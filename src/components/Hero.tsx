@@ -4,7 +4,7 @@ import Title from "./Title";
 
 export default function HeroSection() {
   return (
-    <div className="min-h-[60vh] flex items-center flex-col-reverse gap-14 lg:flex-row lg:justify-between">
+    <div className="min-h-[60vh] flex items-center mt-24 flex-col-reverse gap-14 lg:flex-row lg:justify-between ">
       <div className="space-y-10 text-center lg:text-left">
         <h1 className="text-4xl lg:text-7xl font-bold">
           Nice to meet you👋
@@ -25,7 +25,7 @@ export default function HeroSection() {
           <Title title="Contact Me 📧" />
         </Link>
       </div>
-      <div className="w-72 h-72 space-y-3 -rotate-[30deg]">
+      <div className="w-72 h-72 space-y-3 -rotate-[30deg] ">
         <div className="flex gap-3 translate-x-8">
           <div className="w-32 h-32 rounded-2xl bg-green-500"></div>
           <div className="w-32 h-32 rounded-full bg-indigo-500"></div>
