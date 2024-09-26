@@ -12,8 +12,9 @@ import {
   SiTypescript,
 } from "react-icons/si";
 import Title from "./Title";
-import Link from "next/link";
+// import Link from "next/link";
 import { DirectionAwareHover } from "./ui/direction-aware-hover";
+import { cn } from "@/lib/utils";
 
 export default function Projects() {
   const projects = [
@@ -48,7 +49,7 @@ export default function Projects() {
       ],
       link: "https://www.webex.com/",
       cover: "/webex.png",
-      background: "bg-indigo-500",
+      background: "bg-blue-500",
     },
     {
       title: "Intuit Quickbooks Online",
@@ -75,7 +76,11 @@ export default function Projects() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         {projects.map((project, index) => {
           return (
-            <Link key={index} href={project.link} target="_blank">
+            <div
+              className={cn("p-5 rounded-md", project.background)}
+              key={index}
+            >
+              {/* <Link href={project.link} target="_blank"> */}
               <DirectionAwareHover imageUrl={project.cover}>
                 <h1>{project.title}</h1>
                 <h4>{project.designation}</h4>
@@ -85,7 +90,8 @@ export default function Projects() {
                   ))}
                 </div>
               </DirectionAwareHover>
-            </Link>
+              {/* </Link> */}
+            </div>
           );
         })}
       </div>
