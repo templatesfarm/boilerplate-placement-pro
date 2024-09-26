@@ -58,10 +58,10 @@ export default function Skills() {
   ];
 
   return (
-    <div className="mt-24 flex flex-col justify-between items-center">
+    <div className="mt-24 flex flex-col" id="skills">
       <Title
         title="Skills 🛠️"
-        className="-rotate-6 inline-block float-center"
+        className="-rotate-6 inline-block float-center mx-auto"
       />
       <HoverEffect items={skills} />
     </div>
