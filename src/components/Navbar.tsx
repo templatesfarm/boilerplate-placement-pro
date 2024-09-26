@@ -1,8 +1,9 @@
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 import React from "react";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 
-export default function Navbar() {
+export default function Navbar({ className }: { className?: string }) {
   const socials = [
     {
       link: "https://www.linkedin.com/in/deepakpahawa/",
@@ -17,7 +18,7 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="flex justify-between items-center">
+    <div className={cn("flex justify-between items-center", className)}>
       <div className="text-2xl font-bold underline underline-offset-8 decoration-green-500 -rotate-3">
         Deepak Pahawa 👨🏻‍💻
       </div>
