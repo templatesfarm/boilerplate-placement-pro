@@ -1,123 +1,139 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { usePersonalStore } from '@/store/personalStore';
-import { Dialog, DialogContent, DialogDescription, DialogOverlay, DialogTitle } from './ui/dialog';
+import { Dialog, DialogContent, DialogOverlay, DialogTitle, DialogDescription } from './ui/dialog';
+import { PersonalInfo } from '@/app/types/portfolio.types';
 
 interface PersonalInfoDialogProps {
   isOpen?: boolean;
   onOpenChange?: (x: boolean) => void;
 }
 
-const PersonalInfoDialog: React.FC<PersonalInfoDialogProps> = ({ isOpen, onOpenChange = (x: boolean) => {console.log(x)} }) => {
-  const { personalInfo, setPersonalInfo } = usePersonalStore();
-  const [name, setName] = useState(personalInfo.name);
-  const [phoneNumber, setPhoneNumber] = useState(personalInfo.contactNumber);
-  const [email, setEmail] = useState(personalInfo.email);
-  const [linkedin, setLinkedin] = useState(personalInfo.socialMedia.linkedin.link);
-  const [github, setGithub] = useState(personalInfo.socialMedia.github.link);
-  const [youtube, setYoutube] = useState(personalInfo.socialMedia.youtube.link);
-  const [facebook, setFacebook] = useState(personalInfo.socialMedia.facebook.link);
-  const [instagram, setInstagram] = useState(personalInfo.socialMedia.instagram.link);
+const PersonalInfoDialog: React.FC<PersonalInfoDialogProps> = ({ isOpen, onOpenChange }) => {
+  const { personalInfo, savePersonalInfo } = usePersonalStore();
+  const [localPersonalInfo, setLocalPersonalInfo] = useState<PersonalInfo>(personalInfo);
 
-  const handleSave = () => {
-    setPersonalInfo({
-      name,
-      contactNumber: phoneNumber,
-      email,
-      socialMedia: {
-        linkedin: { link: linkedin, icon: personalInfo.socialMedia.linkedin.icon },
-        github: { link: github, icon: personalInfo.socialMedia.github.icon },
-        youtube: { link: youtube, icon: personalInfo.socialMedia.youtube.icon },
-        facebook: { link: facebook, icon: personalInfo.socialMedia.facebook.icon },
-        instagram: { link: instagram, icon: personalInfo.socialMedia.instagram.icon },
-      },
-    });
-    onOpenChange(false);
+  useEffect(() => {
+    setLocalPersonalInfo(personalInfo);
+  }, [personalInfo]);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setLocalPersonalInfo((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
-  
-  useEffect(() => {
-    setName(personalInfo.name);
-  },[personalInfo.name]);
+  const handleSocialMediaChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setLocalPersonalInfo((prev) => ({
+      ...prev,
+      socialMedia: {
+        ...prev.socialMedia,
+        [name]: value,
+      },
+    }));
+  };
+
+  const handleSave = async () => {
+    await savePersonalInfo(localPersonalInfo);
+    handleOpenChange();
+    
+  };
+
+  const handleOpenChange = () => {
+    if (onOpenChange) {
+      onOpenChange(false);
+    }
+  }
 
   return (
-    <Dialog open={isOpen} onOpenChange={() => onOpenChange(false)}>
+    <Dialog open={isOpen} onOpenChange={handleOpenChange}>
       <DialogOverlay />
       <DialogContent className='overflow-auto min-h-[90%]'>
         <DialogTitle>Edit Personal Information</DialogTitle>
         <DialogDescription>Update your personal information below.</DialogDescription>
-        <div className="">
-          <label className="block mb-1">Name</label>
+        <div className="mt-4">
+          <label className="block mb-2">Name</label>
           <input
             type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            name="name"
+            value={localPersonalInfo.name}
+            onChange={handleChange}
             className="border p-2 w-full"
           />
         </div>
-        <div className="">
-          <label className="block mb-1">Phone Number</label>
+        <div className="mt-4">
+          <label className="block mb-2">Phone Number</label>
           <input
             type="text"
-            value={phoneNumber}
-            onChange={(e) => setPhoneNumber(e.target.value)}
+            name="contactNumber"
+            value={localPersonalInfo.contactNumber}
+            onChange={handleChange}
             className="border p-2 w-full"
           />
         </div>
-        <div className="">
-          <label className="block mb-1">Email</label>
+        <div className="mt-4">
+          <label className="block mb-2">Email</label>
           <input
             type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            name="email"
+            value={localPersonalInfo.email}
+            onChange={handleChange}
             className="border p-2 w-full"
           />
         </div>
-        <div className="">
-          <label className="block mb-1">LinkedIn URL</label>
+        <div className="mt-4">
+          <label className="block mb-2">LinkedIn URL</label>
           <input
             type="text"
-            value={linkedin}
-            onChange={(e) => setLinkedin(e.target.value)}
+            name="linkedin"
+            value={localPersonalInfo.socialMedia?.linkedin}
+            onChange={handleSocialMediaChange}
             className="border p-2 w-full"
           />
         </div>
-        <div className="">
-          <label className="block mb-1">GitHub URL</label>
+        <div className="mt-4">
+          <label className="block mb-2">GitHub URL</label>
           <input
             type="text"
-            value={github}
-            onChange={(e) => setGithub(e.target.value)}
+            name="github"
+            value={localPersonalInfo.socialMedia?.github}
+            onChange={handleSocialMediaChange}
             className="border p-2 w-full"
           />
         </div>
-        <div className="">
-          <label className="block mb-1">YouTube URL</label>
+        <div className="mt-4">
+          <label className="block mb-2">YouTube URL</label>
           <input
             type="text"
-            value={youtube}
-            onChange={(e) => setYoutube(e.target.value)}
+            name="youtube"
+            value={localPersonalInfo.socialMedia?.youtube}
+            onChange={handleSocialMediaChange}
             className="border p-2 w-full"
           />
         </div>
-        <div className="">
-          <label className="block mb-1">Facebook URL</label>
+        <div className="mt-4">
+          <label className="block mb-2">Facebook URL</label>
           <input
             type="text"
-            value={facebook}
-            onChange={(e) => setFacebook(e.target.value)}
+            name="facebook"
+            value={localPersonalInfo.socialMedia?.facebook}
+            onChange={handleSocialMediaChange}
             className="border p-2 w-full"
           />
         </div>
-        <div className="">
-          <label className="block mb-1">Instagram URL</label>
+        <div className="mt-4">
+          <label className="block mb-2">Instagram URL</label>
           <input
             type="text"
-            value={instagram}
-            onChange={(e) => setInstagram(e.target.value)}
+            name="instagram"
+            value={localPersonalInfo.socialMedia?.instagram}
+            onChange={handleSocialMediaChange}
             className="border p-2 w-full"
           />
         </div>
-        <div className=" flex justify-end">
+        <div className="mt-4 flex justify-end">
           <button onClick={handleSave} className="bg-blue-500 text-white px-4 py-2 rounded">
             Save
           </button>
