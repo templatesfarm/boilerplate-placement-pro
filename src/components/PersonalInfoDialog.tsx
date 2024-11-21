@@ -50,11 +50,11 @@ const PersonalInfoDialog: React.FC<PersonalInfoDialogProps> = ({ isOpen, onOpenC
   return (
     <Dialog open={isOpen} onOpenChange={handleOpenChange}>
       <DialogOverlay />
-      <DialogContent className='overflow-auto min-h-[90%]'>
+      <DialogContent className='overflow-auto max-h-svh space-y-2'>
         <DialogTitle>Edit Personal Information</DialogTitle>
         <DialogDescription>Update your personal information below.</DialogDescription>
-        <div className="mt-4">
-          <label className="block mb-2">Name</label>
+        <div className="">
+          <label className="block mb-1">Name</label>
           <input
             type="text"
             name="name"
@@ -63,8 +63,8 @@ const PersonalInfoDialog: React.FC<PersonalInfoDialogProps> = ({ isOpen, onOpenC
             className="border p-2 w-full"
           />
         </div>
-        <div className="mt-4">
-          <label className="block mb-2">Phone Number</label>
+        <div className="">
+          <label className="block mb-1">Phone Number</label>
           <input
             type="text"
             name="contactNumber"
@@ -73,8 +73,8 @@ const PersonalInfoDialog: React.FC<PersonalInfoDialogProps> = ({ isOpen, onOpenC
             className="border p-2 w-full"
           />
         </div>
-        <div className="mt-4">
-          <label className="block mb-2">Email</label>
+        <div className="">
+          <label className="block mb-1">Email</label>
           <input
             type="email"
             name="email"
@@ -83,8 +83,8 @@ const PersonalInfoDialog: React.FC<PersonalInfoDialogProps> = ({ isOpen, onOpenC
             className="border p-2 w-full"
           />
         </div>
-        <div className="mt-4">
-          <label className="block mb-2">LinkedIn URL</label>
+        <div className="">
+          <label className="block mb-1">LinkedIn URL</label>
           <input
             type="text"
             name="linkedin"
@@ -93,8 +93,8 @@ const PersonalInfoDialog: React.FC<PersonalInfoDialogProps> = ({ isOpen, onOpenC
             className="border p-2 w-full"
           />
         </div>
-        <div className="mt-4">
-          <label className="block mb-2">GitHub URL</label>
+        <div className="">
+          <label className="block mb-1">GitHub URL</label>
           <input
             type="text"
             name="github"
@@ -103,8 +103,8 @@ const PersonalInfoDialog: React.FC<PersonalInfoDialogProps> = ({ isOpen, onOpenC
             className="border p-2 w-full"
           />
         </div>
-        <div className="mt-4">
-          <label className="block mb-2">YouTube URL</label>
+        <div className="">
+          <label className="block mb-1">YouTube URL</label>
           <input
             type="text"
             name="youtube"
@@ -113,8 +113,8 @@ const PersonalInfoDialog: React.FC<PersonalInfoDialogProps> = ({ isOpen, onOpenC
             className="border p-2 w-full"
           />
         </div>
-        <div className="mt-4">
-          <label className="block mb-2">Facebook URL</label>
+        <div className="">
+          <label className="block mb-1">Facebook URL</label>
           <input
             type="text"
             name="facebook"
@@ -123,8 +123,8 @@ const PersonalInfoDialog: React.FC<PersonalInfoDialogProps> = ({ isOpen, onOpenC
             className="border p-2 w-full"
           />
         </div>
-        <div className="mt-4">
-          <label className="block mb-2">Instagram URL</label>
+        <div className="">
+          <label className="block mb-1">Instagram URL</label>
           <input
             type="text"
             name="instagram"
@@ -133,7 +133,7 @@ const PersonalInfoDialog: React.FC<PersonalInfoDialogProps> = ({ isOpen, onOpenC
             className="border p-2 w-full"
           />
         </div>
-        <div className="mt-4 flex justify-end">
+        <div className=" flex justify-end">
           <button onClick={handleSave} className="bg-blue-500 text-white px-4 py-2 rounded">
             Save
           </button>
