@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { usePersonalStore } from '@/store/personalStore';
 import { Dialog, DialogContent, DialogDescription, DialogOverlay, DialogTitle } from './ui/dialog';
 
@@ -33,6 +33,11 @@ const PersonalInfoDialog: React.FC<PersonalInfoDialogProps> = ({ isOpen, onOpenC
     });
     onOpenChange(false);
   };
+
+  
+  useEffect(() => {
+    setName(personalInfo.name);
+  },[personalInfo.name]);
 
   return (
     <Dialog open={isOpen} onOpenChange={() => onOpenChange(false)}>
