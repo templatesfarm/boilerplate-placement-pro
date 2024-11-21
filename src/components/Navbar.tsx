@@ -1,34 +1,37 @@
+"use client";
+
 import { cn } from "@/lib/utils";
+import { usePersonalStore } from "@/store/personalStore";
 import Link from "next/link";
 import React from "react";
-import { SiGithub, SiLinkedin } from "react-icons/si";
+import EditComponent from "./EditComponent";
+import PersonalInfoDialog from "./PersonalInfoDialog";
 
-export default function Navbar({ className }: { className?: string }) {
-  const socials = [
-    {
-      link: "https://www.linkedin.com/in/deepakpahawa/",
-      label: "linkedIn",
-      icon: SiLinkedin,
-    },
-    {
-      link: "https://www.linkedin.com/in/deepakpahawa/",
-      label: "github",
-      icon: SiGithub,
-    },
-  ];
+const Navbar = ({ className }: { className?: string }) => {
+  const { personalInfo } = usePersonalStore();
 
   return (
     <div className={cn("flex justify-between items-center", className)}>
       <div className="text-2xl font-bold underline underline-offset-8 decoration-green-500 -rotate-3">
-        Deepak Pahawa 👨🏻‍💻
+        {personalInfo.name} 👨🏻‍💻
       </div>
       <div className="flex justify-end items-center gap-5">
-        {socials.map((social, index) => (
-          <Link href={social.link} key={index} target="_blank">
-            <social.icon className="w-5 h-5 hover:scale-125 transition-all" />
-          </Link>
-        ))}
+        {Object.values(personalInfo.socialMedia).map((social, index) =>
+          social.link ? (
+            <Link href={social.link} key={index} target="_blank">
+              <social.icon className="w-5 h-5 hover:scale-125 transition-all" />
+            </Link>
+          ) : (
+            <></>
+          )
+        )}
       </div>
     </div>
   );
-}
+};
+
+const NavbarWithDialog = () => {
+  return <EditComponent comp={<Navbar />} dialog={<PersonalInfoDialog />} />;
+};
+
+export default NavbarWithDialog;
