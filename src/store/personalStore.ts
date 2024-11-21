@@ -1,36 +1,7 @@
 import {create} from 'zustand';
-import { IconType } from 'react-icons';
 import { SiLinkedin, SiGithub, SiYoutube, SiFacebook, SiInstagram } from 'react-icons/si';
+import { PersonalInfo, SocialMedia } from '@/app/types/portfolio.types';
 
-interface SocialMedia {
-  linkedin: {
-    link: string;
-    icon: IconType;
-  };
-  github: {
-    link: string;
-    icon: IconType;
-  };
-  youtube: {
-    link: string;
-    icon: IconType;
-  };
-  facebook: {
-    link: string;
-    icon: IconType;
-  };
-  instagram: {
-    link: string;
-    icon: IconType;
-  };
-}
-
-interface PersonalInfo {
-  name: string;
-  contactNumber: string;
-  email: string;
-  socialMedia: SocialMedia;
-}
 
 interface PersonalStore {
   personalInfo: PersonalInfo;
@@ -66,9 +37,28 @@ export const usePersonalStore = create<PersonalStore>((set) => ({
       },
     },
   },
-  setPersonalInfo: (info: PersonalInfo) => set({ personalInfo: info }),
+  setPersonalInfo: async (info: PersonalInfo) => {
+    try {
+      const response = await fetch('/api/personal', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(info),
+      });
+      const data = await response.json();
+      console.log("🚀 ~ usePersonalStore ~ data:", data)
+      if (!response.ok) {
+        throw new Error('Failed to save personal information');
+      }
+    } catch (error) {
+      console.error('Error saving personal information:', error);
+    }
+  },
   setSocialMedia: (socialMedia: SocialMedia) =>
     set((state) => ({
       personalInfo: { ...state.personalInfo, socialMedia },
-    })),
+    }))
+     
+    
 }));

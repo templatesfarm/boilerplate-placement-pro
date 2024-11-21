@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { usePersonalStore } from '@/store/personalStore';
 import { Dialog, DialogContent, DialogDescription, DialogOverlay, DialogTitle } from './ui/dialog';
-import { Input } from './ui/input';
-import { Label } from './ui/label';
 
-interface DialogPropType {
-    isOpen: boolean;
-    onOpenChange: (x: boolean) => void;
+interface PersonalInfoDialogProps {
+  isOpen?: boolean;
+  onOpenChange?: (x: boolean) => void;
 }
 
-const PersonalInfoDialog: React.FC<DialogPropType> = ({isOpen, onOpenChange}) => {
-
-  const { personalInfo, setSocialMedia } = usePersonalStore();
+const PersonalInfoDialog: React.FC<PersonalInfoDialogProps> = ({ isOpen, onOpenChange = (x: boolean) => {console.log(x)} }) => {
+  const { personalInfo, setPersonalInfo } = usePersonalStore();
+  const [name, setName] = useState(personalInfo.name);
+  const [phoneNumber, setPhoneNumber] = useState(personalInfo.contactNumber);
+  const [email, setEmail] = useState(personalInfo.email);
   const [linkedin, setLinkedin] = useState(personalInfo.socialMedia.linkedin.link);
   const [github, setGithub] = useState(personalInfo.socialMedia.github.link);
   const [youtube, setYoutube] = useState(personalInfo.socialMedia.youtube.link);
@@ -19,76 +19,106 @@ const PersonalInfoDialog: React.FC<DialogPropType> = ({isOpen, onOpenChange}) =>
   const [instagram, setInstagram] = useState(personalInfo.socialMedia.instagram.link);
 
   const handleSave = () => {
-    setSocialMedia({
-      linkedin: { link: linkedin, icon: personalInfo.socialMedia.linkedin.icon },
-      github: { link: github, icon: personalInfo.socialMedia.github.icon },
-      youtube: { link: youtube, icon: personalInfo.socialMedia.youtube.icon },
-      facebook: { link: facebook, icon: personalInfo.socialMedia.facebook.icon },
-      instagram: { link: instagram, icon: personalInfo.socialMedia.instagram.icon },
+    setPersonalInfo({
+      name,
+      contactNumber: phoneNumber,
+      email,
+      socialMedia: {
+        linkedin: { link: linkedin, icon: personalInfo.socialMedia.linkedin.icon },
+        github: { link: github, icon: personalInfo.socialMedia.github.icon },
+        youtube: { link: youtube, icon: personalInfo.socialMedia.youtube.icon },
+        facebook: { link: facebook, icon: personalInfo.socialMedia.facebook.icon },
+        instagram: { link: instagram, icon: personalInfo.socialMedia.instagram.icon },
+      },
     });
-    setIsOpen(false);
+    onOpenChange(false);
   };
 
   return (
-    <>
-      <Dialog open={isOpen} onOpenChange={() => onOpenChange(false)}>
-        <DialogOverlay />
-        <DialogContent>
-          <DialogTitle>Edit Social Media Links</DialogTitle>
-          <DialogDescription>Update your social media links below.</DialogDescription>
-          <div className="mt-4">
-            <Label className="block mb-2">LinkedIn URL</Label>
-            <Input
-              type="text"
-              value={linkedin}
-              onChange={(e) => setLinkedin(e.target.value)}
-              className="border p-2 w-full"
-            />
-          </div>
-          <div className="mt-4">
-            <Label className="block mb-2">GitHub URL</Label>
-            <Input
-              type="text"
-              value={github}
-              onChange={(e) => setGithub(e.target.value)}
-              className="border p-2 w-full"
-            />
-          </div>
-          <div className="mt-4">
-            <Label className="block mb-2">YouTube URL</Label>
-            <Input
-              type="text"
-              value={youtube}
-              onChange={(e) => setYoutube(e.target.value)}
-              className="border p-2 w-full"
-            />
-          </div>
-          <div className="mt-4">
-            <Label className="block mb-2">Facebook URL</Label>
-            <Input
-              type="text"
-              value={facebook}
-              onChange={(e) => setFacebook(e.target.value)}
-              className="border p-2 w-full"
-            />
-          </div>
-          <div className="mt-4">
-            <Label className="block mb-2">Instagram URL</Label>
-            <Input
-              type="text"
-              value={instagram}
-              onChange={(e) => setInstagram(e.target.value)}
-              className="border p-2 w-full"
-            />
-          </div>
-          <div className="mt-4 flex justify-end">
-            <button onClick={handleSave} className="bg-blue-500 text-white px-4 py-2 rounded">
-              Save
-            </button>
-          </div>
-        </DialogContent>
-      </Dialog>
-    </>
+    <Dialog open={isOpen} onOpenChange={() => onOpenChange(false)}>
+      <DialogOverlay />
+      <DialogContent className='overflow-auto min-h-[90%]'>
+        <DialogTitle>Edit Personal Information</DialogTitle>
+        <DialogDescription>Update your personal information below.</DialogDescription>
+        <div className="">
+          <label className="block mb-1">Name</label>
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="border p-2 w-full"
+          />
+        </div>
+        <div className="">
+          <label className="block mb-1">Phone Number</label>
+          <input
+            type="text"
+            value={phoneNumber}
+            onChange={(e) => setPhoneNumber(e.target.value)}
+            className="border p-2 w-full"
+          />
+        </div>
+        <div className="">
+          <label className="block mb-1">Email</label>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="border p-2 w-full"
+          />
+        </div>
+        <div className="">
+          <label className="block mb-1">LinkedIn URL</label>
+          <input
+            type="text"
+            value={linkedin}
+            onChange={(e) => setLinkedin(e.target.value)}
+            className="border p-2 w-full"
+          />
+        </div>
+        <div className="">
+          <label className="block mb-1">GitHub URL</label>
+          <input
+            type="text"
+            value={github}
+            onChange={(e) => setGithub(e.target.value)}
+            className="border p-2 w-full"
+          />
+        </div>
+        <div className="">
+          <label className="block mb-1">YouTube URL</label>
+          <input
+            type="text"
+            value={youtube}
+            onChange={(e) => setYoutube(e.target.value)}
+            className="border p-2 w-full"
+          />
+        </div>
+        <div className="">
+          <label className="block mb-1">Facebook URL</label>
+          <input
+            type="text"
+            value={facebook}
+            onChange={(e) => setFacebook(e.target.value)}
+            className="border p-2 w-full"
+          />
+        </div>
+        <div className="">
+          <label className="block mb-1">Instagram URL</label>
+          <input
+            type="text"
+            value={instagram}
+            onChange={(e) => setInstagram(e.target.value)}
+            className="border p-2 w-full"
+          />
+        </div>
+        <div className=" flex justify-end">
+          <button onClick={handleSave} className="bg-blue-500 text-white px-4 py-2 rounded">
+            Save
+          </button>
+        </div>
+      </DialogContent>
+    </Dialog>
   );
 };
 
