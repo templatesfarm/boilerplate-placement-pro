@@ -25,6 +25,7 @@ export const usePersonalStore = create<PersonalStore>((set) => ({
   },
   isLoading: true,
   savePersonalInfo: async (info: PersonalInfo) => {
+    set({ isLoading: true });
     try {
       const response = await fetch(serverRoutes.PERSONAL, {
         method: "POST",
@@ -34,14 +35,16 @@ export const usePersonalStore = create<PersonalStore>((set) => ({
         body: JSON.stringify(info),
       });
       const data = await response.json();
-      console.log("🚀 ~ usePersonalStore ~ data:", data);
-      set({
-        personalInfo: data
-      });
       if (!response.ok) {
         throw new Error("Failed to save personal information");
       }
+      console.log("🚀 ~ usePersonalStore ~ data:", data);
+      set({
+        personalInfo: data,
+        isLoading:false
+      });
     } catch (error) {
+      set({ isLoading: false });
       console.error("Error saving personal information:", error);
     }
   },
@@ -61,7 +64,9 @@ export const usePersonalStore = create<PersonalStore>((set) => ({
       const data: PersonalInfo = await response.json();
       console.log("🚀 ~ fetchPersonalInfo: ~ data:", data);
       set({
-        personalInfo: data
+        personalInfo: data,
+        isLoading: false,
+
       });
     } catch (error) {
       console.error("Error fetching personal information:", error);

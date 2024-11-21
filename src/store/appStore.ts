@@ -6,6 +6,6 @@ interface AppStore {
 }
 
 export const useAppStore = create<AppStore>((set) => ({
-  isEditing: true,
+  isEditing: false,
   setIsEditing: (isEditing) => set({ isEditing }),
 }));
