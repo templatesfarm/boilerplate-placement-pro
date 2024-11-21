@@ -1,5 +1,10 @@
 {
   "name": "Deepak Pahawa",
   "contactNumber": "959595959",
-  "email": "deepakpahawa19@gmail.com"
+  "email": "deepakpahawa19@gmail.com",
+  "socialMedia": {
+    "linkedin": "https://github.com/DeepakPahawa/deepk-portfolio",
+    "github": "https://github.com/DeepakPahawa/deepk-portfolio",
+    "youtube": "https://github.com/DeepakPahawa/deepk-portfolio"
+  }
 }
