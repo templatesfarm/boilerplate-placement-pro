@@ -2,10 +2,6 @@
   "skills": {
     "frontend": [
       {
-        "label": "Tailwind",
-        "imageName": "/tailwind.png"
-      },
-      {
         "label": "NextJS",
         "imageName": "/nextjs.jpg"
       },
@@ -28,18 +24,8 @@
         "imageName": "/nodejs.webp"
       }
     ],
-    "database": [
-      {
-        "label": "MySQL",
-        "imageName": "/mysql.png"
-      }
-    ],
-    "mobile": [
-      {
-        "label": "Ionic",
-        "imageName": "/ionic.png"
-      }
-    ],
+    "database": [],
+    "mobile": [],
     "devops": [
       {
         "label": "Kubernetes",
