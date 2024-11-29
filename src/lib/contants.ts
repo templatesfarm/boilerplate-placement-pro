@@ -1,7 +1,9 @@
 export const serverRoutes = {
-    PERSONAL: '/api/personal'
+    PERSONAL: '/api/personal',
+    HERO: '/api/hero',
 }
 
 export const databaseRoutes = {
-    PERSONAL_INFO: 'database/personalInfo.json'
+    PERSONAL_INFO: 'database/personal.json',
+    HERO: 'database/hero.json'
 }

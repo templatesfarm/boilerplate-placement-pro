@@ -1,12 +1,12 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { usePersonalStore } from "@/store/personalStore";
 import React, { useEffect } from "react";
-import EditComponent from "./EditComponent";
-import PersonalInfoDialog from "./PersonalInfoDialog";
-import SocialMediaIcons from "./SocialMedia";
-import { ProfileSkeleton } from "./ProfileSkeleton";
+import EditComponent from "../EditComponent";
+import PersonalInfoDialog from "../PersonalInfoDialog";
+import SocialMediaIcons from "../SocialMedia";
+import { ProfileSkeleton } from "../Loaders";
+import { usePersonalStore } from "@/store/personalStore";
 
 const Navbar = ({ className }: { className?: string }) => {
   const { personalInfo, fetchPersonalInfo, isLoading } = usePersonalStore();

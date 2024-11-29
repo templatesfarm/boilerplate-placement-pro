@@ -8,3 +8,9 @@ export interface PersonalInfo {
   email: string;
   socialMedia: SocialMedia;
 }
+
+export interface HeroType {
+  message: string;
+  introduction: string;
+  description: string;
+}

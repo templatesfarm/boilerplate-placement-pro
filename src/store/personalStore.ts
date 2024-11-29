@@ -16,7 +16,7 @@ export const usePersonalStore = create<PersonalStore>((set) => ({
     contactNumber: "",
     email: "",
     socialMedia: {
-      linkedin: 'https://www.linkedin.com/in/deepakpahawa/',
+      linkedin: '',
       github: '',
       youtube: '',
       facebook: '',

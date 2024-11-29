@@ -1,7 +1,7 @@
 "use client"
 import Footer from "@/components/Footer";
-import HeroSection from "@/components/Hero";
-import NavbarWithDialog from "@/components/Navbar";
+import HeroSectionWithDialog from "@/components/Hero/Hero";
+import NavbarWithDialog from "@/components/Navbar/Navbar";
 import PasswordInput from "@/components/PasswordInput";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
@@ -15,7 +15,7 @@ export default function Home() {
       <div className="max-w-7xl mx-auto p-5">
         {!isEditing && <PasswordInput />}
         <NavbarWithDialog />
-        <HeroSection />
+        <HeroSectionWithDialog/>
         <Skills />
         <Projects />
       </div>
