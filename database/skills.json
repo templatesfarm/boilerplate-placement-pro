@@ -1,2 +1,18 @@
 {
+  "skills": {
+    "frontend": [
+      {
+        "label": "Tailwind",
+        "imageName": "/tailwind.png"
+      },
+      {
+        "label": "NextJS",
+        "imageName": "/nextjs.jpg"
+      },
+      {
+        "label": "ReactJS",
+        "imageName": "/reactjs.png"
+      }
+    ]
+  }
 }
