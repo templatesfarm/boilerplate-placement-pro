@@ -12,6 +12,38 @@
       {
         "label": "ReactJS",
         "imageName": "/reactjs.png"
+      },
+      {
+        "label": "JavaScript",
+        "imageName": "/javascript.png"
+      },
+      {
+        "label": "TypeScript",
+        "imageName": "/typescript.webp"
+      }
+    ],
+    "backend": [
+      {
+        "label": "NodeJS",
+        "imageName": "/nodejs.webp"
+      }
+    ],
+    "database": [
+      {
+        "label": "MySQL",
+        "imageName": "/mysql.png"
+      }
+    ],
+    "mobile": [
+      {
+        "label": "Ionic",
+        "imageName": "/ionic.png"
+      }
+    ],
+    "devops": [
+      {
+        "label": "Kubernetes",
+        "imageName": "/kubernetes.png"
       }
     ]
   }
