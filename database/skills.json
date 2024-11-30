@@ -1,0 +1,24 @@
+{
+  "skills": {
+    "frontend": [
+      {
+        "label": "ReactJS",
+        "imageName": "/reactjs.png"
+      },
+      {
+        "label": "Tailwind",
+        "imageName": "/tailwind.png"
+      }
+    ],
+    "backend": [
+      {
+        "label": "NodeJS",
+        "imageName": "/nodejs.webp"
+      },
+      {
+        "label": "ExpressJS",
+        "imageName": "/expressjs.png"
+      }
+    ]
+  }
+}
