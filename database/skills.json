@@ -22,6 +22,14 @@
       {
         "label": "NodeJS",
         "imageName": "/nodejs.webp"
+      },
+      {
+        "label": "ExpressJS",
+        "imageName": "/expressjs.png"
+      },
+      {
+        "label": "Django",
+        "imageName": "/django.png"
       }
     ],
     "database": [],
