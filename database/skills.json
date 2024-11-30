@@ -10,13 +10,64 @@
         "imageName": "/tailwind.png"
       },
       {
-        "label": "NextJS",
-        "imageName": "/nextjs.jpg"
+        "label": "ReactJS",
+        "imageName": "/reactjs.png"
       }
     ],
-    "backend": [],
-    "database": [],
-    "mobile": [],
+    "backend": [
+      {
+        "label": "ExpressJS",
+        "imageName": "/expressjs.png"
+      },
+      {
+        "label": "NodeJS",
+        "imageName": "/nodejs.webp"
+      }
+    ],
+    "database": [
+      {
+        "label": "Redis",
+        "imageName": "/redis.png"
+      },
+      {
+        "label": "SQLite",
+        "imageName": "/sqlite.png"
+      },
+      {
+        "label": "MySQL",
+        "imageName": "/mysql.png"
+      },
+      {
+        "label": "MongoDB",
+        "imageName": "/mongodb.png"
+      },
+      {
+        "label": "PostgreSQL",
+        "imageName": "/postgresql.png"
+      }
+    ],
+    "mobile": [
+      {
+        "label": "React Native",
+        "imageName": "/reactnative.png"
+      },
+      {
+        "label": "Flutter",
+        "imageName": "/flutter.png"
+      },
+      {
+        "label": "Swift",
+        "imageName": "/swift.png"
+      },
+      {
+        "label": "Kotlin",
+        "imageName": "/kotlin.png"
+      },
+      {
+        "label": "Ionic",
+        "imageName": "/ionic.png"
+      }
+    ],
     "devops": [
       {
         "label": "Docker",
