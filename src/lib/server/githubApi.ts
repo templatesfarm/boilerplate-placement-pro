@@ -24,7 +24,6 @@ const fetchFileData = async (path: string) => {
     path,
     ref: branch,
   });
-  console.log("🚀 ~ fetchFileData ~ fileData:", fileData)
   return fileData;
 };
 

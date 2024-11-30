@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { usePersonalStore } from '@/store/personalStore';
-import { Dialog, DialogContent, DialogOverlay, DialogTitle, DialogDescription } from './ui/dialog';
+import { Dialog, DialogContent, DialogOverlay, DialogTitle, DialogDescription } from '../ui/dialog';
 import { PersonalInfo } from '@/app/types/portfolio.types';
 
 interface PersonalInfoDialogProps {

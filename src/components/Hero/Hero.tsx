@@ -6,7 +6,6 @@ import { HeroSkeleton } from "../Loaders";
 import EditComponent from "../EditComponent";
 import HeroDialog from "./HeroDialog";
 import { usePersonalStore } from "@/store/personalStore";
-// import { usePersonalStore } from "@/store/personalStore";
 
 function HeroSection() {
 

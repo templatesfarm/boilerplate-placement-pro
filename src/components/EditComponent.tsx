@@ -21,7 +21,7 @@ const EditComponent: React.FC<PropTypes> = ({ comp, dialog }) => {
   };
 
   return (
-    <div className={`relative ${isEditing ? "border border-red-500" : ""}`}>
+    <div className={`relative ${isEditing ? "border border-red-500 my-2" : ""}`}>
       {isEditing && (
         <div className="absolute top-2 right-2">
           <button onClick={handleEditClick}>

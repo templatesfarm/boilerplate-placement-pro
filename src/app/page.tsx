@@ -4,7 +4,7 @@ import HeroSectionWithDialog from "@/components/Hero/Hero";
 import NavbarWithDialog from "@/components/Navbar/Navbar";
 import PasswordInput from "@/components/PasswordInput";
 import Projects from "@/components/Projects";
-import Skills from "@/components/Skills";
+import SkillsWithDialog from "@/components/Skills/Skills";
 import { useAppStore } from "@/store/appStore";
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
         {!isEditing && <PasswordInput />}
         <NavbarWithDialog />
         <HeroSectionWithDialog/>
-        <Skills />
+        <SkillsWithDialog />
         <Projects />
       </div>
       <Footer />

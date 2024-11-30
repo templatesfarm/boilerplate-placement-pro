@@ -1,36 +1,36 @@
+import { TechnologiesType } from "@/app/types/portfolio.types";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
-import { IconType } from "react-icons";
+import Image from "next/image";
+import { useMemo, useState } from "react";
 
 export const HoverEffect = ({
   items,
   className,
 }: {
-  items: {
-    text: string;
-    Icon: IconType;
-  }[];
+  items: TechnologiesType;
   className?: string;
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
+  const singleArray = useMemo(() => Object.values(items).flat(),[items]);
+
   return (
     <div
       className={cn(
-        "grid grid-cols-2 lg:grid-cols-3  py-1 max-w-7xl",
+        "grid grid-cols-2 lg:grid-cols-3 py-1 max-w-7xl",
         className
       )}
     >
-      {items.map((item, idx) => (
+      {singleArray?.map((tech, index) => 
         <div
-          key={idx}
+          key={"" + index }
           className="relative group  block p-2 h-full w-full"
-          onMouseEnter={() => setHoveredIndex(idx)}
+          onMouseEnter={() => setHoveredIndex(index)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
           <AnimatePresence>
-            {hoveredIndex === idx && (
+            {hoveredIndex === index && (
               <motion.span
                 className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] block rounded-lg"
                 layoutId="hoverBackground"
@@ -48,14 +48,14 @@ export const HoverEffect = ({
           </AnimatePresence>
           <div className="rounded-md w-full p-4 overflow-hidden bg-black ring-green-500 group-hover:ring-1  relative z-20 transition-all duration-500 cursor-pointer">
             <div className="py-5 z-50 relative space-y-10">
-              <item.Icon className="w-8 h-8 mx-auto" />
+              <Image src={`/images${tech.imageName}`} width={50} height={50} alt={tech.label} className="mx-auto"/>
               <p className="text-2xl font-bold text-center text-gray-300">
-                {item.text}
+                {tech.label}
               </p>
             </div>
           </div>
         </div>
-      ))}
+      )}
     </div>
   );
 };

@@ -14,3 +14,11 @@ export interface HeroType {
   introduction: string;
   description: string;
 }
+
+
+export type SkillType = {
+  label: string;
+  imageName: string;
+}
+
+export type TechnologiesType = { [key: string]: SkillType[] };

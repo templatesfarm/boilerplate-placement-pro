@@ -3,7 +3,7 @@
 import { cn } from "@/lib/utils";
 import React, { useEffect } from "react";
 import EditComponent from "../EditComponent";
-import PersonalInfoDialog from "../PersonalInfoDialog";
+import PersonalInfoDialog from "./PersonalInfoDialog";
 import SocialMediaIcons from "../SocialMedia";
 import { ProfileSkeleton } from "../Loaders";
 import { usePersonalStore } from "@/store/personalStore";
