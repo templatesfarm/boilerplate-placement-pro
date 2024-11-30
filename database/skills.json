@@ -14,8 +14,8 @@
         "imageName": "/javascript.png"
       },
       {
-        "label": "TypeScript",
-        "imageName": "/typescript.webp"
+        "label": "Tailwind",
+        "imageName": "/tailwind.png"
       }
     ],
     "backend": [
