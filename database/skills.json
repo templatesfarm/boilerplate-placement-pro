@@ -6,12 +6,18 @@
         "imageName": "/reactjs.png"
       },
       {
-        "label": "NextJS",
-        "imageName": "/nextjs.jpg"
-      },
-      {
         "label": "Tailwind",
         "imageName": "/tailwind.png"
+      }
+    ],
+    "backend": [
+      {
+        "label": "NodeJS",
+        "imageName": "/nodejs.webp"
+      },
+      {
+        "label": "ExpressJS",
+        "imageName": "/expressjs.png"
       }
     ]
   }
