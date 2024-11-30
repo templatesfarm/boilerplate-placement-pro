@@ -2,12 +2,20 @@
   "skills": {
     "frontend": [
       {
-        "label": "ReactJS",
-        "imageName": "/reactjs.png"
-      },
-      {
         "label": "Tailwind",
         "imageName": "/tailwind.png"
+      },
+      {
+        "label": "NextJS",
+        "imageName": "/nextjs.jpg"
+      },
+      {
+        "label": "JavaScript",
+        "imageName": "/javascript.png"
+      },
+      {
+        "label": "TypeScript",
+        "imageName": "/typescript.webp"
       }
     ],
     "backend": [
@@ -18,6 +26,46 @@
       {
         "label": "ExpressJS",
         "imageName": "/expressjs.png"
+      },
+      {
+        "label": "Spring Boot",
+        "imageName": "/springboot.png"
+      },
+      {
+        "label": "Flask",
+        "imageName": "/flask.png"
+      },
+      {
+        "label": "Django",
+        "imageName": "/django.png"
+      }
+    ],
+    "database": [
+      {
+        "label": "MySQL",
+        "imageName": "/mysql.png"
+      },
+      {
+        "label": "MongoDB",
+        "imageName": "/mongodb.png"
+      },
+      {
+        "label": "SQLite",
+        "imageName": "/sqlite.png"
+      }
+    ],
+    "mobile": [
+      {
+        "label": "Kotlin",
+        "imageName": "/kotlin.png"
+      },
+      {
+        "label": "Swift",
+        "imageName": "/swift.png"
+      },
+      {
+        "label": "Flutter",
+        "imageName": "/flutter.png"
       }
     ]
   }
