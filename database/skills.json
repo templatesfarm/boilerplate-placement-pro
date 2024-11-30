@@ -1,3 +1,14 @@
 {
- 
+  "skills": {
+    "frontend": [
+      {
+        "label": "ReactJS",
+        "imageName": "/reactjs.png"
+      },
+      {
+        "label": "NextJS",
+        "imageName": "/nextjs.jpg"
+      }
+    ]
+  }
 }
