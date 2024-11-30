@@ -1,43 +1,55 @@
 {
   "skills": {
+    "skills": {
+      "frontend": [
+        {
+          "label": "NextJS",
+          "imageName": "/nextjs.jpg"
+        },
+        {
+          "label": "ReactJS",
+          "imageName": "/reactjs.png"
+        },
+        {
+          "label": "JavaScript",
+          "imageName": "/javascript.png"
+        },
+        {
+          "label": "Tailwind",
+          "imageName": "/tailwind.png"
+        }
+      ],
+      "backend": [
+        {
+          "label": "NodeJS",
+          "imageName": "/nodejs.webp"
+        },
+        {
+          "label": "ExpressJS",
+          "imageName": "/expressjs.png"
+        },
+        {
+          "label": "Django",
+          "imageName": "/django.png"
+        }
+      ],
+      "database": [],
+      "mobile": [],
+      "devops": [
+        {
+          "label": "Kubernetes",
+          "imageName": "/kubernetes.png"
+        }
+      ]
+    },
     "frontend": [
-      {
-        "label": "NextJS",
-        "imageName": "/nextjs.jpg"
-      },
       {
         "label": "ReactJS",
         "imageName": "/reactjs.png"
       },
       {
-        "label": "JavaScript",
-        "imageName": "/javascript.png"
-      },
-      {
-        "label": "Tailwind",
-        "imageName": "/tailwind.png"
-      }
-    ],
-    "backend": [
-      {
-        "label": "NodeJS",
-        "imageName": "/nodejs.webp"
-      },
-      {
-        "label": "ExpressJS",
-        "imageName": "/expressjs.png"
-      },
-      {
-        "label": "Django",
-        "imageName": "/django.png"
-      }
-    ],
-    "database": [],
-    "mobile": [],
-    "devops": [
-      {
-        "label": "Kubernetes",
-        "imageName": "/kubernetes.png"
+        "label": "NextJS",
+        "imageName": "/nextjs.jpg"
       }
     ]
   }
