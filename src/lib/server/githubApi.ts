@@ -1,4 +1,4 @@
-"use server"
+"use server";
 
 import env from "@/app/env";
 import { Octokit } from "@octokit/rest";
@@ -63,7 +63,38 @@ export const fetchFileContentFromDatabase = async (path: string) => {
   }
 
   // Decode the base64 file content
-  const fileContent = Buffer.from(fileData.content as string, "base64").toString("utf-8");
+  const fileContent = Buffer.from(
+    fileData.content as string,
+    "base64"
+  ).toString("utf-8");
   const parsedContent = JSON.parse(fileContent);
   return parsedContent;
+};
+
+export const uploadFileInCDN = async (file: File) => {
+  const filename = `${Date.now()}-${file.name}`;
+
+  const encodedContent = Buffer.from(await file.arrayBuffer()).toString(
+    "base64"
+  );
+
+  const { owner, repo, branch } = getGithubClient();
+  const { data } = await octokit.repos.createOrUpdateFileContents({
+    owner,
+    repo,
+    path: `images/${filename}`,
+    message: "Upload Image",
+    content: encodedContent,
+    branch,
+  });
+  console.log("🚀 ~ data:", data);
+
+  const fileUrl = data.content?.html_url
+    ? data.content.html_url
+        .replace("github.com", "raw.githubusercontent.com")
+        .replace(`/blob/${branch}/`, `/${branch}/`)
+    : undefined;
+  console.log("🚀 ~ fileUrl:", fileUrl);
+
+  return fileUrl;
 };
