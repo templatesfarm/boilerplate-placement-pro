@@ -12,6 +12,14 @@
       {
         "label": "ReactJS",
         "imageName": "/reactjs.png"
+      },
+      {
+        "label": "NextJS",
+        "imageName": "/nextjs.jpg"
+      },
+      {
+        "label": "JavaScript",
+        "imageName": "/javascript.png"
       }
     ],
     "backend": [
@@ -22,6 +30,18 @@
       {
         "label": "NodeJS",
         "imageName": "/nodejs.webp"
+      },
+      {
+        "label": "Spring Boot",
+        "imageName": "/springboot.png"
+      },
+      {
+        "label": "Flask",
+        "imageName": "/flask.png"
+      },
+      {
+        "label": "Django",
+        "imageName": "/django.png"
       }
     ],
     "database": [
@@ -80,6 +100,14 @@
       {
         "label": "Jenkins",
         "imageName": "/jenkins.png"
+      },
+      {
+        "label": "GitHub Actions",
+        "imageName": "/githubactions.png"
+      },
+      {
+        "label": "Terraform",
+        "imageName": "/terraform.png"
       }
     ]
   }
