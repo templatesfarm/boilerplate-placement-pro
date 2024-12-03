@@ -5,32 +5,10 @@
       "designation": "Senior Software Engineer",
       "link": "",
       "cover": "",
-      "skills": "Java, JavaScript, NextJS",
-      "companyName": "Microsoft",
-      "startDate": "2024-12-06",
-      "endDate": "",
-      "imageUrl": ""
-    },
-    {
-      "projectName": "QuickBooks",
-      "designation": "Lead Software Engineer",
-      "link": "",
-      "cover": "",
       "skills": "Java, JavaScript, Next.JS, React.JS",
-      "companyName": "Intuit",
-      "startDate": "2024-10-24",
-      "endDate": "2025-01-29",
-      "imageUrl": ""
-    },
-    {
-      "projectName": "",
-      "designation": "",
-      "link": "",
-      "cover": "",
-      "skills": [],
-      "companyName": "",
-      "startDate": "",
-      "endDate": "",
+      "companyName": "Microsoft",
+      "startDate": "2024-12-03",
+      "endDate": "2025-01-03",
       "imageUrl": ""
     }
   ]
