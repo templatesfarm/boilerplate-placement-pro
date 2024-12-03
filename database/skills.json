@@ -12,13 +12,17 @@
       {
         "label": "NextJS",
         "imageName": "/nextjs.jpg"
+      },
+      {
+        "label": "TypeScript",
+        "imageName": "/typescript.webp"
+      },
+      {
+        "label": "JavaScript",
+        "imageName": "/javascript.png"
       }
     ],
     "backend": [
-      {
-        "label": "ExpressJS",
-        "imageName": "/expressjs.png"
-      },
       {
         "label": "NodeJS",
         "imageName": "/nodejs.webp"
