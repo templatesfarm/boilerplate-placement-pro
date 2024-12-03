@@ -6,19 +6,30 @@
       "link": "",
       "cover": "",
       "skills": "Java, JavaScript, NextJS",
-      "companyName": "Broadridge",
-      "startDate": "2022-01-03",
-      "endDate": "2024-12-03",
+      "companyName": "Microsoft",
+      "startDate": "2024-12-06",
+      "endDate": "",
       "imageUrl": ""
     },
     {
-      "projectName": "Microsoft",
+      "projectName": "QuickBooks",
       "designation": "Lead Software Engineer",
       "link": "",
       "cover": "",
-      "skills": "Next.JS, React.JS",
-      "companyName": "Microsoft",
-      "startDate": "2024-11-28",
+      "skills": "Java, JavaScript, Next.JS, React.JS",
+      "companyName": "Intuit",
+      "startDate": "2024-10-24",
+      "endDate": "2025-01-29",
+      "imageUrl": ""
+    },
+    {
+      "projectName": "",
+      "designation": "",
+      "link": "",
+      "cover": "",
+      "skills": [],
+      "companyName": "",
+      "startDate": "",
       "endDate": "",
       "imageUrl": ""
     }
