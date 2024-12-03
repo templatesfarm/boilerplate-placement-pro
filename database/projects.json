@@ -10,6 +10,17 @@
       "startDate": "2022-01-03",
       "endDate": "2024-12-03",
       "imageUrl": ""
+    },
+    {
+      "projectName": "Microsoft",
+      "designation": "Lead Software Engineer",
+      "link": "",
+      "cover": "",
+      "skills": "Next.JS, React.JS",
+      "companyName": "Microsoft",
+      "startDate": "2024-11-28",
+      "endDate": "",
+      "imageUrl": ""
     }
   ]
 }
