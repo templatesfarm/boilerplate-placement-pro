@@ -1,4 +1,3 @@
-import { TechnologiesType } from "@/app/types/portfolio.types";
 import { databaseRoutes } from "@/lib/contants";
 import {
   createOrUpdateDataFromDatabase,
@@ -20,13 +19,10 @@ export const POST = async (req: NextRequest) => {
   try {
     // Prepare the updated content
     const updatedContent = {
-      skills
+      skills,
     };
 
-    await createOrUpdateDataFromDatabase(
-      databaseRoutes.SKILLS,
-      updatedContent
-    );
+    await createOrUpdateDataFromDatabase(databaseRoutes.SKILLS, updatedContent);
 
     // Update the file in the repository
     const parsedContent = await fetchFileContentFromDatabase(
@@ -44,15 +40,12 @@ export const POST = async (req: NextRequest) => {
 
 export const GET = async () => {
   try {
-
     const parsedContent = await fetchFileContentFromDatabase(
       databaseRoutes.SKILLS
     );
     return NextResponse.json(parsedContent, { status: 200 });
-
   } catch (err: unknown) {
     const error = err as Error;
-    console.error("Error fetching SKILLS info:", error.message);
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 };
