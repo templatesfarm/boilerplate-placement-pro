@@ -1,28 +1,15 @@
-{
-  "projects": [
-    {
-      "projectName": "Microsoft Word",
-      "designation": "Senior Software Engineer",
-      "link": "",
-      "cover": "",
-      "skills": "Java, JavaScript, NextJS",
-      "companyName": "Microsoft",
-      "startDate": "",
-      "endDate": "",
-      "imageUrl": {
-        "url": "https://raw.githubusercontent.com/DeepakPahawa/deepk-portfolio/master/images/1733242300002-Akshath%20Srivastava.png"
-      }
-    },
-    {
-      "projectName": "",
-      "designation": "",
-      "link": "",
-      "cover": "",
-      "skills": [],
-      "companyName": "",
-      "startDate": "",
-      "endDate": "",
-      "imageUrl": ""
+[
+  {
+    "projectName": "Intuit Quickbooks",
+    "designation": "Senior Software Engineer",
+    "link": "https://quickbooks.intuit.com/",
+    "cover": "",
+    "skills": "ReactJS,  JavaScript, TypeScript, Styled Components, Material Ui",
+    "companyName": "Intuit",
+    "startDate": "2015-12-04",
+    "endDate": "2020-06-04",
+    "imageUrl": {
+      "url": "https://raw.githubusercontent.com/DeepakPahawa/deepk-portfolio/master/images/1733242300002-Akshath%20Srivastava.png"
     }
-  ]
-}
+  }
+]
