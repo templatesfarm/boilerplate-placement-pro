@@ -5,10 +5,23 @@
       "designation": "Senior Software Engineer",
       "link": "",
       "cover": "",
-      "skills": "Java, JavaScript, Next.JS, React.JS",
+      "skills": "Java, JavaScript, NextJS",
       "companyName": "Microsoft",
-      "startDate": "2024-12-03",
-      "endDate": "2025-01-03",
+      "startDate": "",
+      "endDate": "",
+      "imageUrl": {
+        "url": "https://raw.githubusercontent.com/DeepakPahawa/deepk-portfolio/master/images/1733242300002-Akshath%20Srivastava.png"
+      }
+    },
+    {
+      "projectName": "",
+      "designation": "",
+      "link": "",
+      "cover": "",
+      "skills": [],
+      "companyName": "",
+      "startDate": "",
+      "endDate": "",
       "imageUrl": ""
     }
   ]
