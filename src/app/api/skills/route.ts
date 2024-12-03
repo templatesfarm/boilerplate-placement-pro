@@ -9,7 +9,6 @@ import { NextRequest, NextResponse } from "next/server";
 
 export const POST = async (req: NextRequest) => {
   const skills = await req.json();
-  console.log("🚀 ~ POST ~ skills:", skills)
 
   if (!skills) {
     return NextResponse.json(
@@ -33,11 +32,9 @@ export const POST = async (req: NextRequest) => {
     const parsedContent = await fetchFileContentFromDatabase(
       databaseRoutes.SKILLS
     );
-    console.log("🚀 ~ POST ~ parsedContent:", parsedContent?.skills as TechnologiesType)
 
     return NextResponse.json(parsedContent, { status: 200 });
   } catch (error) {
-    console.log("🚀 ~ POST ~ error:", error)
     return NextResponse.json(
       { error: (error as Error).message },
       { status: 500 }

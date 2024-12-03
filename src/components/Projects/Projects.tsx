@@ -7,16 +7,26 @@ import Link from "next/link";
 import ProjectsDialog from "./ProjectDialog";
 import { useProjectStore } from "@/store/projectStore";
 import { useEffect } from "react";
+import { ProjectsSkeleton } from "../Loaders";
 
-const background = ["bg-blue-500", "bg-indigo-500", "bg-green-500", "bg-blue-500", "bg-orange-500"]
+const background = [
+  "bg-blue-500",
+  "bg-indigo-500",
+  "bg-green-500",
+  "bg-blue-500",
+  "bg-orange-500",
+];
 
-export const ProjectsView = ( ) => {
-  const { projects = [], fetchProjectsSection} = useProjectStore();
-  console.log("🚀 ~ ProjectsView ~ projects:", projects)
+export const ProjectsView = () => {
+  const { projects = [], fetchProjectsSection, isLoading } = useProjectStore();
 
   useEffect(() => {
     fetchProjectsSection();
   }, [fetchProjectsSection]);
+
+  if (isLoading) {
+    return <ProjectsSkeleton />;
+  }
 
   return (
     <div className="py-10 px-5 flex flex-col items-center">
@@ -25,17 +35,18 @@ export const ProjectsView = ( ) => {
         {projects.map((project, index) => {
           return (
             <div
-              className={cn("p-5 rounded-md", background[index % background.length])}
+              className={cn(
+                "p-5 rounded-md",
+                background[index % background.length]
+              )}
               key={index}
             >
               <Link href={project.link} target="_blank">
-              <DirectionAwareHover imageUrl={project.imageUrl}>
-                <h1>{project.projectName}</h1>
-                <h4 className="mb-4">{project.designation}</h4>
-                <div className="text-sm text-wrap">
-                  {project.skills}
-                </div>
-              </DirectionAwareHover>
+                <DirectionAwareHover imageUrl={project.imageUrl}>
+                  <h1>{project.projectName}</h1>
+                  <h4 className="mb-4">{project.designation}</h4>
+                  <div className="text-sm text-wrap">{project.skills}</div>
+                </DirectionAwareHover>
               </Link>
             </div>
           );
@@ -43,11 +54,10 @@ export const ProjectsView = ( ) => {
       </div>
     </div>
   );
-}
-
+};
 
 const Projects = () => {
-  return <EditComponent comp={<ProjectsView />} dialog={<ProjectsDialog />}/>;
-}
+  return <EditComponent comp={<ProjectsView />} dialog={<ProjectsDialog />} />;
+};
 
 export default Projects;

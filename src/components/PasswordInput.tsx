@@ -30,26 +30,6 @@ const PasswordInput: React.FC = () => {
     }
   }, [inputValue, setIsEditing]);
 
-//   useEffect(() => {
-//     if (inputRef.current) {
-//       inputRef.current.focus();
-//     }
-//   }, []);
-
-//   const handleChange = useCallback(
-//     (event: React.ChangeEvent<HTMLInputElement>) => {
-//       console.log("🚀 ~ handleChange ~ event:", event.target.value);
-//       setInputValue(event.target.value);
-//       console.log("🚀 ~ env.password:", env.password)
-//       console.log("🚀 ~ inputValue:", inputValue)
-//       if (inputValue === "123456") {
-//         setIsEditing(true);
-//         setInputValue(""); // Clear the input value after successful match
-//       }
-//     },
-//     [inputValue, setIsEditing]
-//   );
-
   return (
     <input
       type="password"

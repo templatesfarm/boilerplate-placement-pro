@@ -10,7 +10,6 @@ import { NextRequest, NextResponse } from "next/server";
 export const POST = async (req: NextRequest) => {
   const projects: ProjectType[] = await req.json();
 
-  console.log("🚀 ~ POST ~ projects:", projects)
   if (projects?.length === 0) {
     return NextResponse.json(
       { error: "Missing required fields" },
@@ -18,7 +17,9 @@ export const POST = async (req: NextRequest) => {
     );
   }
 
-  const filteredProjects = projects.filter(project => project.projectName !== "" || project.imageUrl  !== "");
+  const filteredProjects = projects.filter(
+    (project) => project.projectName !== "" || project.imageUrl !== ""
+  );
   try {
     await createOrUpdateDataFromDatabase(
       databaseRoutes.PROJECTS,
@@ -42,13 +43,10 @@ export const POST = async (req: NextRequest) => {
 
 export const GET = async () => {
   try {
-
     const parsedContent = await fetchFileContentFromDatabase(
       databaseRoutes.PROJECTS
     );
-    console.log("🚀 ~ GET ~ Projects:", parsedContent)
     return NextResponse.json(parsedContent, { status: 200 });
-
   } catch (err: unknown) {
     const error = err as Error;
     console.error("Error fetching personal info:", error.message);

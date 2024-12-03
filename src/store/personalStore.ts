@@ -5,6 +5,7 @@ import { serverRoutes } from "@/lib/contants";
 interface PersonalStore {
   personalInfo: PersonalInfo;
   isLoading: boolean;
+  error: string;
   savePersonalInfo: (info: PersonalInfo) => void;
   // setSocialMedia: (socialMedia: SocialMedia) => void;
   fetchPersonalInfo: () => Promise<void>;
@@ -16,14 +17,15 @@ export const usePersonalStore = create<PersonalStore>((set) => ({
     contactNumber: "",
     email: "",
     socialMedia: {
-      linkedin: '',
-      github: '',
-      youtube: '',
-      facebook: '',
-      instagram: '',
+      linkedin: "",
+      github: "",
+      youtube: "",
+      facebook: "",
+      instagram: "",
     },
   },
   isLoading: true,
+  error: "",
   savePersonalInfo: async (info: PersonalInfo) => {
     set({ isLoading: true });
     try {
@@ -34,18 +36,17 @@ export const usePersonalStore = create<PersonalStore>((set) => ({
         },
         body: JSON.stringify(info),
       });
-      const data = await response.json();
-      if (!response.ok) {
-        throw new Error("Failed to save personal information");
+      if (response.ok) {
+        const data = await response.json();
+        set({
+          personalInfo: data,
+          isLoading: false,
+        });
+      } else {
+        set({ isLoading: false, error: "Failed to Save Personal Info" });
       }
-      console.log("🚀 ~ usePersonalStore ~ data:", data);
-      set({
-        personalInfo: data,
-        isLoading:false
-      });
     } catch (error) {
-      set({ isLoading: false });
-      console.error("Error saving personal information:", error);
+      set({ isLoading: false, error: (error as Error).message });
     }
   },
   fetchPersonalInfo: async () => {
@@ -57,19 +58,20 @@ export const usePersonalStore = create<PersonalStore>((set) => ({
         },
       });
 
-      if (!response.ok) {
-        throw new Error("Failed to fetch personal information");
+      if (response.ok) {
+        const data: PersonalInfo = await response.json();
+        set({
+          personalInfo: data,
+          isLoading: false,
+        });
+      } else {
+        set({
+          isLoading: false,
+          error: "Failed to fetch personal information",
+        });
       }
-
-      const data: PersonalInfo = await response.json();
-      console.log("🚀 ~ fetchPersonalInfo: ~ data:", data);
-      set({
-        personalInfo: data,
-        isLoading: false,
-
-      });
     } catch (error) {
-      console.error("Error fetching personal information:", error);
+      set({ isLoading: false, error: (error as Error).message });
     }
   },
 }));

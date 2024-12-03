@@ -7,7 +7,6 @@ export async function POST(req: NextRequest) {
 
   try {
     const formData = await req.formData()
-    console.log("🚀 ~ POST ~ formData:", formData)
     const file = formData.get("file") as File;
 
     if (!file) {

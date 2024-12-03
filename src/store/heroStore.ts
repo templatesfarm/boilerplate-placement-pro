@@ -3,8 +3,9 @@ import { HeroType } from "@/app/types/portfolio.types";
 import { serverRoutes } from "@/lib/contants";
 
 interface HeroStore {
-  heroInfo: HeroType
+  heroInfo: HeroType;
   isLoading: boolean;
+  error: string;
   saveHeroInfo: (info: HeroType) => void;
   fetchHeroSection: () => Promise<void>;
 }
@@ -16,6 +17,7 @@ export const useHeroStore = create<HeroStore>((set) => ({
     description: "",
   },
   isLoading: true,
+  error: "",
   saveHeroInfo: async (info: HeroType) => {
     set({ isLoading: true });
     try {
@@ -27,17 +29,17 @@ export const useHeroStore = create<HeroStore>((set) => ({
         body: JSON.stringify(info),
       });
       const data = await response.json();
-      console.log("🚀 ~ saveHeroSection: ~ data:", data)
-      if (!response.ok) {
-        throw new Error("Failed to save personal information");
+      if (response.ok) {
+        set({
+          heroInfo: data,
+          isLoading: false,
+        });
+      } else {
+        set({ isLoading: false, error: "Failed to Save Hero Section" });
       }
-      set({
-        heroInfo: data,
-        isLoading:false
-      });
-    } catch (error) {
-      console.log("🚀 ~ saveHeroSection: ~ error:", error)
-      set({ isLoading: false });
+    } catch (err) {
+      const error = err as Error;
+      set({ isLoading: false, error: error.message });
     }
   },
   fetchHeroSection: async () => {
@@ -49,18 +51,18 @@ export const useHeroStore = create<HeroStore>((set) => ({
         },
       });
 
-      if (!response.ok) {
-        throw new Error("Failed to fetch Hero information");
+      if (response.ok) {
+        const data: HeroType = await response.json();
+        set({
+          heroInfo: data,
+          isLoading: false,
+        });
+      } else {
+        set({ isLoading: false, error: "Failed to fetch Hero Section" });
       }
-
-      const data: HeroType = await response.json();
-      console.log("🚀 ~ fetchHeroSection: ~ data:", data)
-      set({
-        heroInfo: data,
-        isLoading: false,
-      });
-    } catch (error) {
-      console.log("🚀 ~ fetchHeroSection: ~ error:", error)
+    } catch (err) {
+      const error = err as Error;
+      set({ isLoading: false, error: error.message });
     }
   },
 }));

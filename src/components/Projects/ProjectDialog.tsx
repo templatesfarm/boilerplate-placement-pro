@@ -55,7 +55,6 @@ export const ProjectsDialog: React.FC<ProjectDialogProps> = ({
   };
 
   const handleSave = async () => {
-    console.log("🚀 ~ handleSave ~ localProjects:", localProjects);
     saveProjects(localProjects);
     onOpenChange?.(false);
   };
@@ -123,7 +122,6 @@ const ProjectDetail: React.FC<ProjectDetailType> = ({
   },[]);
 
   const handleImageUrl = useCallback((imageUrl: string) => {
-    console.log("🚀 ~ handleImageUrl ~ imageUrl:", imageUrl);
     setProjectDetails((prev) => ({
       ...prev,
       imageUrl: imageUrl,
@@ -132,7 +130,6 @@ const ProjectDetail: React.FC<ProjectDetailType> = ({
   },[]);
 
   const handleBlur = useCallback(() => {
-    console.log("🚀 ~ handleBlur ~ projectDetails:", projectDetails);
     updateProjects(index, projectDetails);
   },[index, projectDetails, updateProjects]);
 

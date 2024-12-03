@@ -33,7 +33,6 @@ const FileUpload:React.FC<PropType> = ({ setImageUrl }) => {
         body: formData, 
       });
       const data = await response.json() || null;
-      console.log("🚀 ~ handleUpload ~ url:", data)
       if (response.ok && !!data) { 
         setUploadedUrl(data.url);
         setImageUrl(data.url);
