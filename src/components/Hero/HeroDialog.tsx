@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useHeroStore } from '@/store/heroStore';
 import { Dialog, DialogContent, DialogDescription, DialogOverlay, DialogTitle } from '../ui/dialog';
 import { HeroType } from '@/app/types/portfolio.types';
-import FileUpload from '../FileUpload/FileUpload';
 
 interface HeroDialogProps {
   isOpen?: boolean;
@@ -69,7 +68,6 @@ const HeroDialog: React.FC<HeroDialogProps> = ({ isOpen, onOpenChange }) => {
             Save
           </button>
         </div>
-        <FileUpload />
       </DialogContent>
     </Dialog>
   );
