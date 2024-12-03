@@ -2,10 +2,6 @@
   "skills": {
     "frontend": [
       {
-        "label": "TypeScript",
-        "imageName": "/typescript.webp"
-      },
-      {
         "label": "Tailwind",
         "imageName": "/tailwind.png"
       },
@@ -16,10 +12,6 @@
       {
         "label": "NextJS",
         "imageName": "/nextjs.jpg"
-      },
-      {
-        "label": "JavaScript",
-        "imageName": "/javascript.png"
       }
     ],
     "backend": [
@@ -30,85 +22,10 @@
       {
         "label": "NodeJS",
         "imageName": "/nodejs.webp"
-      },
-      {
-        "label": "Spring Boot",
-        "imageName": "/springboot.png"
-      },
-      {
-        "label": "Flask",
-        "imageName": "/flask.png"
-      },
-      {
-        "label": "Django",
-        "imageName": "/django.png"
       }
     ],
-    "database": [
-      {
-        "label": "Redis",
-        "imageName": "/redis.png"
-      },
-      {
-        "label": "SQLite",
-        "imageName": "/sqlite.png"
-      },
-      {
-        "label": "MySQL",
-        "imageName": "/mysql.png"
-      },
-      {
-        "label": "MongoDB",
-        "imageName": "/mongodb.png"
-      },
-      {
-        "label": "PostgreSQL",
-        "imageName": "/postgresql.png"
-      }
-    ],
-    "mobile": [
-      {
-        "label": "React Native",
-        "imageName": "/reactnative.png"
-      },
-      {
-        "label": "Flutter",
-        "imageName": "/flutter.png"
-      },
-      {
-        "label": "Swift",
-        "imageName": "/swift.png"
-      },
-      {
-        "label": "Kotlin",
-        "imageName": "/kotlin.png"
-      },
-      {
-        "label": "Ionic",
-        "imageName": "/ionic.png"
-      }
-    ],
-    "devops": [
-      {
-        "label": "Docker",
-        "imageName": "/docker.png"
-      },
-      {
-        "label": "Kubernetes",
-        "imageName": "/kubernetes.png"
-      },
-      {
-        "label": "Jenkins",
-        "imageName": "/jenkins.png"
-      },
-      {
-        "label": "GitHub Actions",
-        "imageName": "/githubactions.png"
-      },
-      {
-        "label": "Terraform",
-        "imageName": "/terraform.png"
-      }
-    ]
+    "database": [],
+    "mobile": [],
+    "devops": []
   }
 }
