@@ -1,6 +1,6 @@
 [
   {
-    "projectName": "Intuit Quickbooks",
+    "projectName": "Intuit Quickbooks INDIA",
     "designation": "Senior Software Engineer",
     "link": "https://quickbooks.intuit.com/",
     "cover": "",
@@ -8,8 +8,17 @@
     "companyName": "Intuit",
     "startDate": "2015-12-04",
     "endDate": "2020-06-04",
-    "imageUrl": {
-      "url": "https://raw.githubusercontent.com/DeepakPahawa/deepk-portfolio/master/images/1733242300002-Akshath%20Srivastava.png"
-    }
+    "imageUrl": "https://raw.githubusercontent.com/DeepakPahawa/deepk-portfolio/master/images/1733253341479-Intuit%20Quickbooks.png"
+  },
+  {
+    "projectName": "",
+    "designation": "",
+    "link": "",
+    "cover": "",
+    "skills": [],
+    "companyName": "",
+    "startDate": "",
+    "endDate": "",
+    "imageUrl": ""
   }
 ]
