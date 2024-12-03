@@ -1,2 +1,15 @@
 {
+  "projects": [
+    {
+      "projectName": "Microsoft Word",
+      "designation": "Senior Software Engineer",
+      "link": "",
+      "cover": "",
+      "skills": "Java, JavaScript, NextJS",
+      "companyName": "Broadridge",
+      "startDate": "2022-01-03",
+      "endDate": "2024-12-03",
+      "imageUrl": ""
+    }
+  ]
 }
