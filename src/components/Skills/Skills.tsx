@@ -7,7 +7,7 @@ import SkillDialog from "./SkillDialog";
 import { useEffect } from "react";
 import { SkillsSkeleton } from "../Loaders";
 
-function Skills() {
+function SkillsView() {
   // const skills = [
   //   {
   //     text: "ReactJS",
@@ -64,8 +64,8 @@ function Skills() {
   );
 }
 
-const SkillsWithDialog = () => {
-  return <EditComponent comp={<Skills />} dialog={<SkillDialog />} />;
+const Skills = () => {
+  return <EditComponent comp={<SkillsView />} dialog={<SkillDialog />} />;
 };
 
-export default SkillsWithDialog;
+export default Skills;

@@ -8,7 +8,7 @@ import SocialMediaIcons from "../SocialMedia";
 import { ProfileSkeleton } from "../Loaders";
 import { usePersonalStore } from "@/store/personalStore";
 
-const Navbar = ({ className }: { className?: string }) => {
+const NavbarView = ({ className }: { className?: string }) => {
   const { personalInfo, fetchPersonalInfo, isLoading } = usePersonalStore();
 
   useEffect(() => {
@@ -29,8 +29,8 @@ const Navbar = ({ className }: { className?: string }) => {
   );
 };
 
-const NavbarWithDialog = () => {
-  return <EditComponent comp={<Navbar />} dialog={<PersonalInfoDialog />} />;
+const Navbar = () => {
+  return <EditComponent comp={<NavbarView />} dialog={<PersonalInfoDialog />} />;
 };
 
-export default NavbarWithDialog;
+export default Navbar;

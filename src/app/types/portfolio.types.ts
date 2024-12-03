@@ -22,3 +22,15 @@ export type SkillType = {
 }
 
 export type TechnologiesType = { [key: string]: SkillType[] };
+
+
+export type ProjectType = {
+  projectName: string;
+  designation: string;
+  link: string;
+  skills: string[];
+  companyName: string;
+  startDate: string;
+  endDate: string;
+  imageUrl: string;
+};

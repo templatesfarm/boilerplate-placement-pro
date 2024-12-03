@@ -1,10 +1,10 @@
 "use client"
 import Footer from "@/components/Footer";
-import HeroSectionWithDialog from "@/components/Hero/Hero";
-import NavbarWithDialog from "@/components/Navbar/Navbar";
+import Hero from "@/components/Hero/Hero";
+import Navbar from "@/components/Navbar/Navbar";
 import PasswordInput from "@/components/PasswordInput";
-import Projects from "@/components/Projects";
-import SkillsWithDialog from "@/components/Skills/Skills";
+import Projects from "@/components/Projects/Projects";
+import Skills from "@/components/Skills/Skills";
 import { useAppStore } from "@/store/appStore";
 
 export default function Home() {
@@ -14,9 +14,9 @@ export default function Home() {
     <div className="min-h-screen bg-black overflow-hidden">
       <div className="max-w-7xl mx-auto p-5">
         {!isEditing && <PasswordInput />}
-        <NavbarWithDialog />
-        <HeroSectionWithDialog/>
-        <SkillsWithDialog />
+        <Navbar />
+        <Hero/>
+        <Skills />
         <Projects />
       </div>
       <Footer />

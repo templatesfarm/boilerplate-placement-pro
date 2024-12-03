@@ -8,7 +8,7 @@ type PropType  = {
   setImageUrl: (x: string) => void;
 }
 
-const FileUpload:React.FC<PropType> = ({ setImageUrl}) => {
+const FileUpload:React.FC<PropType> = ({ setImageUrl }) => {
   const [image, setImage] = useState<File | null>(null);
   const [error, setError] = useState<string>("");
   const [uploading, setUploading] = useState(false);
@@ -32,11 +32,11 @@ const FileUpload:React.FC<PropType> = ({ setImageUrl}) => {
         method: "POST",
         body: formData, 
       });
-      const url = await response.json() || null;
-      console.log("🚀 ~ handleUpload ~ url:", url)
-      if (response.ok && url) { 
-        setUploadedUrl(url);
-        setImageUrl(url);
+      const data = await response.json() || null;
+      console.log("🚀 ~ handleUpload ~ url:", data)
+      if (response.ok && !!data) { 
+        setUploadedUrl(data.url);
+        setImageUrl(data.url);
       }
     } catch (err) {
       const error = err as Error;
@@ -56,12 +56,12 @@ const FileUpload:React.FC<PropType> = ({ setImageUrl}) => {
         {uploading ? "Uploading..." : "Upload"}
       </Button>
       {error && <p className="text-red-500 text-sm">{error}</p>}
-      {uploadedUrl && (
+      {!!uploadedUrl && (
         <div className="mt-4">
           <p>Image uploaded successfully:</p>
-          <a href={uploadedUrl} target="_blank" rel="noopener noreferrer">
+          {/* <a href={uploadedUrl} target="_blank" rel="noopener noreferrer">
             {uploadedUrl}
-          </a>
+          </a> */}
         </div>
       )}
     </div>

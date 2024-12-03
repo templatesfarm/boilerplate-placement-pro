@@ -7,7 +7,7 @@ import EditComponent from "../EditComponent";
 import HeroDialog from "./HeroDialog";
 import { usePersonalStore } from "@/store/personalStore";
 
-function HeroSection() {
+function HeroView() {
 
   const { heroInfo, fetchHeroSection,  isLoading} = useHeroStore();
   const { personalInfo} = usePersonalStore();
@@ -60,8 +60,8 @@ function HeroSection() {
   );
 }
 
-const HeroSectionWithDialog = () => { 
-  return <EditComponent comp={<HeroSection />} dialog={<HeroDialog />}/>;
+const Hero = () => { 
+  return <EditComponent comp={<HeroView />} dialog={<HeroDialog />}/>;
 }
 
-export default HeroSectionWithDialog
+export default Hero
