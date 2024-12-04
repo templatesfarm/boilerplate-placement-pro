@@ -2,26 +2,26 @@
   "skills": {
     "frontend": [
       {
-        "label": "Tailwind",
-        "imageName": "/tailwind.png"
-      },
-      {
         "label": "ReactJS",
         "imageName": "/reactjs.png"
-      },
-      {
-        "label": "NextJS",
-        "imageName": "/nextjs.jpg"
-      },
-      {
-        "label": "TypeScript",
-        "imageName": "/typescript.webp"
       }
     ],
     "backend": [
       {
         "label": "NodeJS",
         "imageName": "/nodejs.webp"
+      },
+      {
+        "label": "Flask",
+        "imageName": "/flask.png"
+      },
+      {
+        "label": "Django",
+        "imageName": "/django.png"
+      },
+      {
+        "label": "ExpressJS",
+        "imageName": "/expressjs.png"
       }
     ],
     "database": [],
