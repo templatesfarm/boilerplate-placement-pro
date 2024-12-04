@@ -16,10 +16,6 @@
       {
         "label": "TypeScript",
         "imageName": "/typescript.webp"
-      },
-      {
-        "label": "JavaScript",
-        "imageName": "/javascript.png"
       }
     ],
     "backend": [
@@ -29,7 +25,12 @@
       }
     ],
     "database": [],
-    "mobile": [],
+    "mobile": [
+      {
+        "label": "React Native",
+        "imageName": "/reactnative.png"
+      }
+    ],
     "devops": []
   }
 }
