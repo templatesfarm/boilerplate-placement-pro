@@ -4,6 +4,22 @@
       {
         "label": "ReactJS",
         "imageName": "/reactjs.png"
+      },
+      {
+        "label": "TypeScript",
+        "imageName": "/typescript.webp"
+      },
+      {
+        "label": "Tailwind",
+        "imageName": "/tailwind.png"
+      },
+      {
+        "label": "NextJS",
+        "imageName": "/nextjs.jpg"
+      },
+      {
+        "label": "JavaScript",
+        "imageName": "/javascript.png"
       }
     ],
     "backend": [
