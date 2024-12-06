@@ -1,9 +1,9 @@
 import { ProjectType } from "@/app/types/portfolio.types";
 import { databaseRoutes } from "@/lib/contants";
 import {
-  createOrUpdateDataFromDatabase,
   fetchFileContentFromDatabase,
-} from "@/lib/server/githubApi";
+  createOrUpdateData,
+} from "portfolio-api-package";
 
 import { NextRequest, NextResponse } from "next/server";
 
@@ -21,10 +21,7 @@ export const POST = async (req: NextRequest) => {
     (project) => project.projectName !== "" || project.imageUrl !== ""
   );
   try {
-    await createOrUpdateDataFromDatabase(
-      databaseRoutes.PROJECTS,
-      filteredProjects
-    );
+    await createOrUpdateData(databaseRoutes.PROJECTS, filteredProjects);
 
     // Update the file in the repository
     const parsedContent = await fetchFileContentFromDatabase(

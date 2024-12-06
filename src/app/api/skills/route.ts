@@ -1,8 +1,8 @@
 import { databaseRoutes } from "@/lib/contants";
 import {
-  createOrUpdateDataFromDatabase,
   fetchFileContentFromDatabase,
-} from "@/lib/server/githubApi";
+  createOrUpdateData,
+} from "portfolio-api-package";
 
 import { NextRequest, NextResponse } from "next/server";
 
@@ -22,7 +22,7 @@ export const POST = async (req: NextRequest) => {
       skills,
     };
 
-    await createOrUpdateDataFromDatabase(databaseRoutes.SKILLS, updatedContent);
+    await createOrUpdateData(databaseRoutes.SKILLS, updatedContent);
 
     // Update the file in the repository
     const parsedContent = await fetchFileContentFromDatabase(

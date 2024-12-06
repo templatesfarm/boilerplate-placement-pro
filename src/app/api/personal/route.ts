@@ -1,8 +1,8 @@
 import { databaseRoutes } from "@/lib/contants";
 import {
-  createOrUpdateDataFromDatabase,
   fetchFileContentFromDatabase,
-} from "@/lib/server/githubApi";
+  createOrUpdateData,
+} from "portfolio-api-package";
 
 import { NextRequest, NextResponse } from "next/server";
 
@@ -25,10 +25,7 @@ export const POST = async (req: NextRequest) => {
       socialMedia,
     };
 
-    await createOrUpdateDataFromDatabase(
-      databaseRoutes.PERSONAL_INFO,
-      updatedContent
-    );
+    await createOrUpdateData(databaseRoutes.PERSONAL_INFO, updatedContent);
 
     // Update the file in the repository
     const parsedContent = await fetchFileContentFromDatabase(
@@ -47,12 +44,10 @@ export const POST = async (req: NextRequest) => {
 
 export const GET = async () => {
   try {
-
     const parsedContent = await fetchFileContentFromDatabase(
       databaseRoutes.PERSONAL_INFO
     );
     return NextResponse.json(parsedContent, { status: 200 });
-
   } catch (err: unknown) {
     const error = err as Error;
     console.error("Error fetching personal info:", error.message);

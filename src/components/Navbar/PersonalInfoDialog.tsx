@@ -1,16 +1,28 @@
-import React, { useState, useEffect } from 'react';
-import { usePersonalStore } from '@/store/personalStore';
-import { Dialog, DialogContent, DialogOverlay, DialogTitle, DialogDescription } from '../ui/dialog';
-import { PersonalInfo } from '@/app/types/portfolio.types';
+import React, { useState, useEffect } from "react";
+import {
+  Dialog,
+  DialogContent,
+  DialogOverlay,
+  DialogTitle,
+  DialogDescription,
+} from "../ui/dialog";
+import { PersonalInfo } from "@/app/types/portfolio.types";
 
 interface PersonalInfoDialogProps {
-  isOpen?: boolean;
-  onOpenChange?: (x: boolean) => void;
+  isOpen: boolean;
+  onOpenChange: (x: boolean) => void;
+  personalInfo: PersonalInfo;
+  savePersonalInfo?: (x: PersonalInfo) => void;
 }
 
-const PersonalInfoDialog: React.FC<PersonalInfoDialogProps> = ({ isOpen, onOpenChange }) => {
-  const { personalInfo, savePersonalInfo } = usePersonalStore();
-  const [localPersonalInfo, setLocalPersonalInfo] = useState<PersonalInfo>(personalInfo);
+const PersonalInfoDialog: React.FC<PersonalInfoDialogProps> = ({
+  isOpen,
+  onOpenChange,
+  personalInfo,
+  savePersonalInfo,
+}) => {
+  const [localPersonalInfo, setLocalPersonalInfo] =
+    useState<PersonalInfo>(personalInfo);
 
   useEffect(() => {
     setLocalPersonalInfo(personalInfo);
@@ -36,23 +48,22 @@ const PersonalInfoDialog: React.FC<PersonalInfoDialogProps> = ({ isOpen, onOpenC
   };
 
   const handleSave = async () => {
-    await savePersonalInfo(localPersonalInfo);
+    await savePersonalInfo?.(localPersonalInfo);
     handleOpenChange();
-    
   };
 
   const handleOpenChange = () => {
-    if (onOpenChange) {
-      onOpenChange(false);
-    }
-  }
+    onOpenChange(false);
+  };
 
   return (
     <Dialog open={isOpen} onOpenChange={handleOpenChange}>
       <DialogOverlay />
-      <DialogContent className='overflow-auto max-h-svh space-y-2'>
+      <DialogContent className="overflow-auto max-h-svh space-y-2">
         <DialogTitle>Edit Personal Information</DialogTitle>
-        <DialogDescription>Update your personal information below.</DialogDescription>
+        <DialogDescription>
+          Update your personal information below.
+        </DialogDescription>
         <div className="">
           <label className="block mb-1">Name</label>
           <input
@@ -134,7 +145,10 @@ const PersonalInfoDialog: React.FC<PersonalInfoDialogProps> = ({ isOpen, onOpenC
           />
         </div>
         <div className=" flex justify-end">
-          <button onClick={handleSave} className="bg-blue-500 text-white px-4 py-2 rounded">
+          <button
+            onClick={handleSave}
+            className="bg-blue-500 text-white px-4 py-2 rounded"
+          >
             Save
           </button>
         </div>

@@ -1,8 +1,8 @@
 import { databaseRoutes } from "@/lib/contants";
 import {
-  createOrUpdateDataFromDatabase,
   fetchFileContentFromDatabase,
-} from "@/lib/server/githubApi";
+  createOrUpdateData,
+} from "portfolio-api-package";
 
 import { NextRequest, NextResponse } from "next/server";
 
@@ -19,13 +19,12 @@ export const POST = async (req: NextRequest) => {
   try {
     // Prepare the updated content
     const updatedContent = {
-      message, introduction, description
+      message,
+      introduction,
+      description,
     };
 
-    await createOrUpdateDataFromDatabase(
-      databaseRoutes.HERO,
-      updatedContent
-    );
+    await createOrUpdateData(databaseRoutes.HERO, updatedContent);
 
     // Update the file in the repository
     const parsedContent = await fetchFileContentFromDatabase(
@@ -44,12 +43,10 @@ export const POST = async (req: NextRequest) => {
 
 export const GET = async () => {
   try {
-
     const parsedContent = await fetchFileContentFromDatabase(
       databaseRoutes.HERO
     );
     return NextResponse.json(parsedContent, { status: 200 });
-
   } catch (err: unknown) {
     const error = err as Error;
     console.error("Error fetching hero info:", error.message);
