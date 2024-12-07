@@ -8,6 +8,18 @@
       {
         "label": "NextJS",
         "imageName": "/nextjs.jpg"
+      },
+      {
+        "label": "Tailwind",
+        "imageName": "/tailwind.png"
+      },
+      {
+        "label": "TypeScript",
+        "imageName": "/typescript.webp"
+      },
+      {
+        "label": "JavaScript",
+        "imageName": "/javascript.png"
       }
     ],
     "backend": [],
@@ -21,12 +33,7 @@
         "imageName": "/mysql.png"
       }
     ],
-    "mobile": [
-      {
-        "label": "React Native",
-        "imageName": "/reactnative.png"
-      }
-    ],
+    "mobile": [],
     "devops": []
   }
 }
