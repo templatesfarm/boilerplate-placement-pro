@@ -33,7 +33,16 @@
         "imageName": "/mysql.png"
       }
     ],
-    "mobile": [],
+    "mobile": [
+      {
+        "label": "Ionic",
+        "imageName": "/ionic.png"
+      },
+      {
+        "label": "Kotlin",
+        "imageName": "/kotlin.png"
+      }
+    ],
     "devops": []
   }
 }
