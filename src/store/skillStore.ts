@@ -6,7 +6,7 @@ interface SkillsStore {
   skills: TechnologiesType;
   isLoading: boolean;
   error: string;
-  saveSelectedSkills: (skills: TechnologiesType) => void;
+  saveSelectedSkills: (x: TechnologiesType) => void;
   fetchSkills: () => void;
 }
 

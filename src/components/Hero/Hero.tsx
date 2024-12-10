@@ -1,25 +1,20 @@
 import Link from "next/link";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Title from "../Title";
 import { useHeroStore } from "@/store/heroStore";
 import { HeroSkeleton } from "../Loaders";
-import EditComponent from "../EditComponent";
 import HeroDialog from "./HeroDialog";
 import { usePersonalStore } from "@/store/personalStore";
+import EditComponent from "../EditComponent";
+import { useAppStore } from "@/store/appStore";
+import { HeroType, PersonalInfo } from "@/app/types/portfolio.types";
 
-function HeroView() {
+interface HeroViewProps {
+  heroInfo: HeroType;
+  personalInfo: PersonalInfo;
+}
 
-  const { heroInfo, fetchHeroSection,  isLoading} = useHeroStore();
-  const { personalInfo} = usePersonalStore();
-
-  useEffect(() => {
-    fetchHeroSection()
-  }, [fetchHeroSection]);
-
-  if(isLoading) {
-    return <HeroSkeleton />
-  }
-
+const HeroView: React.FC<HeroViewProps> = ({ heroInfo, personalInfo }) => {
   return (
     <div className="min-h-[60vh] flex items-center mt-24 flex-col-reverse gap-14 lg:flex-row lg:justify-between ">
       <div className="space-y-10 text-center lg:text-left">
@@ -58,10 +53,61 @@ function HeroView() {
       </div>
     </div>
   );
+};
+
+const Hero = () => {
+  const { heroInfo, fetchHeroSection, isLoading, saveHeroInfo } =
+    useHeroStore();
+  const { personalInfo } = usePersonalStore();
+  const { isEditing } = useAppStore();
+
+  useEffect(() => {
+    fetchHeroSection();
+  }, [fetchHeroSection]);
+
+  if (isLoading) {
+    return <HeroSkeleton />;
+  }
+
+  return (
+    <HeroBasic
+      isEditing={isEditing}
+      heroInfo={heroInfo}
+      saveHeroInfo={saveHeroInfo}
+      personalInfo={personalInfo}
+    />
+  );
+};
+
+interface HeroBasicProps {
+  isEditing: boolean;
+  heroInfo: HeroType;
+  saveHeroInfo: (info: HeroType) => void;
+  personalInfo: PersonalInfo;
 }
 
-const Hero = () => { 
-  return <EditComponent comp={<HeroView />} dialog={<HeroDialog />}/>;
-}
+const HeroBasic: React.FC<HeroBasicProps> = ({
+  isEditing,
+  personalInfo,
+  heroInfo,
+  saveHeroInfo,
+}) => {
+  const [isDialogOpen, setIsDialogOpen] = useState<boolean>(false);
 
-export default Hero
+  return (
+    <EditComponent
+      isEditing={isEditing}
+      handleEditClick={() => setIsDialogOpen(true)}
+    >
+      <HeroView heroInfo={heroInfo} personalInfo={personalInfo} />
+      <HeroDialog
+        heroInfo={heroInfo}
+        saveHeroInfo={saveHeroInfo}
+        isOpen={isDialogOpen}
+        onOpenChange={(flag: boolean = false) => setIsDialogOpen(flag)}
+      />
+    </EditComponent>
+  );
+};
+
+export default Hero;

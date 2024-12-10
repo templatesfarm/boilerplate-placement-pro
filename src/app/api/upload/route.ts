@@ -1,6 +1,7 @@
 // app/api/upload/route.ts
+import { uploadFileInCDN } from "@/lib/server/githubApi";
 import { NextRequest, NextResponse } from "next/server";
-import { uploadFileInCDN } from "portfolio-api-package";
+// import { uploadFileInCDN } from "portfolio-api-package";
 
 export async function POST(req: NextRequest) {
   try {

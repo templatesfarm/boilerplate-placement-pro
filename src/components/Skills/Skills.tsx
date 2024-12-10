@@ -2,70 +2,78 @@
 import { useSkillsStore } from "@/store/skillStore";
 import EditComponent from "../EditComponent";
 import Title from "../Title";
-import { HoverEffect } from "../ui/card-hover-effect";
+import { HoverEffectCard } from "../ui/card-hover-effect";
 import SkillDialog from "./SkillDialog";
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { SkillsSkeleton } from "../Loaders";
+import { TechnologiesType } from "@/app/types/portfolio.types";
+import { useAppStore } from "@/store/appStore";
 
-function SkillsView() {
-  // const skills = [
-  //   {
-  //     text: "ReactJS",
-  //     imageName: "/reactjs.png",
-  //   },
-  //   {
-  //     text: "NextJS",
-  //     imageName: "/nextjs.jpg",
-  //   },
-  //   {
-  //     text: "Tailwind",
-  //     imageName: "/tailwind.png",
-  //   },
-  //   {
-  //     text: "TypeScript",
-  //     imageName: "/typescript.webp",
-  //   },
-  //   {
-  //     text: "JavaScript",
-  //     imageName: "/javascript.png",
-  //   },
-  //   {
-  //     text: "NodeJS",
-  //     imageName: "/nodejs.webp",
-  //   },
-  //   {
-  //     text: "GitHub",
-  //     imageName: "/github.webp",
-  //   },
-  //   {
-  //     text: "Appwrite",
-  //     imageName: "/appwrite.png",
-  //   },
-  //   {
-  //     text: "PostgreSQL",
-  //     imageName: "/postgresql.png",
-  //   },
-  // ];
+interface SkillsViewProps {
+  skills: TechnologiesType;
+}
 
-  const { skills, fetchSkills, isLoading } = useSkillsStore();
-
-  useEffect(() => {
-    fetchSkills();
-  }, [fetchSkills]);
-
+const SkillsView: React.FC<SkillsViewProps> = ({ skills }) => {
   return (
     <div className="mt-24 flex flex-col" id="skills">
       <Title
         title="Skills 🛠️"
         className="-rotate-6 inline-block float-center mx-auto"
       />
-      {isLoading ? <SkillsSkeleton /> : <HoverEffect items={skills} />}
+      <HoverEffectCard items={skills} />
     </div>
   );
-}
+};
 
 const Skills = () => {
-  return <EditComponent comp={<SkillsView />} dialog={<SkillDialog />} />;
+  const { skills, fetchSkills, isLoading, saveSelectedSkills } =
+    useSkillsStore();
+  const { isEditing } = useAppStore();
+
+  useEffect(() => {
+    fetchSkills();
+  }, [fetchSkills]);
+
+  if (isLoading) {
+    return <SkillsSkeleton />;
+  }
+
+  return (
+    <SkillsBasic
+      saveSelectedSkills={saveSelectedSkills}
+      skills={skills}
+      isEditing={isEditing}
+    />
+  );
+};
+
+interface SkillBasicProps {
+  isEditing: boolean;
+  skills: TechnologiesType;
+  saveSelectedSkills: (x: TechnologiesType) => void;
+}
+
+const SkillsBasic: React.FC<SkillBasicProps> = ({
+  isEditing,
+  skills,
+  saveSelectedSkills,
+}) => {
+  const [isDialogOpen, setIsDialogOpen] = useState<boolean>(false);
+
+  return (
+    <EditComponent
+      isEditing={isEditing}
+      handleEditClick={() => setIsDialogOpen(true)}
+    >
+      <SkillsView skills={skills} />
+      <SkillDialog
+        skills={skills}
+        saveSelectedSkills={saveSelectedSkills}
+        isOpen={isDialogOpen}
+        onOpenChange={(flag: boolean = false) => setIsDialogOpen(flag)}
+      />
+    </EditComponent>
+  );
 };
 
 export default Skills;

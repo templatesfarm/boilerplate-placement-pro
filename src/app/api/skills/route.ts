@@ -1,8 +1,13 @@
 import { databaseRoutes } from "@/lib/contants";
+// import {
+//   fetchFileContentFromDatabase,
+//   createOrUpdateData,
+// } from "portfolio-api-package";
+
 import {
-  fetchFileContentFromDatabase,
   createOrUpdateData,
-} from "portfolio-api-package";
+  fetchFileContentFromDatabase,
+} from "@/lib/server/githubApi";
 
 import { NextRequest, NextResponse } from "next/server";
 

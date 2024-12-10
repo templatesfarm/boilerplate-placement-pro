@@ -1,22 +1,31 @@
-import React, { useState, useEffect } from 'react';
-import { useHeroStore } from '@/store/heroStore';
-import { Dialog, DialogContent, DialogDescription, DialogOverlay, DialogTitle } from '../ui/dialog';
-import { HeroType } from '@/app/types/portfolio.types';
+import React, { useState } from "react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogOverlay,
+  DialogTitle,
+} from "../ui/dialog";
+import { HeroType } from "@/app/types/portfolio.types";
 
 interface HeroDialogProps {
   isOpen?: boolean;
   onOpenChange?: (x: boolean) => void;
+  heroInfo: HeroType;
+  saveHeroInfo: (x: HeroType) => void;
 }
 
-const HeroDialog: React.FC<HeroDialogProps> = ({ isOpen, onOpenChange }) => {
-  const { heroInfo, saveHeroInfo } = useHeroStore();
+const HeroDialog: React.FC<HeroDialogProps> = ({
+  isOpen,
+  onOpenChange,
+  heroInfo,
+  saveHeroInfo,
+}) => {
   const [localHeroInfo, setLocalHeroInfo] = useState<HeroType>(heroInfo);
 
-  useEffect(() => {
-    setLocalHeroInfo(heroInfo);
-  }, [heroInfo]);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setLocalHeroInfo((prev) => ({
       ...prev,
@@ -32,9 +41,11 @@ const HeroDialog: React.FC<HeroDialogProps> = ({ isOpen, onOpenChange }) => {
   return (
     <Dialog open={isOpen} onOpenChange={() => onOpenChange?.(false)}>
       <DialogOverlay />
-      <DialogContent className='overflow-auto max-h-svh space-y-2'>
+      <DialogContent className="overflow-auto max-h-svh space-y-2">
         <DialogTitle>Edit Hero Information</DialogTitle>
-        <DialogDescription>Update your hero information below.</DialogDescription>
+        <DialogDescription>
+          Update your hero information below.
+        </DialogDescription>
         <div className="">
           <label className="block mb-1">Message</label>
           <input
@@ -64,7 +75,10 @@ const HeroDialog: React.FC<HeroDialogProps> = ({ isOpen, onOpenChange }) => {
           />
         </div>
         <div className="mt-4 flex justify-end">
-          <button onClick={handleSave} className="bg-blue-500 text-white px-4 py-2 rounded">
+          <button
+            onClick={handleSave}
+            className="bg-blue-500 text-white px-4 py-2 rounded"
+          >
             Save
           </button>
         </div>

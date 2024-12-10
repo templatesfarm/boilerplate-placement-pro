@@ -1,27 +1,21 @@
-import { useAppStore } from "@/store/appStore";
-import React, { useState } from "react";
+import React from "react";
 import { FaPencilAlt } from "react-icons/fa";
 
 interface PropTypes {
-  comp: React.ReactElement;
-  dialog: React.ReactElement;
+  children: React.ReactNode;
+  isEditing: boolean;
+  handleEditClick: () => void;
 }
 
-const EditComponent: React.FC<PropTypes> = ({ comp, dialog }) => {
-  const { isEditing } = useAppStore();
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
-
-  const handleEditClick = () => {
-    setIsDialogOpen(true);
-  };
-
-  const onOpenChange = (flag: boolean = false) => {
-    setIsDialogOpen(flag);
-    // Save the input value to the store or perform any other save action
-  };
-
+const EditComponent: React.FC<PropTypes> = ({
+  children,
+  isEditing,
+  handleEditClick,
+}) => {
   return (
-    <div className={`relative ${isEditing ? "border border-red-500 my-2" : ""}`}>
+    <div
+      className={`relative ${isEditing ? "border border-red-500 my-2" : ""}`}
+    >
       {isEditing && (
         <div className="absolute top-2 right-2">
           <button onClick={handleEditClick}>
@@ -29,13 +23,7 @@ const EditComponent: React.FC<PropTypes> = ({ comp, dialog }) => {
           </button>
         </div>
       )}
-      <div className={`${isEditing ? "mt-8 mb-2" : ""}`}>
-        {React.cloneElement(comp as React.ReactElement)}
-        {React.cloneElement(dialog as React.ReactElement, {
-          isOpen: isDialogOpen,
-          onOpenChange: onOpenChange,
-        })}
-      </div>
+      <div className={`${isEditing ? "mt-8 mb-2" : ""}`}>{children}</div>
     </div>
   );
 };

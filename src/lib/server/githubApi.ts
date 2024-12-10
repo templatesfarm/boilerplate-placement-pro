@@ -27,10 +27,7 @@ const fetchFileData = async (path: string) => {
   return fileData;
 };
 
-export const createOrUpdateDataFromDatabase = async (
-  path: string,
-  content: unknown
-) => {
+export const createOrUpdateData = async (path: string, content: unknown) => {
   // Get the file's current SHA and content
   const fileData = await fetchFileData(path);
 

@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useMemo, useState } from "react";
 
-export const HoverEffect = ({
+export const HoverEffectCard = ({
   items,
   className,
 }: {
@@ -13,7 +13,7 @@ export const HoverEffect = ({
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
-  const singleArray = useMemo(() => Object.values(items).flat(),[items]);
+  const singleArray = useMemo(() => Object.values(items).flat(), [items]);
 
   return (
     <div
@@ -22,9 +22,9 @@ export const HoverEffect = ({
         className
       )}
     >
-      {singleArray?.map((tech, index) => 
+      {singleArray?.map((tech, index) => (
         <div
-          key={"" + index }
+          key={"" + index}
           className="relative group  block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(index)}
           onMouseLeave={() => setHoveredIndex(null)}
@@ -48,14 +48,20 @@ export const HoverEffect = ({
           </AnimatePresence>
           <div className="rounded-md w-full p-4 overflow-hidden bg-black ring-green-500 group-hover:ring-1  relative z-20 transition-all duration-500 cursor-pointer">
             <div className="py-5 z-50 relative space-y-10">
-              <Image src={`/images${tech.imageName}`} width={50} height={50} alt={tech.label} className="mx-auto"/>
+              <Image
+                src={`/images${tech.imageName}`}
+                width={50}
+                height={50}
+                alt={tech.label}
+                className="mx-auto"
+              />
               <p className="text-2xl font-bold text-center text-gray-300">
                 {tech.label}
               </p>
             </div>
           </div>
         </div>
-      )}
+      ))}
     </div>
   );
 };
