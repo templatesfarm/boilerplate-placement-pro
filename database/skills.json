@@ -10,39 +10,22 @@
         "imageName": "/nextjs.jpg"
       },
       {
-        "label": "Tailwind",
-        "imageName": "/tailwind.png"
-      },
-      {
-        "label": "TypeScript",
-        "imageName": "/typescript.webp"
-      },
-      {
         "label": "JavaScript",
         "imageName": "/javascript.png"
       }
     ],
-    "backend": [],
-    "database": [
+    "backend": [
       {
-        "label": "MongoDB",
-        "imageName": "/mongodb.png"
+        "label": "Django",
+        "imageName": "/django.png"
       },
       {
-        "label": "MySQL",
-        "imageName": "/mysql.png"
+        "label": "Flask",
+        "imageName": "/flask.png"
       }
     ],
-    "mobile": [
-      {
-        "label": "Ionic",
-        "imageName": "/ionic.png"
-      },
-      {
-        "label": "Kotlin",
-        "imageName": "/kotlin.png"
-      }
-    ],
+    "database": [],
+    "mobile": [],
     "devops": []
   }
 }
