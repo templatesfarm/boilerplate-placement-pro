@@ -31,5 +31,16 @@
     "startDate": "2022-02-06",
     "endDate": "",
     "imageUrl": "https://raw.githubusercontent.com/DeepakPahawa/deepk-portfolio/master/images/1733258709818-lowes.png"
+  },
+  {
+    "projectName": "ReactJS,  JavaScript, TypeScript, Styled Components, Material Ui",
+    "designation": "Lowes India Services",
+    "link": "https://www.lowes.com/",
+    "cover": "",
+    "skills": "Java, JavaScript, NextJS",
+    "companyName": "Lowes",
+    "startDate": "2024-12-05",
+    "endDate": "2024-12-13",
+    "imageUrl": "https://raw.githubusercontent.com/DeepakPahawa/deepk-portfolio/master/images/1733858396061-Deepak%20Image.png"
   }
 ]
