@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero/Hero";
 import Navbar from "@/components/Navbar/Navbar";
 import PasswordInput from "@/components/PasswordInput";
-import Projects from "@/components/Projects/Projects";
+import { Projects } from "@/components/Projects/Projects";
 import Skills from "@/components/Skills/Skills";
 import ThemeToggle from "@/components/ThemeToggle";
 import { useAppStore } from "@/store/appStore";
