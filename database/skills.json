@@ -23,7 +23,12 @@
       }
     ],
     "backend": [],
-    "database": [],
+    "database": [
+      {
+        "label": "Redis",
+        "imageName": "/redis.png"
+      }
+    ],
     "mobile": [],
     "devops": []
   }
