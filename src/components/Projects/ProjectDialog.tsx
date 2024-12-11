@@ -13,25 +13,26 @@ import { Button } from "../ui/button";
 import { ProjectType } from "@/app/types/portfolio.types";
 import FileUpload from "../FileUpload/FileUpload";
 import { initialProject } from "@/lib/initialState/initialState";
-import { useProjectStore } from "@/store/projectStore";
 
 interface ProjectDialogProps {
-  isOpen?: boolean;
-  onOpenChange?: (x: boolean) => void;
+  isOpen: boolean;
+  onOpenChange: (x: boolean) => void;
+  projects: ProjectType[];
+  saveProjects: (x: ProjectType[]) => void;
 }
 
 export const ProjectsDialog: React.FC<ProjectDialogProps> = ({
   isOpen,
   onOpenChange,
+  projects,
+  saveProjects,
 }) => {
-  const [error, ] = useState<string | null>(null);
+  const [error] = useState<string | null>(null);
   const [localProjects, setLocalProjects] = useState<ProjectType[]>([
     {
       ...initialProject,
     },
   ]);
-
-  const { projects, saveProjects } = useProjectStore();
 
   useEffect(() => {
     setLocalProjects(projects);
@@ -110,16 +111,17 @@ const ProjectDetail: React.FC<ProjectDetailType> = ({
 }) => {
   const [projectDetails, setProjectDetails] = useState<ProjectType>(project);
   const skillsInputRef = useRef<HTMLInputElement>(null);
-  
-  const handleChange = useCallback((
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setProjectDetails((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  },[]);
+
+  const handleChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+      const { name, value } = e.target;
+      setProjectDetails((prev) => ({
+        ...prev,
+        [name]: value,
+      }));
+    },
+    []
+  );
 
   const handleImageUrl = useCallback((imageUrl: string) => {
     setProjectDetails((prev) => ({
@@ -127,15 +129,14 @@ const ProjectDetail: React.FC<ProjectDetailType> = ({
       imageUrl: imageUrl,
     }));
     skillsInputRef.current?.focus();
-  },[]);
+  }, []);
 
   const handleBlur = useCallback(() => {
     updateProjects(index, projectDetails);
-  },[index, projectDetails, updateProjects]);
-
+  }, [index, projectDetails, updateProjects]);
 
   return (
-    <div className="space-y-4 border-t-2 border-gray-500" >
+    <div className="space-y-4 border-t-2 border-gray-500">
       <Label>{`Project ${index + 1}`}</Label>
       <div className="mt-4">
         <Label className="block mb-2">Project Name</Label>
@@ -184,7 +185,7 @@ const ProjectDetail: React.FC<ProjectDetailType> = ({
       <div className="mt-4">
         <Label className="block mb-2">Skills</Label>
         <Input
-        ref={skillsInputRef}
+          ref={skillsInputRef}
           type="text"
           name="skills"
           value={projectDetails.skills}

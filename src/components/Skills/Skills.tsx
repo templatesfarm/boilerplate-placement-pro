@@ -18,7 +18,7 @@ const SkillsView: React.FC<SkillsViewProps> = ({ skills }) => {
     <div className="mt-24 flex flex-col" id="skills">
       <Title
         title="Skills 🛠️"
-        className="-rotate-6 inline-block float-center mx-auto"
+        className="-rotate-6 inline-block float-center mx-auto text-foreground"
       />
       <HoverEffectCard items={skills} />
     </div>

@@ -6,28 +6,20 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import ProjectsDialog from "./ProjectDialog";
 import { useProjectStore } from "@/store/projectStore";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { ProjectsSkeleton } from "../Loaders";
+import { ProjectType } from "@/app/types/portfolio.types";
+import { useAppStore } from "@/store/appStore";
 
 const background = [
   "bg-blue-500",
-  "bg-indigo-500",
   "bg-green-500",
-  "bg-blue-500",
   "bg-orange-500",
+  "bg-indigo-500",
+  "bg-violet-500",
 ];
 
-export const ProjectsView = () => {
-  const { projects = [], fetchProjectsSection, isLoading } = useProjectStore();
-
-  useEffect(() => {
-    fetchProjectsSection();
-  }, [fetchProjectsSection]);
-
-  if (isLoading) {
-    return <ProjectsSkeleton />;
-  }
-
+const ProjectsView = ({ projects }: { projects: ProjectType[] }) => {
   return (
     <div className="py-10 px-5 flex flex-col items-center">
       <Title title="Projects 🚀" className="-rotate-6 my-10" />
@@ -56,8 +48,59 @@ export const ProjectsView = () => {
   );
 };
 
-const Projects = () => {
-  return <EditComponent comp={<ProjectsView />} dialog={<ProjectsDialog />} />;
+export const Projects = () => {
+  const {
+    projects = [],
+    fetchProjectsSection,
+    isLoading,
+    saveProjects,
+  } = useProjectStore();
+  const { isEditing } = useAppStore();
+
+  useEffect(() => {
+    fetchProjectsSection();
+  }, [fetchProjectsSection]);
+
+  if (isLoading) {
+    return <ProjectsSkeleton />;
+  }
+
+  return (
+    <ProjectsBasic
+      isEditing={isEditing}
+      projects={projects}
+      saveProjects={saveProjects}
+    />
+  );
+};
+
+interface ProjectsBasicProps {
+  isEditing: boolean;
+  projects: ProjectType[];
+  saveProjects: (projects: ProjectType[]) => void;
+}
+
+const ProjectsBasic: React.FC<ProjectsBasicProps> = ({
+  isEditing,
+  projects,
+  saveProjects,
+}) => {
+  const [isDialogOpen, setIsDialogOpen] = useState<boolean>(false);
+
+  return (
+    <EditComponent
+      isEditing={isEditing}
+      handleEditClick={() => setIsDialogOpen(true)}
+    >
+      <ProjectsView projects={projects} />
+      <ProjectsDialog
+        isOpen={isDialogOpen}
+        onOpenChange={() => setIsDialogOpen(false)}
+        saveProjects={saveProjects}
+        projects={projects}
+      />
+    </EditComponent>
+  );
 };
 
 export default Projects;

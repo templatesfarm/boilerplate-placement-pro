@@ -16,9 +16,9 @@ interface HeroViewProps {
 
 const HeroView: React.FC<HeroViewProps> = ({ heroInfo, personalInfo }) => {
   return (
-    <div className="min-h-[60vh] flex items-center mt-24 flex-col-reverse gap-14 lg:flex-row lg:justify-between ">
+    <div className="min-h-[60vh] flex items-center mt-24 flex-col-reverse gap-14 sm:flex-row sm:justify-between ">
       <div className="space-y-10 text-center lg:text-left">
-        <h1 className="text-4xl lg:text-7xl font-bold">
+        <h1 className="text-4xl lg:text-7xl font-bold ">
           {/* Nice to meet you👋 */}
           {heroInfo.message}👋
           <br />{" "}
@@ -27,7 +27,7 @@ const HeroView: React.FC<HeroViewProps> = ({ heroInfo, personalInfo }) => {
             {/* {"I'm Deepak."} */}
           </span>
         </h1>
-        <p className="w-[90%] text-lg text-gray-300">
+        <p className="w-[90%] text-l">
           {/* {
             "Based in India, I'm a Fullstack Developer passionate about building a modern web application that users love."
           } */}

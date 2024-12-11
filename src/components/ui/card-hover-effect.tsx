@@ -46,7 +46,7 @@ export const HoverEffectCard = ({
               />
             )}
           </AnimatePresence>
-          <div className="rounded-md w-full p-4 overflow-hidden bg-black ring-green-500 group-hover:ring-1  relative z-20 transition-all duration-500 cursor-pointer">
+          <div className="rounded-md w-full p-4 overflow-hidden bg-card text-card-foreground ring-green-500 group-hover:ring-1  relative z-20 transition-all duration-500 cursor-pointer">
             <div className="py-5 z-50 relative space-y-10">
               <Image
                 src={`/images${tech.imageName}`}
@@ -55,9 +55,7 @@ export const HoverEffectCard = ({
                 alt={tech.label}
                 className="mx-auto"
               />
-              <p className="text-2xl font-bold text-center text-gray-300">
-                {tech.label}
-              </p>
+              <p className="text-2xl font-bold text-center">{tech.label}</p>
             </div>
           </div>
         </div>
@@ -76,7 +74,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
+        "rounded-2xl h-full w-full p-4 overflow-hidden bg-card text-card-foreground border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
         className
       )}
     >

@@ -6,14 +6,13 @@ import {
   DialogOverlay,
   DialogTitle,
 } from "../ui/dialog";
-import { useSkillsStore } from "@/store/skillStore";
 import { SkillType, TechnologiesType } from "@/app/types/portfolio.types";
 
 interface SkillDialogProps {
-  skills: TechnologiesType;
-  saveSelectedSkills: (x: TechnologiesType) => void;
   isOpen: boolean;
   onOpenChange: (x: boolean) => void;
+  skills: TechnologiesType;
+  saveSelectedSkills: (x: TechnologiesType) => void;
 }
 
 const technologies: TechnologiesType = {
@@ -54,10 +53,14 @@ const technologies: TechnologiesType = {
   ],
 };
 
-const SkillDialog: React.FC<SkillDialogProps> = ({ isOpen, onOpenChange }) => {
+const SkillDialog: React.FC<SkillDialogProps> = ({
+  isOpen,
+  onOpenChange,
+  skills,
+  saveSelectedSkills,
+}) => {
   const [selectedSkills, setSelectedSkills] = useState<TechnologiesType>({});
   const [searchTerm, setSearchTerm] = useState("");
-  const { skills, saveSelectedSkills } = useSkillsStore();
 
   useEffect(() => {
     setSelectedSkills(skills);

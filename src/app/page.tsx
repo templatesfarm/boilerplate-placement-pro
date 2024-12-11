@@ -10,7 +10,7 @@ import { useAppStore } from "@/store/appStore";
 export default function Home() {
   const { isEditing } = useAppStore();
   return (
-    <div className="min-h-screen bg-black overflow-hidden">
+    <div className="min-h-screen bg-background overflow-hidden">
       <div className="max-w-7xl mx-auto p-5">
         {!isEditing && <PasswordInput />}
         {isEditing && (
