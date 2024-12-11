@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import PasswordInput from "@/components/PasswordInput";
 import Projects from "@/components/Projects/Projects";
 import Skills from "@/components/Skills/Skills";
+import ThemeToggle from "@/components/ThemeToggle";
 import { useAppStore } from "@/store/appStore";
 
 export default function Home() {
@@ -18,7 +19,12 @@ export default function Home() {
             {`Just Refresh the page once you're done with the changes`}
           </div>
         )}
-        <Navbar />
+        <div className="flex justify-end">
+          <div className="w-[90vw] mr-20">
+            <Navbar />
+          </div>
+          <ThemeToggle />
+        </div>
         <Hero />
         <Skills />
         <Projects />
