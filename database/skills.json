@@ -7,46 +7,6 @@
       {
         "label": "React Native",
         "imageName": "/reactnative.png"
-      },
-      {
-        "label": "Flutter",
-        "imageName": "/flutter.png"
-      },
-      {
-        "label": "Swift",
-        "imageName": "/swift.png"
-      },
-      {
-        "label": "Kotlin",
-        "imageName": "/kotlin.png"
-      },
-      {
-        "label": "Ionic",
-        "imageName": "/ionic.png"
-      },
-      {
-        "label": "Xamarin",
-        "imageName": "/xamarin.png"
-      },
-      {
-        "label": "Cordova",
-        "imageName": "/cordova.png"
-      },
-      {
-        "label": "Unity",
-        "imageName": "/unity.png"
-      },
-      {
-        "label": "NativeScript",
-        "imageName": "/nativescript.png"
-      },
-      {
-        "label": "Java (Android)",
-        "imageName": "/androidjava.png"
-      },
-      {
-        "label": "Unreal",
-        "imageName": "/unreal.png"
       }
     ],
     "devops": []
