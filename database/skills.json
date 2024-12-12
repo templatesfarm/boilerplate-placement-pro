@@ -16,6 +16,10 @@
       {
         "label": "TypeScript",
         "imageName": "/typescript.webp"
+      },
+      {
+        "label": "VueJS",
+        "imageName": "/vuejs.png"
       }
     ],
     "backend": [],
