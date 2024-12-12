@@ -2,24 +2,24 @@
   "skills": {
     "frontend": [
       {
-        "label": "Svelte",
-        "imageName": "/svelte.png"
+        "label": "ReactJS",
+        "imageName": "/reactjs.png"
       },
       {
-        "label": "Bootstrap",
-        "imageName": "/bootstrap.png"
+        "label": "NextJS",
+        "imageName": "/nextjs.jpg"
       },
       {
-        "label": "Material-UI",
-        "imageName": "/materialui.png"
+        "label": "Tailwind",
+        "imageName": "/tailwind.png"
       },
       {
-        "label": "Chakra UI",
-        "imageName": "/chakraui.png"
+        "label": "TypeScript",
+        "imageName": "/typescript.webp"
       },
       {
-        "label": "Electron",
-        "imageName": "/electron.png"
+        "label": "JavaScript",
+        "imageName": "/javascript.png"
       }
     ],
     "backend": [],
