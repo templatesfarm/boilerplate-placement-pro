@@ -16,6 +16,14 @@
       {
         "label": "Bootstrap",
         "imageName": "/bootstrap.png"
+      },
+      {
+        "label": "Material-UI",
+        "imageName": "/materialui.png"
+      },
+      {
+        "label": "Chakra UI",
+        "imageName": "/chakraui.png"
       }
     ],
     "backend": [],
