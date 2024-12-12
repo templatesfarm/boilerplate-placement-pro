@@ -2,24 +2,12 @@
   "skills": {
     "frontend": [
       {
-        "label": "ReactJS",
-        "imageName": "/reactjs.png"
-      },
-      {
-        "label": "NextJS",
-        "imageName": "/nextjs.jpg"
-      },
-      {
-        "label": "Tailwind",
-        "imageName": "/tailwind.png"
-      },
-      {
-        "label": "TypeScript",
-        "imageName": "/typescript.webp"
-      },
-      {
         "label": "VueJS",
         "imageName": "/vuejs.png"
+      },
+      {
+        "label": "Angular",
+        "imageName": "/angular.png"
       }
     ],
     "backend": [],
