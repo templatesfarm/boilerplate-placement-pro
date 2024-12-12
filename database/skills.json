@@ -1,140 +1,50 @@
 {
   "skills": {
-    "frontend": [
+    "frontend": [],
+    "backend": [],
+    "database": [],
+    "mobile": [
       {
-        "label": "ReactJS",
-        "imageName": "/reactjs.png"
+        "label": "React Native",
+        "imageName": "/reactnative.png"
       },
       {
-        "label": "NextJS",
-        "imageName": "/nextjs.jpg"
+        "label": "Flutter",
+        "imageName": "/flutter.png"
       },
       {
-        "label": "Tailwind",
-        "imageName": "/tailwind.png"
+        "label": "Swift",
+        "imageName": "/swift.png"
       },
       {
-        "label": "TypeScript",
-        "imageName": "/typescript.webp"
+        "label": "Kotlin",
+        "imageName": "/kotlin.png"
       },
       {
-        "label": "JavaScript",
-        "imageName": "/javascript.png"
+        "label": "Ionic",
+        "imageName": "/ionic.png"
       },
       {
-        "label": "VueJS",
-        "imageName": "/vuejs.png"
+        "label": "Xamarin",
+        "imageName": "/xamarin.png"
       },
       {
-        "label": "Angular",
-        "imageName": "/angular.png"
+        "label": "Cordova",
+        "imageName": "/cordova.png"
       },
       {
-        "label": "Svelte",
-        "imageName": "/svelte.png"
+        "label": "Unity",
+        "imageName": "/unity.png"
       },
       {
-        "label": "Bootstrap",
-        "imageName": "/bootstrap.png"
+        "label": "NativeScript",
+        "imageName": "/nativescript.png"
       },
       {
-        "label": "Material-UI",
-        "imageName": "/materialui.png"
-      },
-      {
-        "label": "Electron",
-        "imageName": "/electron.png"
-      },
-      {
-        "label": "Chakra UI",
-        "imageName": "/chakraui.png"
+        "label": "Java (Android)",
+        "imageName": "/androidjava.png"
       }
     ],
-    "backend": [
-      {
-        "label": "NodeJS",
-        "imageName": "/nodejs.webp"
-      },
-      {
-        "label": "ExpressJS",
-        "imageName": "/expressjs.png"
-      },
-      {
-        "label": "Django",
-        "imageName": "/django.png"
-      },
-      {
-        "label": "Flask",
-        "imageName": "/flask.png"
-      },
-      {
-        "label": "Spring Boot",
-        "imageName": "/springboot.png"
-      },
-      {
-        "label": "Ruby on Rails",
-        "imageName": "/rubyonrails.png"
-      },
-      {
-        "label": "Laravel",
-        "imageName": "/laravel.png"
-      },
-      {
-        "label": "ASP.NET Core",
-        "imageName": "/aspnetcore.png"
-      },
-      {
-        "label": "FastAPI",
-        "imageName": "/fastapi.png"
-      },
-      {
-        "label": "Go",
-        "imageName": "/golang.png"
-      }
-    ],
-    "database": [
-      {
-        "label": "PostgreSQL",
-        "imageName": "/postgresql.png"
-      },
-      {
-        "label": "MongoDB",
-        "imageName": "/mongodb.png"
-      },
-      {
-        "label": "MySQL",
-        "imageName": "/mysql.png"
-      },
-      {
-        "label": "SQLite",
-        "imageName": "/sqlite.png"
-      },
-      {
-        "label": "Oracle Database",
-        "imageName": "/oracle.png"
-      },
-      {
-        "label": "Redis",
-        "imageName": "/redis.png"
-      },
-      {
-        "label": "Microsoft SQL Server",
-        "imageName": "/mssql.png"
-      },
-      {
-        "label": "Elasticsearch",
-        "imageName": "/elasticsearch.png"
-      },
-      {
-        "label": "Firebase",
-        "imageName": "/firebase.png"
-      },
-      {
-        "label": "Cassandra",
-        "imageName": "/cassandra.png"
-      }
-    ],
-    "mobile": [],
     "devops": []
   }
 }
