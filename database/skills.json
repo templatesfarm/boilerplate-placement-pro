@@ -1,49 +1,49 @@
 {
   "skills": {
     "frontend": [],
-    "backend": [
+    "backend": [],
+    "database": [
       {
-        "label": "NodeJS",
-        "imageName": "/nodejs.webp"
+        "label": "PostgreSQL",
+        "imageName": "/postgresql.png"
       },
       {
-        "label": "ExpressJS",
-        "imageName": "/expressjs.png"
+        "label": "MongoDB",
+        "imageName": "/mongodb.png"
       },
       {
-        "label": "Django",
-        "imageName": "/django.png"
+        "label": "MySQL",
+        "imageName": "/mysql.png"
       },
       {
-        "label": "Flask",
-        "imageName": "/flask.png"
+        "label": "SQLite",
+        "imageName": "/sqlite.png"
       },
       {
-        "label": "Spring Boot",
-        "imageName": "/springboot.png"
+        "label": "Oracle Database",
+        "imageName": "/oracle.png"
       },
       {
-        "label": "Ruby on Rails",
-        "imageName": "/rubyonrails.png"
+        "label": "Redis",
+        "imageName": "/redis.png"
       },
       {
-        "label": "Laravel",
-        "imageName": "/laravel.png"
+        "label": "Microsoft SQL Server",
+        "imageName": "/mssql.png"
       },
       {
-        "label": "FastAPI",
-        "imageName": "/fastapi.png"
+        "label": "Elasticsearch",
+        "imageName": "/elasticsearch.png"
       },
       {
-        "label": "ASP.NET Core",
-        "imageName": "/aspnetcore.png"
+        "label": "Firebase",
+        "imageName": "/firebase.png"
       },
       {
-        "label": "Go",
-        "imageName": "/golang.png"
+        "label": "Cassandra",
+        "imageName": "/cassandra.png"
       }
     ],
-    "database": [],
     "mobile": [],
     "devops": []
   }
