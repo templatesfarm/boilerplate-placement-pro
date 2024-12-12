@@ -2,14 +2,6 @@
   "skills": {
     "frontend": [
       {
-        "label": "VueJS",
-        "imageName": "/vuejs.png"
-      },
-      {
-        "label": "Angular",
-        "imageName": "/angular.png"
-      },
-      {
         "label": "Svelte",
         "imageName": "/svelte.png"
       },
@@ -24,6 +16,10 @@
       {
         "label": "Chakra UI",
         "imageName": "/chakraui.png"
+      },
+      {
+        "label": "Electron",
+        "imageName": "/electron.png"
       }
     ],
     "backend": [],
