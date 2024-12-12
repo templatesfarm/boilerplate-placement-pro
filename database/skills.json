@@ -3,52 +3,48 @@
     "frontend": [],
     "backend": [],
     "database": [],
-    "mobile": [
+    "mobile": [],
+    "devops": [
       {
-        "label": "React Native",
-        "imageName": "/reactnative.png"
+        "label": "Docker",
+        "imageName": "/docker.png"
       },
       {
-        "label": "Flutter",
-        "imageName": "/flutter.png"
+        "label": "Kubernetes",
+        "imageName": "/kubernetes.png"
       },
       {
-        "label": "Swift",
-        "imageName": "/swift.png"
+        "label": "Jenkins",
+        "imageName": "/jenkins.png"
       },
       {
-        "label": "Kotlin",
-        "imageName": "/kotlin.png"
+        "label": "GitHub Actions",
+        "imageName": "/githubactions.png"
       },
       {
-        "label": "Ionic",
-        "imageName": "/ionic.png"
+        "label": "Terraform",
+        "imageName": "/terraform.png"
       },
       {
-        "label": "Xamarin",
-        "imageName": "/xamarin.png"
+        "label": "AWS",
+        "imageName": "/aws.png"
       },
       {
-        "label": "Cordova",
-        "imageName": "/cordova.png"
+        "label": "Google Cloud Platform (GCP)",
+        "imageName": "/gcp.png"
       },
       {
-        "label": "Unity",
-        "imageName": "/unity.png"
+        "label": "Microsoft Azure",
+        "imageName": "/azure.png"
       },
       {
-        "label": "Unreal",
-        "imageName": "/unreal.png"
+        "label": "Ansible",
+        "imageName": "/ansible.png"
       },
       {
-        "label": "NativeScript",
-        "imageName": "/nativescript.png"
-      },
-      {
-        "label": "Java (Android)",
-        "imageName": "/androidjava.png"
+        "label": "CircleCI",
+        "imageName": "/circleci.png"
       }
-    ],
-    "devops": []
+    ]
   }
 }
