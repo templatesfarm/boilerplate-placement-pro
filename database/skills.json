@@ -8,21 +8,19 @@
       {
         "label": "Angular",
         "imageName": "/angular.png"
+      },
+      {
+        "label": "Svelte",
+        "imageName": "/svelte.png"
+      },
+      {
+        "label": "Bootstrap",
+        "imageName": "/bootstrap.png"
       }
     ],
     "backend": [],
-    "database": [
-      {
-        "label": "Redis",
-        "imageName": "/redis.png"
-      }
-    ],
-    "mobile": [
-      {
-        "label": "React Native",
-        "imageName": "/reactnative.png"
-      }
-    ],
+    "database": [],
+    "mobile": [],
     "devops": []
   }
 }
