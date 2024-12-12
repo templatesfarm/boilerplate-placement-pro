@@ -1,28 +1,48 @@
 {
   "skills": {
-    "frontend": [
+    "frontend": [],
+    "backend": [
       {
-        "label": "ReactJS",
-        "imageName": "/reactjs.png"
+        "label": "NodeJS",
+        "imageName": "/nodejs.webp"
       },
       {
-        "label": "NextJS",
-        "imageName": "/nextjs.jpg"
+        "label": "ExpressJS",
+        "imageName": "/expressjs.png"
       },
       {
-        "label": "Tailwind",
-        "imageName": "/tailwind.png"
+        "label": "Django",
+        "imageName": "/django.png"
       },
       {
-        "label": "TypeScript",
-        "imageName": "/typescript.webp"
+        "label": "Flask",
+        "imageName": "/flask.png"
       },
       {
-        "label": "JavaScript",
-        "imageName": "/javascript.png"
+        "label": "Spring Boot",
+        "imageName": "/springboot.png"
+      },
+      {
+        "label": "Ruby on Rails",
+        "imageName": "/rubyonrails.png"
+      },
+      {
+        "label": "Laravel",
+        "imageName": "/laravel.png"
+      },
+      {
+        "label": "FastAPI",
+        "imageName": "/fastapi.png"
+      },
+      {
+        "label": "ASP.NET Core",
+        "imageName": "/aspnetcore.png"
+      },
+      {
+        "label": "Go",
+        "imageName": "/golang.png"
       }
     ],
-    "backend": [],
     "database": [],
     "mobile": [],
     "devops": []
