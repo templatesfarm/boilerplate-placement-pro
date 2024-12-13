@@ -4,6 +4,32 @@
     "backend": [],
     "database": [],
     "mobile": [],
-    "devops": []
+    "devops": [],
+    "cloud": [
+      {
+        "label": "Heroku",
+        "imageName": "/heroku.png"
+      },
+      {
+        "label": "Netlify",
+        "imageName": "/netlify.png"
+      },
+      {
+        "label": "Vercel",
+        "imageName": "/vercel.png"
+      },
+      {
+        "label": "DigitalOcean",
+        "imageName": "/digitalocean.png"
+      },
+      {
+        "label": "Cloudflare",
+        "imageName": "/cloudflare.png"
+      },
+      {
+        "label": "Alibaba Cloud",
+        "imageName": "/alibaba.png"
+      }
+    ]
   }
 }
