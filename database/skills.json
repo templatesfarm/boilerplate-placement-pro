@@ -6,46 +6,47 @@
     "mobile": [],
     "devops": [],
     "cloud": [],
-    "erp_crm": [
+    "erp_crm": [],
+    "analytics": [
       {
-        "label": "SAP",
-        "imageName": "/sap.png"
+        "label": "Google Analytics",
+        "imageName": "/googleanalytics.png"
       },
       {
-        "label": "Salesforce",
-        "imageName": "/salesforce.png"
+        "label": "Tableau",
+        "imageName": "/tableau.png"
       },
       {
-        "label": "Microsoft Dynamics",
-        "imageName": "/dynamics.png"
+        "label": "Power BI",
+        "imageName": "/powerbi.png"
       },
       {
-        "label": "Zoho CRM",
-        "imageName": "/zoho.png"
+        "label": "QlikView",
+        "imageName": "/qlikview.png"
       },
       {
-        "label": "Oracle NetSuite",
-        "imageName": "/netsuite.png"
+        "label": "SAP Analytics Cloud",
+        "imageName": "/sapanalytics.png"
       },
       {
-        "label": "Workday",
-        "imageName": "/workday.png"
+        "label": "Adobe Analytics",
+        "imageName": "/adobeanalytics.png"
       },
       {
-        "label": "HubSpot",
-        "imageName": "/hubspot.png"
+        "label": "Data Studio",
+        "imageName": "/datastudio.png"
       },
       {
-        "label": "Odoo",
-        "imageName": "/odoo.png"
+        "label": "Snowflake",
+        "imageName": "/snowflake.png"
       },
       {
-        "label": "Tally",
-        "imageName": "/tally.png"
+        "label": "Splunk",
+        "imageName": "/splunk.png"
       },
       {
-        "label": "QuickBooks",
-        "imageName": "/quickbooks.png"
+        "label": "Looker",
+        "imageName": "/looker.png"
       }
     ]
   }
