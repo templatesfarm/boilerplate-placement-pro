@@ -9,46 +9,47 @@
     "erp_crm": [],
     "analytics": [],
     "mba_tools": [],
-    "ai_ml": [
+    "ai_ml": [],
+    "ms_tools": [
       {
-        "label": "TensorFlow",
-        "imageName": "/tensorflow.png"
+        "label": "Microsoft Excel",
+        "imageName": "/excel.png"
       },
       {
-        "label": "PyTorch",
-        "imageName": "/pytorch.png"
+        "label": "Microsoft Word",
+        "imageName": "/word.png"
       },
       {
-        "label": "Keras",
-        "imageName": "/keras.png"
+        "label": "Microsoft PowerPoint",
+        "imageName": "/powerpoint.png"
       },
       {
-        "label": "Scikit-learn",
-        "imageName": "/scikit.png"
+        "label": "Microsoft Outlook",
+        "imageName": "/outlook.png"
       },
       {
-        "label": "OpenAI API",
-        "imageName": "/openai.png"
+        "label": "Microsoft Access",
+        "imageName": "/access.png"
       },
       {
-        "label": "Hugging Face",
-        "imageName": "/huggingface.png"
+        "label": "Microsoft Teams",
+        "imageName": "/teams.png"
       },
       {
-        "label": "IBM Watson",
-        "imageName": "/ibmwatson.png"
+        "label": "Microsoft Project",
+        "imageName": "/project.png"
       },
       {
-        "label": "Google AI",
-        "imageName": "/googleai.png"
+        "label": "Microsoft Visio",
+        "imageName": "/visio.png"
       },
       {
-        "label": "Amazon SageMaker",
-        "imageName": "/sagemaker.png"
+        "label": "Microsoft OneNote",
+        "imageName": "/onenote.png"
       },
       {
-        "label": "Azure Machine Learning",
-        "imageName": "/azureml.png"
+        "label": "Microsoft Dynamics 365",
+        "imageName": "/dynamics365.png"
       }
     ]
   }
