@@ -10,46 +10,35 @@
     "analytics": [],
     "mba_tools": [],
     "ai_ml": [],
-    "ms_tools": [
+    "ms_tools": [],
+    "education_tools": [
       {
-        "label": "Microsoft Excel",
-        "imageName": "/excel.png"
+        "label": "Google Classroom",
+        "imageName": "/googleclassroom.png"
       },
       {
-        "label": "Microsoft Word",
-        "imageName": "/word.png"
+        "label": "Zoom",
+        "imageName": "/zoom.png"
       },
       {
-        "label": "Microsoft PowerPoint",
-        "imageName": "/powerpoint.png"
+        "label": "Moodle",
+        "imageName": "/moodle.png"
       },
       {
-        "label": "Microsoft Outlook",
-        "imageName": "/outlook.png"
+        "label": "Blackboard",
+        "imageName": "/blackboard.png"
       },
       {
-        "label": "Microsoft Access",
-        "imageName": "/access.png"
+        "label": "Edmodo",
+        "imageName": "/edmodo.png"
       },
       {
-        "label": "Microsoft Teams",
-        "imageName": "/teams.png"
+        "label": "Duolingo",
+        "imageName": "/duolingo.png"
       },
       {
-        "label": "Microsoft Project",
-        "imageName": "/project.png"
-      },
-      {
-        "label": "Microsoft Visio",
-        "imageName": "/visio.png"
-      },
-      {
-        "label": "Microsoft OneNote",
-        "imageName": "/onenote.png"
-      },
-      {
-        "label": "Microsoft Dynamics 365",
-        "imageName": "/dynamics365.png"
+        "label": "Canva for Education",
+        "imageName": "/canvaeducation.png"
       }
     ]
   }
