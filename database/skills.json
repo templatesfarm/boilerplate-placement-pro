@@ -8,46 +8,47 @@
     "cloud": [],
     "erp_crm": [],
     "analytics": [],
-    "mba_tools": [
+    "mba_tools": [],
+    "ai_ml": [
       {
-        "label": "Excel",
-        "imageName": "/excel.png"
+        "label": "TensorFlow",
+        "imageName": "/tensorflow.png"
       },
       {
-        "label": "R Programming",
-        "imageName": "/r.png"
+        "label": "PyTorch",
+        "imageName": "/pytorch.png"
       },
       {
-        "label": "SPSS",
-        "imageName": "/spss.png"
+        "label": "Keras",
+        "imageName": "/keras.png"
       },
       {
-        "label": "MATLAB",
-        "imageName": "/matlab.png"
+        "label": "Scikit-learn",
+        "imageName": "/scikit.png"
       },
       {
-        "label": "Stata",
-        "imageName": "/stata.png"
+        "label": "OpenAI API",
+        "imageName": "/openai.png"
       },
       {
-        "label": "SAS",
-        "imageName": "/sas.png"
+        "label": "Hugging Face",
+        "imageName": "/huggingface.png"
       },
       {
-        "label": "Hootsuite",
-        "imageName": "/hootsuite.png"
+        "label": "IBM Watson",
+        "imageName": "/ibmwatson.png"
       },
       {
-        "label": "Canva",
-        "imageName": "/canva.png"
+        "label": "Google AI",
+        "imageName": "/googleai.png"
       },
       {
-        "label": "Slack",
-        "imageName": "/slack.png"
+        "label": "Amazon SageMaker",
+        "imageName": "/sagemaker.png"
       },
       {
-        "label": "Trello",
-        "imageName": "/trello.png"
+        "label": "Azure Machine Learning",
+        "imageName": "/azureml.png"
       }
     ]
   }
