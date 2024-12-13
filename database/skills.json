@@ -1,6 +1,27 @@
 {
   "skills": {
-    "frontend": [],
+    "frontend": [
+      {
+        "label": "NextJS",
+        "imageName": "/nextjs.jpg"
+      },
+      {
+        "label": "ReactJS",
+        "imageName": "/reactjs.png"
+      },
+      {
+        "label": "Tailwind",
+        "imageName": "/tailwind.png"
+      },
+      {
+        "label": "TypeScript",
+        "imageName": "/typescript.webp"
+      },
+      {
+        "label": "JavaScript",
+        "imageName": "/javascript.png"
+      }
+    ],
     "backend": [],
     "database": [],
     "mobile": [],
