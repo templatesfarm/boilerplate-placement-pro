@@ -7,46 +7,47 @@
     "devops": [],
     "cloud": [],
     "erp_crm": [],
-    "analytics": [
+    "analytics": [],
+    "mba_tools": [
       {
-        "label": "Google Analytics",
-        "imageName": "/googleanalytics.png"
+        "label": "Excel",
+        "imageName": "/excel.png"
       },
       {
-        "label": "Tableau",
-        "imageName": "/tableau.png"
+        "label": "R Programming",
+        "imageName": "/r.png"
       },
       {
-        "label": "Power BI",
-        "imageName": "/powerbi.png"
+        "label": "SPSS",
+        "imageName": "/spss.png"
       },
       {
-        "label": "QlikView",
-        "imageName": "/qlikview.png"
+        "label": "MATLAB",
+        "imageName": "/matlab.png"
       },
       {
-        "label": "SAP Analytics Cloud",
-        "imageName": "/sapanalytics.png"
+        "label": "Stata",
+        "imageName": "/stata.png"
       },
       {
-        "label": "Adobe Analytics",
-        "imageName": "/adobeanalytics.png"
+        "label": "SAS",
+        "imageName": "/sas.png"
       },
       {
-        "label": "Data Studio",
-        "imageName": "/datastudio.png"
+        "label": "Hootsuite",
+        "imageName": "/hootsuite.png"
       },
       {
-        "label": "Snowflake",
-        "imageName": "/snowflake.png"
+        "label": "Canva",
+        "imageName": "/canva.png"
       },
       {
-        "label": "Splunk",
-        "imageName": "/splunk.png"
+        "label": "Slack",
+        "imageName": "/slack.png"
       },
       {
-        "label": "Looker",
-        "imageName": "/looker.png"
+        "label": "Trello",
+        "imageName": "/trello.png"
       }
     ]
   }
