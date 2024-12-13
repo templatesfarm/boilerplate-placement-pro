@@ -5,30 +5,47 @@
     "database": [],
     "mobile": [],
     "devops": [],
-    "cloud": [
+    "cloud": [],
+    "erp_crm": [
       {
-        "label": "Heroku",
-        "imageName": "/heroku.png"
+        "label": "SAP",
+        "imageName": "/sap.png"
       },
       {
-        "label": "Netlify",
-        "imageName": "/netlify.png"
+        "label": "Salesforce",
+        "imageName": "/salesforce.png"
       },
       {
-        "label": "Vercel",
-        "imageName": "/vercel.png"
+        "label": "Microsoft Dynamics",
+        "imageName": "/dynamics.png"
       },
       {
-        "label": "DigitalOcean",
-        "imageName": "/digitalocean.png"
+        "label": "Zoho CRM",
+        "imageName": "/zoho.png"
       },
       {
-        "label": "Cloudflare",
-        "imageName": "/cloudflare.png"
+        "label": "Oracle NetSuite",
+        "imageName": "/netsuite.png"
       },
       {
-        "label": "Alibaba Cloud",
-        "imageName": "/alibaba.png"
+        "label": "Workday",
+        "imageName": "/workday.png"
+      },
+      {
+        "label": "HubSpot",
+        "imageName": "/hubspot.png"
+      },
+      {
+        "label": "Odoo",
+        "imageName": "/odoo.png"
+      },
+      {
+        "label": "Tally",
+        "imageName": "/tally.png"
+      },
+      {
+        "label": "QuickBooks",
+        "imageName": "/quickbooks.png"
       }
     ]
   }
