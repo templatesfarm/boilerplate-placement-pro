@@ -16,44 +16,42 @@
     "finance_tools": [],
     "graphic_design": [
       {
-        "label": "Adobe Photoshop",
-        "imageName": "/photoshop.png"
-      },
-      {
-        "label": "Adobe Illustrator",
-        "imageName": "/illustrator.png"
-      },
-      {
-        "label": "Adobe InDesign",
-        "imageName": "/indesign.png"
-      },
-      {
-        "label": "CorelDRAW",
-        "imageName": "/coreldraw.png"
-      },
-      {
-        "label": "Figma",
-        "imageName": "/figma.png"
-      },
-      {
-        "label": "Sketch",
-        "imageName": "/sketch.png"
-      },
-      {
-        "label": "Affinity Designer",
-        "imageName": "/affinitydesigner.png"
-      },
-      {
         "label": "Canva",
         "imageName": "/canva.png"
+      }
+    ],
+    "project_management": [
+      {
+        "label": "Jira",
+        "imageName": "/jira.png"
       },
       {
-        "label": "InVision",
-        "imageName": "/invision.png"
+        "label": "Asana",
+        "imageName": "/asana.png"
       },
       {
-        "label": "Procreate",
-        "imageName": "/procreate.png"
+        "label": "Monday.com",
+        "imageName": "/monday.png"
+      },
+      {
+        "label": "Basecamp",
+        "imageName": "/basecamp.png"
+      },
+      {
+        "label": "ClickUp",
+        "imageName": "/clickup.png"
+      },
+      {
+        "label": "Wrike",
+        "imageName": "/wrike.png"
+      },
+      {
+        "label": "Notion",
+        "imageName": "/notion.png"
+      },
+      {
+        "label": "Smartsheet",
+        "imageName": "/smartsheet.png"
       }
     ]
   }
