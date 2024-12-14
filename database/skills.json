@@ -1,27 +1,6 @@
 {
   "skills": {
-    "frontend": [
-      {
-        "label": "NextJS",
-        "imageName": "/nextjs.jpg"
-      },
-      {
-        "label": "ReactJS",
-        "imageName": "/reactjs.png"
-      },
-      {
-        "label": "Tailwind",
-        "imageName": "/tailwind.png"
-      },
-      {
-        "label": "TypeScript",
-        "imageName": "/typescript.webp"
-      },
-      {
-        "label": "JavaScript",
-        "imageName": "/javascript.png"
-      }
-    ],
+    "frontend": [],
     "backend": [],
     "database": [],
     "mobile": [],
@@ -32,34 +11,47 @@
     "mba_tools": [],
     "ai_ml": [],
     "ms_tools": [],
-    "education_tools": [
+    "education_tools": [],
+    "healthcare_software": [
       {
-        "label": "Google Classroom",
-        "imageName": "/googleclassroom.png"
+        "label": "Epic Systems",
+        "imageName": "/epic.png"
       },
       {
-        "label": "Zoom",
-        "imageName": "/zoom.png"
+        "label": "Cerner",
+        "imageName": "/cerner.png"
       },
       {
-        "label": "Moodle",
-        "imageName": "/moodle.png"
+        "label": "Allscripts",
+        "imageName": "/allscripts.png"
       },
       {
-        "label": "Blackboard",
-        "imageName": "/blackboard.png"
+        "label": "Meditech",
+        "imageName": "/meditech.png"
       },
       {
-        "label": "Edmodo",
-        "imageName": "/edmodo.png"
+        "label": "Athenahealth",
+        "imageName": "/athenahealth.png"
       },
       {
-        "label": "Duolingo",
-        "imageName": "/duolingo.png"
+        "label": "eClinicalWorks",
+        "imageName": "/eclinicalworks.png"
       },
       {
-        "label": "Canva for Education",
-        "imageName": "/canvaeducation.png"
+        "label": "NextGen Healthcare",
+        "imageName": "/nextgen.png"
+      },
+      {
+        "label": "GE Healthcare Centricity",
+        "imageName": "/gehealthcare.png"
+      },
+      {
+        "label": "Philips IntelliSpace",
+        "imageName": "/philipsintellispace.png"
+      },
+      {
+        "label": "McKesson",
+        "imageName": "/mckesson.png"
       }
     ]
   }
