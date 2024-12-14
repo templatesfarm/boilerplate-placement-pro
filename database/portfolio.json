@@ -53,15 +53,15 @@
       "imageUrl": "https://raw.githubusercontent.com/DeepakPahawa/deepk-portfolio/master/images/1734168126943-Intuit%20Quickbooks.png"
     },
     {
-      "projectName": "",
-      "designation": "",
-      "link": "",
+      "projectName": "Cisco Webex",
+      "designation": "Lead Software Engineer",
+      "link": "https://www.webex.com/",
       "cover": "",
-      "skills": [],
-      "companyName": "",
-      "startDate": "",
-      "endDate": "",
-      "imageUrl": ""
+      "skills": "Java, JavaScript, NextJS",
+      "companyName": "Cisco",
+      "startDate": "2024-11-25",
+      "endDate": "2025-01-02",
+      "imageUrl": "https://raw.githubusercontent.com/DeepakPahawa/deepk-portfolio/master/images/1734168227220-Webex.png"
     }
   ]
 }
