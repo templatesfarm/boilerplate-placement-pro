@@ -12,46 +12,47 @@
     "ai_ml": [],
     "ms_tools": [],
     "education_tools": [],
-    "healthcare_software": [
+    "healthcare_software": [],
+    "finance_tools": [
       {
-        "label": "Epic Systems",
-        "imageName": "/epic.png"
+        "label": "QuickBooks",
+        "imageName": "/quickbooks.png"
       },
       {
-        "label": "Cerner",
-        "imageName": "/cerner.png"
+        "label": "SAP FICO",
+        "imageName": "/sapfico.png"
       },
       {
-        "label": "Allscripts",
-        "imageName": "/allscripts.png"
+        "label": "Tally ERP",
+        "imageName": "/tallyerp.png"
       },
       {
-        "label": "Meditech",
-        "imageName": "/meditech.png"
+        "label": "Xero",
+        "imageName": "/xero.png"
       },
       {
-        "label": "Athenahealth",
-        "imageName": "/athenahealth.png"
+        "label": "Oracle Financials",
+        "imageName": "/oraclefinancials.png"
       },
       {
-        "label": "eClinicalWorks",
-        "imageName": "/eclinicalworks.png"
+        "label": "Intuit TurboTax",
+        "imageName": "/turbotax.png"
       },
       {
-        "label": "NextGen Healthcare",
-        "imageName": "/nextgen.png"
+        "label": "Sage 50cloud",
+        "imageName": "/sage50cloud.png"
       },
       {
-        "label": "GE Healthcare Centricity",
-        "imageName": "/gehealthcare.png"
+        "label": "Wave Accounting",
+        "imageName": "/waveaccounting.png"
       },
       {
-        "label": "Philips IntelliSpace",
-        "imageName": "/philipsintellispace.png"
+        "label": "FreshBooks",
+        "imageName": "/freshbooks.png"
       },
       {
-        "label": "McKesson",
-        "imageName": "/mckesson.png"
+        "label": "Bloomberg Terminal",
+        "imageName": "/bloomberg.png"
       }
     ]
   }
