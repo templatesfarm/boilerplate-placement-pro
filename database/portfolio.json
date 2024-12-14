@@ -16,7 +16,30 @@
     "introduction": "I am Deepak",
     "description": "I am based out of Bangalore, India and an expert at developing Full Stack Website and Mobile Apps using NextJS, ReactJS, ReactNative and Typescript."
   },
-  "skills": {},
+  "skills": {
+    "frontend": [
+      {
+        "label": "ReactJS",
+        "imageName": "/reactjs.png"
+      },
+      {
+        "label": "NextJS",
+        "imageName": "/nextjs.jpg"
+      },
+      {
+        "label": "Tailwind",
+        "imageName": "/tailwind.png"
+      },
+      {
+        "label": "JavaScript",
+        "imageName": "/javascript.png"
+      },
+      {
+        "label": "TypeScript",
+        "imageName": "/typescript.webp"
+      }
+    ]
+  },
   "projects": [
     {
       "projectName": "",
