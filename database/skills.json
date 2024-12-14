@@ -20,38 +20,47 @@
         "imageName": "/canva.png"
       }
     ],
-    "project_management": [
+    "project_management": [],
+    "version_control": [
       {
-        "label": "Jira",
-        "imageName": "/jira.png"
+        "label": "Git",
+        "imageName": "/git.png"
       },
       {
-        "label": "Asana",
-        "imageName": "/asana.png"
+        "label": "GitHub",
+        "imageName": "/github.png"
       },
       {
-        "label": "Monday.com",
-        "imageName": "/monday.png"
+        "label": "GitLab",
+        "imageName": "/gitlab.png"
       },
       {
-        "label": "Basecamp",
-        "imageName": "/basecamp.png"
+        "label": "Bitbucket",
+        "imageName": "/bitbucket.png"
       },
       {
-        "label": "ClickUp",
-        "imageName": "/clickup.png"
+        "label": "Perforce",
+        "imageName": "/perforce.png"
       },
       {
-        "label": "Wrike",
-        "imageName": "/wrike.png"
+        "label": "SVN (Apache Subversion)",
+        "imageName": "/svn.png"
       },
       {
-        "label": "Notion",
-        "imageName": "/notion.png"
+        "label": "Mercurial",
+        "imageName": "/mercurial.png"
       },
       {
-        "label": "Smartsheet",
-        "imageName": "/smartsheet.png"
+        "label": "Plastic SCM",
+        "imageName": "/plasticscm.png"
+      },
+      {
+        "label": "Bazaar",
+        "imageName": "/bazaar.png"
+      },
+      {
+        "label": "SourceForge",
+        "imageName": "/sourceforge.png"
       }
     ]
   }
