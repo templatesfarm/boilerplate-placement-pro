@@ -13,46 +13,47 @@
     "ms_tools": [],
     "education_tools": [],
     "healthcare_software": [],
-    "finance_tools": [
+    "finance_tools": [],
+    "graphic_design": [
       {
-        "label": "QuickBooks",
-        "imageName": "/quickbooks.png"
+        "label": "Adobe Photoshop",
+        "imageName": "/photoshop.png"
       },
       {
-        "label": "SAP FICO",
-        "imageName": "/sapfico.png"
+        "label": "Adobe Illustrator",
+        "imageName": "/illustrator.png"
       },
       {
-        "label": "Tally ERP",
-        "imageName": "/tallyerp.png"
+        "label": "Adobe InDesign",
+        "imageName": "/indesign.png"
       },
       {
-        "label": "Xero",
-        "imageName": "/xero.png"
+        "label": "CorelDRAW",
+        "imageName": "/coreldraw.png"
       },
       {
-        "label": "Oracle Financials",
-        "imageName": "/oraclefinancials.png"
+        "label": "Figma",
+        "imageName": "/figma.png"
       },
       {
-        "label": "Intuit TurboTax",
-        "imageName": "/turbotax.png"
+        "label": "Sketch",
+        "imageName": "/sketch.png"
       },
       {
-        "label": "Sage 50cloud",
-        "imageName": "/sage50cloud.png"
+        "label": "Affinity Designer",
+        "imageName": "/affinitydesigner.png"
       },
       {
-        "label": "Wave Accounting",
-        "imageName": "/waveaccounting.png"
+        "label": "Canva",
+        "imageName": "/canva.png"
       },
       {
-        "label": "FreshBooks",
-        "imageName": "/freshbooks.png"
+        "label": "InVision",
+        "imageName": "/invision.png"
       },
       {
-        "label": "Bloomberg Terminal",
-        "imageName": "/bloomberg.png"
+        "label": "Procreate",
+        "imageName": "/procreate.png"
       }
     ]
   }
