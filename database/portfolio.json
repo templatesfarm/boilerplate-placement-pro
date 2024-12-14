@@ -1,1 +1,33 @@
-
+{
+  "personalInfo": {
+    "name": "Deepak Pahawa",
+    "contactNumber": "09963976068",
+    "email": "deepakpahwa19@gmail.com",
+    "socialMedia": {
+      "linkedin": "https://www.linkedin.com/in/deepakpahawa/",
+      "github": "https://github.com/DeepakPahawa/deepk-portfolio",
+      "youtube": "",
+      "facebook": "",
+      "instagram": ""
+    }
+  },
+  "heroInfo": {
+    "message": "",
+    "introduction": "",
+    "description": ""
+  },
+  "skills": {},
+  "projects": [
+    {
+      "projectName": "",
+      "designation": "",
+      "link": "",
+      "cover": "",
+      "skills": [],
+      "companyName": "",
+      "startDate": "",
+      "endDate": "",
+      "imageUrl": ""
+    }
+  ]
+}
