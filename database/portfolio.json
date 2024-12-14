@@ -42,6 +42,17 @@
   },
   "projects": [
     {
+      "projectName": "Intuit Quickbooks",
+      "designation": "Senior Software Engineer",
+      "link": "https://quickbooks.intuit.com/",
+      "cover": "",
+      "skills": "Java, JavaScript, Next.JS, React.JS",
+      "companyName": "Intuit",
+      "startDate": "2024-12-04",
+      "endDate": "2024-12-14",
+      "imageUrl": "https://raw.githubusercontent.com/DeepakPahawa/deepk-portfolio/master/images/1734168126943-Intuit%20Quickbooks.png"
+    },
+    {
       "projectName": "",
       "designation": "",
       "link": "",
