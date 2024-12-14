@@ -20,7 +20,7 @@ export default function Home() {
           </div>
         )}
         <div className="flex justify-end">
-          <div className="w-[90vw] mr-20">
+          <div className="w-[90vw] mr-3 md:mr-20">
             <Navbar />
           </div>
           <ThemeToggle />
