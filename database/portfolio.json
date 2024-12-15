@@ -1,75 +1,75 @@
 {
   "personalInfo": {
-    "name": "Deepak Pahawa",
-    "contactNumber": "09963976068",
+    "displayName": "",
+    "name": "Deepak Pahwa",
+    "contactNumber": "9963976068",
     "email": "deepakpahwa19@gmail.com",
     "socialMedia": {
-      "linkedin": "",
-      "github": "",
-      "youtube": "https://www.linkedin.com/in/deepakpahawa/",
-      "facebook": "https://github.com/DeepakPahawa/deepk-portfolio",
-      "instagram": "https://github.com/DeepakPahawa/deepk-portfolio"
+      "linkedin": "https://www.linkedin.com/in/deepakpahawa/",
+      "github": "https://github.com/DeepakPahawa/deepk-portfolio",
+      "youtube": "",
+      "facebook": "",
+      "instagram": ""
     }
   },
   "heroInfo": {
-    "message": "Hola There",
-    "introduction": "I am Deepak\n",
-    "description": "I am based out of London, UK and an expert at developing Full Stack Website and Mobile Apps using NextJS, ReactJS, ReactNative and Typescript."
+    "displayName": "",
+    "message": "Nice to Meet you.",
+    "introduction": "I am Deepak",
+    "description": "I am passionate about crafting innovative web solutions and staying up-to-date with the latest technologies. My goal is to deliver high-quality, efficient, and user-friendly applications that exceed expectations."
   },
-  "skills": {
-    "frontend": [
+  "skillsInfo": {
+    "displayName": "Arsenal",
+    "skills": {
+      "frontend": [
+        {
+          "label": "ReactJS",
+          "imageName": "/reactjs.png"
+        },
+        {
+          "label": "NextJS",
+          "imageName": "/nextjs.jpg"
+        },
+        {
+          "label": "Tailwind",
+          "imageName": "/tailwind.png"
+        },
+        {
+          "label": "TypeScript",
+          "imageName": "/typescript.webp"
+        },
+        {
+          "label": "JavaScript",
+          "imageName": "/javascript.png"
+        }
+      ]
+    }
+  },
+  "projectsInfo": {
+    "displayName": "Experience",
+    "projects": [
       {
-        "label": "ReactJS",
-        "imageName": "/reactjs.png"
+        "projectName": "Intuit Quickbooks",
+        "designation": "Lead Software Engineer",
+        "link": "https://quickbooks.intuit.com/",
+        "cover": "",
+        "skills": "Java, JavaScript, Next.JS, React.JS",
+        "companyName": "Intuit",
+        "startDate": "",
+        "endDate": "",
+        "imageUrl": "https://raw.githubusercontent.com/DeepakPahawa/deepk-portfolio/master/images/1734302627699-Intuit%20Quickbooks.png"
       },
       {
-        "label": "NextJS",
-        "imageName": "/nextjs.jpg"
-      },
-      {
-        "label": "Tailwind",
-        "imageName": "/tailwind.png"
-      },
-      {
-        "label": "TypeScript",
-        "imageName": "/typescript.webp"
-      }
-    ],
-    "backend": [
-      {
-        "label": "Django",
-        "imageName": "/django.png"
-      }
-    ],
-    "devops": [
-      {
-        "label": "GitHub Actions",
-        "imageName": "/githubactions.png"
+        "projectName": "Microsoft Word",
+        "designation": "Senior Software Engineer",
+        "link": "https://www.webex.com/",
+        "cover": "",
+        "skills": "ReactJS,  JavaScript, TypeScript, Styled Components, Material Ui",
+        "companyName": "Microsoft",
+        "startDate": "",
+        "endDate": "",
+        "imageUrl": "https://raw.githubusercontent.com/DeepakPahawa/deepk-portfolio/master/images/1734305033916-lowes.png"
       }
     ]
-  },
-  "projects": [
-    {
-      "projectName": "Microsoft Word",
-      "designation": "Senior Software Engineer",
-      "link": "https://www.webex.com/",
-      "cover": "",
-      "skills": "ReactJS,  JavaScript, TypeScript, Styled Components, Material Ui",
-      "companyName": "Microsoft",
-      "startDate": "",
-      "endDate": "",
-      "imageUrl": ""
-    },
-    {
-      "projectName": "Broadridge L&D",
-      "designation": "Lead Software Engineer",
-      "link": "https://quickbooks.intuit.com/",
-      "cover": "",
-      "skills": "ReactJS, TypeScript, Redux, PWA",
-      "companyName": "Broadridge",
-      "startDate": "",
-      "endDate": "",
-      "imageUrl": ""
-    }
-  ]
+  }
 }
