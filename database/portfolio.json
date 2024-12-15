@@ -23,24 +23,20 @@
     "skills": {},
     "frontend": [
       {
-        "label": "ReactJS",
-        "imageName": "/reactjs.png"
+        "label": "Tailwind",
+        "imageName": "/tailwind.png"
       },
       {
         "label": "NextJS",
         "imageName": "/nextjs.jpg"
       },
       {
-        "label": "Tailwind",
-        "imageName": "/tailwind.png"
+        "label": "ReactJS",
+        "imageName": "/reactjs.png"
       },
       {
         "label": "TypeScript",
         "imageName": "/typescript.webp"
-      },
-      {
-        "label": "JavaScript",
-        "imageName": "/javascript.png"
       }
     ]
   },
