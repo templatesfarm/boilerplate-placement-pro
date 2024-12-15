@@ -8,8 +8,6 @@ import { usePortfolioStore } from "@/store/usePortfolioStore";
 
 const Navbar = () => {
   const { portfolio, savePersonalInfo, isLoading } = usePortfolioStore();
-  console.log("🚀 ~ Navbar ~ portfolio:", portfolio);
-  console.log("🚀 ~ Navbar ~ isLoading:", isLoading);
   const { isEditing } = useAppStore();
 
   if (isLoading) {

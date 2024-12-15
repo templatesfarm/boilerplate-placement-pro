@@ -31,7 +31,7 @@ export async function generateMetadata({}): Promise<Metadata> {
 
 export default async function Page() {
   const { portfolio, url, error } = await fetchPortfolioDetails();
-  if (error) {
+  if (!!error) {
     return (
       <div className="text-center mx-fit mx-auto">
         <p className="text-red-500 text-xl">{error}</p>

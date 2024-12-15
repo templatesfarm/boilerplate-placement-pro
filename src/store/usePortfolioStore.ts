@@ -64,7 +64,7 @@ export const usePortfolioStore = create<PortfolioStore>((set, get) => ({
     skills: {} as TechnologiesType,
     projects: [initialProjectState],
   },
-  isLoading: false,
+  isLoading: true,
   error: "",
 
   savePortfolio: async (portfolioData: PortfolioType) => {
@@ -124,10 +124,6 @@ export const usePortfolioStore = create<PortfolioStore>((set, get) => ({
   },
 
   updateState: (newState: PortfolioType) => {
-    console.log(
-      "🚀 ~ file: usePortfolioStore.ts ~ line 144 ~ updateState: ~ newState",
-      newState
-    );
     set({ portfolio: newState, isLoading: false, error: "" });
   },
 }));
