@@ -50,17 +50,6 @@
   },
   "projects": [
     {
-      "projectName": "Microsoft Word",
-      "designation": "Senior Software Engineer",
-      "link": "https://quickbooks.intuit.com/",
-      "cover": "",
-      "skills": "Java, JavaScript, NextJS",
-      "companyName": "Microsoft",
-      "startDate": "",
-      "endDate": "",
-      "imageUrl": ""
-    },
-    {
       "projectName": "Intuit Quickbooks",
       "designation": "Senior Software Engineer",
       "link": "https://www.webex.com/",
