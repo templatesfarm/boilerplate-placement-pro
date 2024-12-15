@@ -1,8 +1,4 @@
-import {
-  PortfolioType,
-  setPortfolioState,
-  updateState,
-} from "@/store/usePortfolioStore";
+import { PortfolioType } from "@/store/usePortfolioStore";
 import { serverRoutes } from "../contants";
 import { headers } from "next/headers";
 
@@ -13,6 +9,7 @@ export const getBaseUrl = (domain: string) => {
 interface PortfolioSeoType {
   portfolio: PortfolioType;
   url: string;
+  error: string;
 }
 
 export async function fetchPortfolioDetails() {
@@ -20,7 +17,6 @@ export async function fetchPortfolioDetails() {
     const headersList = headers();
     const domain = headersList.get("host") || "";
     const baseUrl = getBaseUrl(domain) || "";
-    console.log("🚀 ~ fetchPortfolioDetails ~ baseUrl:", baseUrl);
     const response = await fetch(`${baseUrl}${serverRoutes.PORTFOLIO}`, {
       method: "GET",
       headers: {
@@ -28,31 +24,27 @@ export async function fetchPortfolioDetails() {
       },
       cache: "force-cache",
     });
-    console.log("🚀 ~ fetchPortfolioDetails ~ response:", response);
 
     if (response.ok) {
       const data = await response.json();
-      console.log("🚀 ~ fetchPortfolioDetails ~ data:", data);
       return {
         portfolio: data as PortfolioType,
         url: baseUrl,
+        error: "",
       } as PortfolioSeoType;
     } else {
-      setPortfolioState((state) => ({
-        ...state,
-        isLoading: false,
-        error: "Unable to Fetch Data after authentication",
+      return {
         portfolio: {} as PortfolioType,
-      }));
+        url: baseUrl,
+        error: "Unable to Fetch Data after authentication",
+      };
     }
   } catch (err) {
     const error = err as Error;
-    setPortfolioState((state) => ({
-      ...state,
-      isLoading: false,
-      error: error.message,
+    return {
       portfolio: {} as PortfolioType,
-    }));
+      error: error.message,
+      url: "",
+    };
   }
-  return {} as PortfolioSeoType;
 }
