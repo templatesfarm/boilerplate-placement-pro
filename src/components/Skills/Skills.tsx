@@ -16,7 +16,7 @@ const Skills = () => {
   return (
     <SkillsBasic
       saveSelectedSkills={saveSkillsInfo}
-      skills={portfolio.skills}
+      skillsInfo={portfolio.skillsInfo}
       isEditing={isEditing}
     />
   );

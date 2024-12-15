@@ -15,8 +15,8 @@ export const Projects = () => {
   return (
     <ProjectsBasic
       isEditing={isEditing}
-      projects={portfolio.projects}
-      saveProjects={saveProjectsInfo}
+      projectsInfo={portfolio.projectsInfo}
+      saveProjectsInfo={saveProjectsInfo}
     />
   );
 };

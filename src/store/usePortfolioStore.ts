@@ -3,29 +3,12 @@ import { serverRoutes } from "@/lib/contants";
 import {
   HeroType,
   PersonalInfoType,
-  ProjectType,
-  TechnologiesType,
+  ProjectsInfoType,
+  SkillsInfoType,
 } from "portfolioui";
 
-const initialHeroState: HeroType = {
-  message: "",
-  introduction: "",
-  description: "",
-};
-
-const initialProjectState = {
-  projectName: "",
-  designation: "",
-  link: "",
-  cover: "",
-  skills: [] as string[],
-  companyName: "",
-  startDate: "",
-  endDate: "",
-  imageUrl: "",
-};
-
 const initialPersonalState: PersonalInfoType = {
+  displayName: "",
   name: "",
   contactNumber: "",
   email: "",
@@ -38,31 +21,61 @@ const initialPersonalState: PersonalInfoType = {
   },
 };
 
+const initialHeroState: HeroType = {
+  displayName: "",
+  message: "",
+  introduction: "",
+  description: "",
+};
+
+const initialSkillsState: SkillsInfoType = {
+  displayName: "",
+  skills: {},
+};
+
+const initialProjectState = {
+  displayName: "",
+  projects: [
+    {
+      projectName: "",
+      designation: "",
+      link: "",
+      cover: "",
+      skills: [] as string[],
+      companyName: "",
+      startDate: "",
+      endDate: "",
+      imageUrl: "",
+    },
+  ],
+};
+
 export interface PortfolioType {
   personalInfo: PersonalInfoType;
   heroInfo: HeroType;
-  skills: TechnologiesType;
-  projects: ProjectType[];
+  skillsInfo: SkillsInfoType;
+  projectsInfo: ProjectsInfoType;
 }
 
 interface PortfolioStore {
   portfolio: PortfolioType;
   isLoading: boolean;
   error: string;
-  savePortfolio: (portfolioData: PortfolioType) => void;
-  savePersonalInfo: (info: PersonalInfoType) => void;
-  saveHeroInfo: (info: HeroType) => void;
-  saveProjectsInfo: (projects: ProjectType[]) => void;
-  saveSkillsInfo: (skills: TechnologiesType) => void;
-  updateState: (portfolioData: PortfolioType) => void;
+  savePortfolio: (x: PortfolioType) => void;
+  savePersonalInfo: (x: PersonalInfoType) => void;
+  saveHeroInfo: (x: HeroType) => void;
+  saveProjectsInfo: (x: ProjectsInfoType) => void;
+  saveSkillsInfo: (x: SkillsInfoType) => void;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  updateState: (x: any) => void;
 }
 
 export const usePortfolioStore = create<PortfolioStore>((set, get) => ({
   portfolio: {
     personalInfo: initialPersonalState,
     heroInfo: initialHeroState,
-    skills: {} as TechnologiesType,
-    projects: [initialProjectState],
+    skillsInfo: initialSkillsState,
+    projectsInfo: initialProjectState,
   },
   isLoading: true,
   error: "",
@@ -107,23 +120,27 @@ export const usePortfolioStore = create<PortfolioStore>((set, get) => ({
     } as PortfolioType);
   },
 
-  saveSkillsInfo: async (skills: TechnologiesType) => {
+  saveSkillsInfo: async (skillsInfo: SkillsInfoType) => {
     const currentPortfolio = get().portfolio;
     await get().savePortfolio({
       ...currentPortfolio,
-      skills,
+      skillsInfo,
     } as PortfolioType);
   },
 
-  saveProjectsInfo: async (projects: ProjectType[]) => {
+  saveProjectsInfo: async (projectsInfo: ProjectsInfoType) => {
     const currentPortfolio = get().portfolio;
     await get().savePortfolio({
       ...currentPortfolio,
-      projects,
+      projectsInfo,
     } as PortfolioType);
   },
 
   updateState: (newState: PortfolioType) => {
-    set({ portfolio: newState, isLoading: false, error: "" });
+    set({
+      portfolio: newState,
+      isLoading: false,
+      error: "",
+    });
   },
 }));
