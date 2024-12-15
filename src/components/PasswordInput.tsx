@@ -5,7 +5,7 @@ import env from "@/app/env";
 
 const PasswordInput: React.FC = () => {
   const { setIsEditing } = useAppStore();
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState<string>("");
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -16,17 +16,17 @@ const PasswordInput: React.FC = () => {
       }
     };
 
-    window.addEventListener('keypress', handleKeyPress);
+    window.addEventListener("keypress", handleKeyPress);
 
     return () => {
-      window.removeEventListener('keypress', handleKeyPress);
+      window.removeEventListener("keypress", handleKeyPress);
     };
   }, []);
 
   useEffect(() => {
     if (inputValue === env.password) {
       setIsEditing(true);
-      setInputValue(''); // Clear the input value after successful match
+      setInputValue(""); // Clear the input value after successful match
     }
   }, [inputValue, setIsEditing]);
 
@@ -35,8 +35,8 @@ const PasswordInput: React.FC = () => {
       type="password"
       ref={inputRef}
       value={inputValue}
-    //   onChange={(event) => setInputValue(event?.target.value)}
-        style={{ position: 'absolute', top: '-9999px', left: '-9999px' }} // Hide the input field
+      onChange={() => {}}
+      style={{ position: "absolute", top: "-9999px", left: "-9999px" }} // Hide the input field
     />
   );
 };
