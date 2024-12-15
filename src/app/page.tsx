@@ -6,9 +6,9 @@ export async function generateMetadata({}): Promise<Metadata> {
   const { portfolio, url } = await fetchPortfolioDetails();
   if (portfolio?.personalInfo?.name) {
     return {
-      title: `${portfolio.personalInfo.name} | Portfolio | TemplatesFarm.com`,
+      title: `${portfolio.personalInfo.name} | Portfolio | TemplatesFarm`,
       description: portfolio.heroInfo.description,
-      keywords: `${portfolio.personalInfo.name} Portfolio, TemplatesFarm.com`,
+      keywords: `${portfolio.personalInfo.name} Portfolio, TemplatesFarm`,
       // openGraph: {
       //   images: [
       //     {
@@ -17,7 +17,7 @@ export async function generateMetadata({}): Promise<Metadata> {
       //   ],
       // },
       alternates: {
-        canonical: `${url}`,
+        canonical: url,
       },
     };
   }
@@ -31,6 +31,7 @@ export async function generateMetadata({}): Promise<Metadata> {
 
 export default async function Page() {
   const { portfolio, url, error } = await fetchPortfolioDetails();
+
   if (!!error) {
     return (
       <div className="text-center mx-fit mx-auto">

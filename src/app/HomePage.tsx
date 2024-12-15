@@ -6,8 +6,10 @@ import PasswordInput from "@/components/PasswordInput";
 import { Projects } from "@/components/Projects/Projects";
 import Skills from "@/components/Skills/Skills";
 import ThemeToggle from "@/components/ThemeToggle";
+import { Button } from "@/components/ui/button";
 import { useAppStore } from "@/store/appStore";
 import { PortfolioType, usePortfolioStore } from "@/store/usePortfolioStore";
+import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
 interface HomePageProps {
@@ -17,8 +19,9 @@ interface HomePageProps {
 
 export default function HomePage({ portfolio, url }: HomePageProps) {
   const { updateState } = usePortfolioStore();
+  const router = useRouter();
 
-  const { isEditing } = useAppStore();
+  const { isEditing, setIsEditing } = useAppStore();
 
   useEffect(() => {
     console.log("url: ", url);
@@ -30,8 +33,18 @@ export default function HomePage({ portfolio, url }: HomePageProps) {
       <div className="max-w-7xl mx-auto p-5">
         {!isEditing && <PasswordInput />}
         {isEditing && (
-          <div className="text-center mx-auto text-blue-500 animate-pulse">
-            {`Just Refresh the page once you're done with the changes`}
+          // <div className="text-center mx-auto text-blue-500 animate-pulse">
+          //   {`Just Refresh the page once you're done with the changes`}
+          // </div>
+          <div className="flex justify-end my-5">
+            <Button
+              onClick={() => {
+                router.refresh();
+                setIsEditing(false);
+              }}
+            >
+              Apply Changes
+            </Button>
           </div>
         )}
         <div className="flex justify-end">

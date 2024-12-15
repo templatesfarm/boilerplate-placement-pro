@@ -22,7 +22,7 @@ export async function fetchPortfolioDetails() {
       headers: {
         "Content-Type": "application/json",
       },
-      cache: "force-cache",
+      cache: "default",
     });
 
     if (response.ok) {
