@@ -45,7 +45,7 @@ export const createOrUpdateData = async (path: string, content: unknown) => {
     owner,
     repo,
     path,
-    message: "Update personal info",
+    message: "Update Portfolio info",
     content: encodedContent,
     sha: fileSha,
     branch,

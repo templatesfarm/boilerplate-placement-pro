@@ -1,18 +1,13 @@
 "use client";
-import { useSkillsStore } from "@/store/skillStore";
-import React, { useEffect } from "react";
+import React from "react";
 import { SkillsSkeleton } from "../Loaders";
 import { useAppStore } from "@/store/appStore";
 import { SkillsBasic } from "portfolioui";
+import { usePortfolioStore } from "@/store/usePortfolioStore";
 
 const Skills = () => {
-  const { skills, fetchSkills, isLoading, saveSelectedSkills } =
-    useSkillsStore();
+  const { portfolio, saveSkillsInfo, isLoading } = usePortfolioStore();
   const { isEditing } = useAppStore();
-
-  useEffect(() => {
-    fetchSkills();
-  }, [fetchSkills]);
 
   if (isLoading) {
     return <SkillsSkeleton />;
@@ -20,8 +15,8 @@ const Skills = () => {
 
   return (
     <SkillsBasic
-      saveSelectedSkills={saveSelectedSkills}
-      skills={skills}
+      saveSelectedSkills={saveSkillsInfo}
+      skills={portfolio.skills}
       isEditing={isEditing}
     />
   );

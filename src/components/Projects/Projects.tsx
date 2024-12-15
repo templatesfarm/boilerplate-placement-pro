@@ -1,21 +1,12 @@
-import { useProjectStore } from "@/store/projectStore";
-import React, { useEffect } from "react";
+import React from "react";
 import { ProjectsSkeleton } from "../Loaders";
 import { useAppStore } from "@/store/appStore";
 import { ProjectsBasic } from "portfolioui";
+import { usePortfolioStore } from "@/store/usePortfolioStore";
 
 export const Projects = () => {
-  const {
-    projects = [],
-    fetchProjectsSection,
-    isLoading,
-    saveProjects,
-  } = useProjectStore();
+  const { isLoading, portfolio, saveProjectsInfo } = usePortfolioStore();
   const { isEditing } = useAppStore();
-
-  useEffect(() => {
-    fetchProjectsSection();
-  }, [fetchProjectsSection]);
 
   if (isLoading) {
     return <ProjectsSkeleton />;
@@ -24,8 +15,8 @@ export const Projects = () => {
   return (
     <ProjectsBasic
       isEditing={isEditing}
-      projects={projects}
-      saveProjects={saveProjects}
+      projects={portfolio.projects}
+      saveProjects={saveProjectsInfo}
     />
   );
 };

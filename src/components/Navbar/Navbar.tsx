@@ -1,19 +1,16 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React from "react";
 import { ProfileSkeleton } from "../Loaders";
-import { usePersonalStore } from "@/store/personalStore";
 import { useAppStore } from "@/store/appStore";
 import { NavbarBasic } from "portfolioui";
+import { usePortfolioStore } from "@/store/usePortfolioStore";
 
 const Navbar = () => {
-  const { personalInfo, fetchPersonalInfo, isLoading, savePersonalInfo } =
-    usePersonalStore();
+  const { portfolio, savePersonalInfo, isLoading } = usePortfolioStore();
+  console.log("🚀 ~ Navbar ~ portfolio:", portfolio);
+  console.log("🚀 ~ Navbar ~ isLoading:", isLoading);
   const { isEditing } = useAppStore();
-
-  useEffect(() => {
-    fetchPersonalInfo();
-  }, [fetchPersonalInfo]);
 
   if (isLoading) {
     return <ProfileSkeleton />;
@@ -23,7 +20,7 @@ const Navbar = () => {
     <>
       <NavbarBasic
         isEditing={isEditing}
-        personalInfo={personalInfo}
+        personalInfo={portfolio.personalInfo}
         savePersonalInfo={savePersonalInfo}
       />
     </>

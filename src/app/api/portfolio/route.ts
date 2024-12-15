@@ -3,6 +3,7 @@ import {
   createOrUpdateData,
   fetchFileContentFromDatabase,
 } from "@/lib/server/githubApi";
+import { revalidatePath } from "next/cache";
 // import {
 //   fetchFileContentFromDatabase,
 //   createOrUpdateData,
@@ -11,9 +12,9 @@ import {
 import { NextRequest, NextResponse } from "next/server";
 
 export const POST = async (req: NextRequest) => {
-  const { message, introduction, description } = await req.json();
+  const porfolioData = await req.json();
 
-  if (!message || !introduction || !description) {
+  if (!porfolioData) {
     return NextResponse.json(
       { error: "Missing required fields" },
       { status: 400 }
@@ -21,23 +22,17 @@ export const POST = async (req: NextRequest) => {
   }
 
   try {
-    // Prepare the updated content
-    const updatedContent = {
-      message,
-      introduction,
-      description,
-    };
-
-    await createOrUpdateData(databaseRoutes.HERO, updatedContent);
-
     // Update the file in the repository
+    await createOrUpdateData(databaseRoutes.PORTFOLIO, porfolioData);
+
+    // Fetch the updated content
     const parsedContent = await fetchFileContentFromDatabase(
-      databaseRoutes.HERO
+      databaseRoutes.PORTFOLIO
     );
 
+    revalidatePath("/api/portfolio");
     return NextResponse.json(parsedContent, { status: 200 });
   } catch (error) {
-    console.error("Error updating personal info:", (error as Error).message);
     return NextResponse.json(
       { error: (error as Error).message },
       { status: 500 }
@@ -48,7 +43,7 @@ export const POST = async (req: NextRequest) => {
 export const GET = async () => {
   try {
     const parsedContent = await fetchFileContentFromDatabase(
-      databaseRoutes.HERO
+      databaseRoutes.PORTFOLIO
     );
     return NextResponse.json(parsedContent, { status: 200 });
   } catch (err: unknown) {

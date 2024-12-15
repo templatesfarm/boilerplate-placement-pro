@@ -1,20 +1,13 @@
 "use client";
-import React, { useEffect } from "react";
-import { useHeroStore } from "@/store/heroStore";
+import React from "react";
 import { HeroSkeleton } from "../Loaders";
-import { usePersonalStore } from "@/store/personalStore";
 import { useAppStore } from "@/store/appStore";
 import { HeroBasic } from "portfolioui";
+import { usePortfolioStore } from "@/store/usePortfolioStore";
 
 const Hero = () => {
-  const { heroInfo, fetchHeroSection, isLoading, saveHeroInfo } =
-    useHeroStore();
-  const { personalInfo } = usePersonalStore();
+  const { portfolio, saveHeroInfo, isLoading } = usePortfolioStore();
   const { isEditing } = useAppStore();
-
-  useEffect(() => {
-    fetchHeroSection();
-  }, [fetchHeroSection]);
 
   if (isLoading) {
     return <HeroSkeleton />;
@@ -23,9 +16,9 @@ const Hero = () => {
   return (
     <HeroBasic
       isEditing={isEditing}
-      heroInfo={heroInfo}
+      heroInfo={portfolio.heroInfo}
       saveHeroInfo={saveHeroInfo}
-      personalInfo={personalInfo}
+      personalInfo={portfolio.personalInfo}
     />
   );
 };
