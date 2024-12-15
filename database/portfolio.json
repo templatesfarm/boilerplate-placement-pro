@@ -1,6 +1,6 @@
 {
   "personalInfo": {
-    "name": "Virat Kohli",
+    "name": "Deepak Pahawa",
     "contactNumber": "09963976068",
     "email": "deepakpahwa19@gmail.com",
     "socialMedia": {
@@ -13,7 +13,7 @@
   },
   "heroInfo": {
     "message": "Hola There",
-    "introduction": "I am Virat Kohli\n",
+    "introduction": "I am Deepak\n",
     "description": "I am based out of London, UK and an expert at developing Full Stack Website and Mobile Apps using NextJS, ReactJS, ReactNative and Typescript."
   },
   "skills": {
@@ -50,26 +50,26 @@
   },
   "projects": [
     {
-      "projectName": "Intuit Quickbooks",
+      "projectName": "Microsoft Word",
       "designation": "Senior Software Engineer",
-      "link": "https://quickbooks.intuit.com/",
-      "cover": "",
-      "skills": "Java, JavaScript, Next.JS, React.JS",
-      "companyName": "Intuit",
-      "startDate": "2024-12-04",
-      "endDate": "2024-12-14",
-      "imageUrl": "https://raw.githubusercontent.com/DeepakPahawa/deepk-portfolio/master/images/1734168126943-Intuit%20Quickbooks.png"
-    },
-    {
-      "projectName": "Cisco Webex",
-      "designation": "Lead Software Engineer",
       "link": "https://www.webex.com/",
       "cover": "",
-      "skills": "Java, JavaScript, NextJS",
-      "companyName": "Cisco",
-      "startDate": "2024-11-25",
-      "endDate": "2025-01-02",
-      "imageUrl": "https://raw.githubusercontent.com/DeepakPahawa/deepk-portfolio/master/images/1734168227220-Webex.png"
+      "skills": "ReactJS,  JavaScript, TypeScript, Styled Components, Material Ui",
+      "companyName": "Microsoft",
+      "startDate": "",
+      "endDate": "",
+      "imageUrl": ""
+    },
+    {
+      "projectName": "Broadridge L&D",
+      "designation": "Lead Software Engineer",
+      "link": "https://quickbooks.intuit.com/",
+      "cover": "",
+      "skills": "ReactJS, TypeScript, Redux, PWA",
+      "companyName": "Broadridge",
+      "startDate": "",
+      "endDate": "",
+      "imageUrl": ""
     }
   ]
 }
