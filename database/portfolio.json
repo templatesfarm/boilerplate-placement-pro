@@ -59,6 +59,17 @@
       "startDate": "",
       "endDate": "",
       "imageUrl": ""
+    },
+    {
+      "projectName": "Microsoft Word",
+      "designation": "Senior Software Engineer",
+      "link": "https://www.webex.com/",
+      "cover": "",
+      "skills": "ReactJS,  JavaScript, TypeScript, Styled Components, Material Ui",
+      "companyName": "Microsoft",
+      "startDate": "",
+      "endDate": "",
+      "imageUrl": ""
     }
   ]
 }
