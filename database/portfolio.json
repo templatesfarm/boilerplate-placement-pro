@@ -42,6 +42,20 @@
           "label": "JavaScript",
           "imageName": "/javascript.png"
         }
+      ],
+      "backend": [
+        {
+          "label": "Spring Boot",
+          "imageName": "/springboot.png"
+        },
+        {
+          "label": "Flask",
+          "imageName": "/flask.png"
+        },
+        {
+          "label": "Django",
+          "imageName": "/django.png"
+        }
       ]
     }
   },
