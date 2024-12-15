@@ -48,28 +48,5 @@
       }
     ]
   },
-  "projects": [
-    {
-      "projectName": "Microsoft Word",
-      "designation": "Senior Software Engineer",
-      "link": "https://www.webex.com/",
-      "cover": "",
-      "skills": "ReactJS,  JavaScript, TypeScript, Styled Components, Material Ui",
-      "companyName": "Microsoft",
-      "startDate": "",
-      "endDate": "",
-      "imageUrl": ""
-    },
-    {
-      "projectName": "Broadridge L&D",
-      "designation": "Lead Software Engineer",
-      "link": "https://quickbooks.intuit.com/",
-      "cover": "",
-      "skills": "ReactJS, TypeScript, Redux, PWA",
-      "companyName": "Broadridge",
-      "startDate": "",
-      "endDate": "",
-      "imageUrl": ""
-    }
-  ]
+  "projects": []
 }
