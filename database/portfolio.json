@@ -23,18 +23,18 @@
     "skills": {}
   },
   "projectsInfo": {
-    "displayName": "",
+    "displayName": "s",
     "projects": [
       {
-        "projectName": "",
-        "designation": "",
-        "link": "",
+        "projectName": "Intuit Quickbooks",
+        "designation": "Lead Software Engineer",
+        "link": "https://quickbooks.intuit.com/",
         "cover": "",
-        "skills": [],
-        "companyName": "",
+        "skills": "Java, JavaScript, Next.JS, React.JS",
+        "companyName": "Intuit",
         "startDate": "",
         "endDate": "",
-        "imageUrl": ""
+        "imageUrl": "https://raw.githubusercontent.com/DeepakPahawa/deepk-portfolio/master/images/1734302627699-Intuit%20Quickbooks.png"
       }
     ]
   }
