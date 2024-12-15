@@ -48,5 +48,17 @@
       }
     ]
   },
-  "projects": []
+  "projects": [
+    {
+      "projectName": "Microsoft Word",
+      "designation": "",
+      "link": "https://quickbooks.intuit.com/",
+      "cover": "",
+      "skills": "Java, JavaScript, NextJS",
+      "companyName": "Intuit",
+      "startDate": "",
+      "endDate": "",
+      "imageUrl": ""
+    }
+  ]
 }
