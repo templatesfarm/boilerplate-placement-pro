@@ -51,11 +51,11 @@
   "projects": [
     {
       "projectName": "Microsoft Word",
-      "designation": "",
+      "designation": "Senior Software Engineer",
       "link": "https://quickbooks.intuit.com/",
       "cover": "",
       "skills": "Java, JavaScript, NextJS",
-      "companyName": "Intuit",
+      "companyName": "Microsoft",
       "startDate": "",
       "endDate": "",
       "imageUrl": ""
