@@ -70,6 +70,17 @@
       "startDate": "",
       "endDate": "",
       "imageUrl": ""
+    },
+    {
+      "projectName": "Broadridge L&D",
+      "designation": "Lead Software Engineer",
+      "link": "https://quickbooks.intuit.com/",
+      "cover": "",
+      "skills": "ReactJS, TypeScript, Redux, PWA",
+      "companyName": "Broadridge",
+      "startDate": "",
+      "endDate": "",
+      "imageUrl": ""
     }
   ]
 }
