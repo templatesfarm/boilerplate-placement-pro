@@ -1,20 +1,20 @@
 {
   "personalInfo": {
-    "name": "Indrajeet Pahawa",
+    "name": "Virat Kohli",
     "contactNumber": "09963976068",
     "email": "deepakpahwa19@gmail.com",
     "socialMedia": {
-      "linkedin": "https://www.linkedin.com/in/deepakpahawa/",
-      "github": "https://github.com/DeepakPahawa/deepk-portfolio",
-      "youtube": "",
-      "facebook": "",
-      "instagram": ""
+      "linkedin": "",
+      "github": "",
+      "youtube": "https://www.linkedin.com/in/deepakpahawa/",
+      "facebook": "https://github.com/DeepakPahawa/deepk-portfolio",
+      "instagram": "https://github.com/DeepakPahawa/deepk-portfolio"
     }
   },
   "heroInfo": {
-    "message": "Nice to Meet you.",
-    "introduction": "I am Indrajeet Kaur",
-    "description": "I am based out of Bangalore, India and an expert at developing Full Stack Website and Mobile Apps using NextJS, ReactJS, ReactNative and Typescript."
+    "message": "Hola There",
+    "introduction": "I am Virat Kohli\n",
+    "description": "I am based out of London, UK and an expert at developing Full Stack Website and Mobile Apps using NextJS, ReactJS, ReactNative and Typescript."
   },
   "skills": {
     "frontend": [
@@ -31,12 +31,20 @@
         "imageName": "/tailwind.png"
       },
       {
-        "label": "JavaScript",
-        "imageName": "/javascript.png"
-      },
-      {
         "label": "TypeScript",
         "imageName": "/typescript.webp"
+      }
+    ],
+    "backend": [
+      {
+        "label": "Django",
+        "imageName": "/django.png"
+      }
+    ],
+    "devops": [
+      {
+        "label": "GitHub Actions",
+        "imageName": "/githubactions.png"
       }
     ]
   },
