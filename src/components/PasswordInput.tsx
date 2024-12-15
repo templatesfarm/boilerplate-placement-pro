@@ -16,10 +16,20 @@ const PasswordInput: React.FC = () => {
       }
     };
 
+    const handlePaste = (event: ClipboardEvent) => {
+      if (inputRef.current) {
+        const pastedText = event.clipboardData?.getData("text") || "";
+        console.log("🚀 ~ handlePaste ~ pastedText:", pastedText);
+        setInputValue(pastedText);
+      }
+    };
+
     window.addEventListener("keypress", handleKeyPress);
+    window.addEventListener("paste", handlePaste);
 
     return () => {
       window.removeEventListener("keypress", handleKeyPress);
+      window.removeEventListener("paste", handlePaste);
     };
   }, []);
 
