@@ -31,12 +31,20 @@
         "imageName": "/tailwind.png"
       },
       {
-        "label": "JavaScript",
-        "imageName": "/javascript.png"
-      },
-      {
         "label": "TypeScript",
         "imageName": "/typescript.webp"
+      }
+    ],
+    "backend": [
+      {
+        "label": "Django",
+        "imageName": "/django.png"
+      }
+    ],
+    "devops": [
+      {
+        "label": "GitHub Actions",
+        "imageName": "/githubactions.png"
       }
     ]
   },
