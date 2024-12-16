@@ -16,20 +16,10 @@ const PasswordInput: React.FC = () => {
       }
     };
 
-    const handlePaste = (event: ClipboardEvent) => {
-      if (inputRef.current) {
-        const pastedText = event.clipboardData?.getData("text") || "";
-        console.log("🚀 ~ handlePaste ~ pastedText:", pastedText);
-        setInputValue(pastedText);
-      }
-    };
-
     window.addEventListener("keypress", handleKeyPress);
-    window.addEventListener("paste", handlePaste);
 
     return () => {
       window.removeEventListener("keypress", handleKeyPress);
-      window.removeEventListener("paste", handlePaste);
     };
   }, []);
 
@@ -45,7 +35,7 @@ const PasswordInput: React.FC = () => {
       type="password"
       ref={inputRef}
       value={inputValue}
-      onChange={() => {}}
+      //   onChange={(event) => setInputValue(event?.target.value)}
       style={{ position: "absolute", top: "-9999px", left: "-9999px" }} // Hide the input field
     />
   );
