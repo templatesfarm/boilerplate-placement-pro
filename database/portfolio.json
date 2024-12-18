@@ -21,10 +21,64 @@
   "skillsInfo": {
     "displayName": "",
     "skills": {
-       "cloud": [
+      "cloud": [
         {
           "label": "DigitalOcean",
           "imageName": "/digitalocean.png"
+        }
+      ],
+      "Frontend": [
+        {
+          "label": "ReactJS",
+          "imageName": "/reactjs.png"
+        },
+        {
+          "label": "NextJS",
+          "imageName": "/nextjs.jpg"
+        },
+        {
+          "label": "Tailwind",
+          "imageName": "/tailwind.png"
+        },
+        {
+          "label": "Material-UI",
+          "imageName": "/materialui.png"
+        }
+      ],
+      "Mobile": [
+        {
+          "label": "React Native",
+          "imageName": "/reactnative.png"
+        }
+      ],
+      "Database": [
+        {
+          "label": "MySQL",
+          "imageName": "/mysql.png"
+        },
+        {
+          "label": "MongoDB",
+          "imageName": "/mongodb.png"
+        }
+      ],
+      "mba_tools": [
+        {
+          "label": "SPSS",
+          "imageName": "/spss.png"
+        },
+        {
+          "label": "MATLAB",
+          "imageName": "/matlab.png"
+        }
+      ],
+      "AI/ML": [
+        {
+          "label": "TensorFlow",
+          "imageName": "/tensorflow.png"
+        },
+        {
+          "label": "PyTorch",
+          "imageName": "/pytorch.png"
         }
       ]
     }
