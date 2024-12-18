@@ -26,8 +26,8 @@
           "label": "DigitalOcean",
           "imageName": "/digitalocean.png"
         }
-      ]
-    }
+      ],
+    },
   },
   "projectsInfo": {
     "displayName": "Experience",
