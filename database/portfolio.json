@@ -23,52 +23,12 @@
     "skills": {
       "frontend": [
         {
-          "label": "ReactJS",
-          "imageName": "/reactjs.png"
-        },
-        {
-          "label": "NextJS",
-          "imageName": "/nextjs.jpg"
-        },
-        {
-          "label": "Tailwind",
-          "imageName": "/tailwind.png"
-        },
-        {
           "label": "TypeScript",
           "imageName": "/typescript.webp"
         },
         {
           "label": "JavaScript",
           "imageName": "/javascript.png"
-        },
-        {
-          "label": "Angular",
-          "imageName": "/angular.png"
-        },
-        {
-          "label": "Svelte",
-          "imageName": "/svelte.png"
-        },
-        {
-          "label": "Bootstrap",
-          "imageName": "/bootstrap.png"
-        },
-        {
-          "label": "Material-UI",
-          "imageName": "/materialui.png"
-        },
-        {
-          "label": "Chakra UI",
-          "imageName": "/chakraui.png"
-        },
-        {
-          "label": "Electron",
-          "imageName": "/electron.png"
-        },
-        {
-          "label": "VueJS",
-          "imageName": "/vuejs.png"
         }
       ],
       "backend": [
@@ -155,22 +115,6 @@
         {
           "label": "MongoDB",
           "imageName": "/mongodb.png"
-        },
-        {
-          "label": "MySQL",
-          "imageName": "/mysql.png"
-        },
-        {
-          "label": "SQLite",
-          "imageName": "/sqlite.png"
-        },
-        {
-          "label": "Redis",
-          "imageName": "/redis.png"
-        },
-        {
-          "label": "Oracle Database",
-          "imageName": "/oracle.png"
         },
         {
           "label": "Microsoft SQL Server",
