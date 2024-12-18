@@ -104,7 +104,16 @@
           "imageName": "/digitalocean.png"
         }
       ],
-      "coding_languages": []
+      "coding_languages": [
+        {
+          "label": "JavaScript",
+          "imageName": "/javascript.png"
+        },
+        {
+          "label": "TypeScript",
+          "imageName": "/typescript.png"
+        }
+      ]
     }
   },
   "projectsInfo": {
