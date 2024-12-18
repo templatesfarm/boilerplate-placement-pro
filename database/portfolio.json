@@ -21,21 +21,13 @@
   "skillsInfo": {
     "displayName": "",
     "skills": {
-      "frontend": [
+       "cloud": [
         {
-          "label": "ReactJS",
-          "imageName": "/reactjs.png"
-        },
-        {
-          "label": "NextJS",
-          "imageName": "/nextjs.jpg"
-        },
-        {
-          "label": "Tailwind",
-          "imageName": "/tailwind.png"
-        },
-      ],
-    },
+          "label": "DigitalOcean",
+          "imageName": "/digitalocean.png"
+        }
+      ]
+    }
   },
   "projectsInfo": {
     "displayName": "Experience",
