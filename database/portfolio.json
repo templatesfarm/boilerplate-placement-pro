@@ -29,21 +29,25 @@
         {
           "label": "JavaScript",
           "imageName": "/javascript.png"
+        },
+        {
+          "label": "ReactJS",
+          "imageName": "/reactjs.png"
+        },
+        {
+          "label": "NextJS",
+          "imageName": "/nextjs.jpg"
+        },
+        {
+          "label": "Tailwind",
+          "imageName": "/tailwind.png"
+        },
+        {
+          "label": "Material-UI",
+          "imageName": "/materialui.png"
         }
       ],
       "backend": [
-        {
-          "label": "Spring Boot",
-          "imageName": "/springboot.png"
-        },
-        {
-          "label": "Flask",
-          "imageName": "/flask.png"
-        },
-        {
-          "label": "Django",
-          "imageName": "/django.png"
-        },
         {
           "label": "ExpressJS",
           "imageName": "/expressjs.png"
@@ -53,60 +57,15 @@
           "imageName": "/nodejs.webp"
         },
         {
-          "label": "Ruby on Rails",
-          "imageName": "/rubyonrails.png"
+          "label": "Spring Boot",
+          "imageName": "/springboot.png"
         },
         {
-          "label": "Laravel",
-          "imageName": "/laravel.png"
-        },
-        {
-          "label": "FastAPI",
-          "imageName": "/fastapi.png"
-        },
-        {
-          "label": "ASP.NET Core",
-          "imageName": "/aspnetcore.png"
+          "label": "Flask",
+          "imageName": "/flask.png"
         }
       ],
-      "mobile": [
-        {
-          "label": "Java (Android)",
-          "imageName": "/androidjava.png"
-        },
-        {
-          "label": "NativeScript",
-          "imageName": "/nativescript.png"
-        },
-        {
-          "label": "Unreal",
-          "imageName": "/unreal.png"
-        },
-        {
-          "label": "Unity",
-          "imageName": "/unity.png"
-        },
-        {
-          "label": "Cordova",
-          "imageName": "/cordova.png"
-        },
-        {
-          "label": "Xamarin",
-          "imageName": "/xamarin.png"
-        },
-        {
-          "label": "Ionic",
-          "imageName": "/ionic.png"
-        },
-        {
-          "label": "Flutter",
-          "imageName": "/flutter.png"
-        },
-        {
-          "label": "React Native",
-          "imageName": "/reactnative.png"
-        }
-      ],
+      "mobile": [],
       "database": [
         {
           "label": "PostgreSQL",
@@ -115,18 +74,6 @@
         {
           "label": "MongoDB",
           "imageName": "/mongodb.png"
-        },
-        {
-          "label": "Microsoft SQL Server",
-          "imageName": "/mssql.png"
-        },
-        {
-          "label": "Elasticsearch",
-          "imageName": "/elasticsearch.png"
-        },
-        {
-          "label": "Firebase",
-          "imageName": "/firebase.png"
         }
       ],
       "devops": [
@@ -139,18 +86,6 @@
           "imageName": "/kubernetes.png"
         },
         {
-          "label": "Jenkins",
-          "imageName": "/jenkins.png"
-        },
-        {
-          "label": "GitHub Actions",
-          "imageName": "/githubactions.png"
-        },
-        {
-          "label": "Terraform",
-          "imageName": "/terraform.png"
-        },
-        {
           "label": "AWS",
           "imageName": "/aws.png"
         },
@@ -159,44 +94,17 @@
           "imageName": "/gcp.png"
         },
         {
-          "label": "Microsoft Azure",
-          "imageName": "/azure.png"
-        },
-        {
-          "label": "Ansible",
-          "imageName": "/ansible.png"
-        },
-        {
-          "label": "CircleCI",
-          "imageName": "/circleci.png"
+          "label": "GitHub Actions",
+          "imageName": "/githubactions.png"
         }
       ],
       "cloud": [
         {
-          "label": "Alibaba Cloud",
-          "imageName": "/alibaba.png"
-        },
-        {
-          "label": "Cloudflare",
-          "imageName": "/cloudflare.png"
-        },
-        {
           "label": "DigitalOcean",
           "imageName": "/digitalocean.png"
-        },
-        {
-          "label": "Vercel",
-          "imageName": "/vercel.png"
-        },
-        {
-          "label": "Netlify",
-          "imageName": "/netlify.png"
-        },
-        {
-          "label": "Heroku",
-          "imageName": "/heroku.png"
         }
-      ]
+      ],
+      "coding_languages": []
     }
   },
   "projectsInfo": {
