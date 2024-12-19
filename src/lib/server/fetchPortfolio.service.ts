@@ -25,8 +25,8 @@ export async function fetchPortfolioDetails() {
       cache: "default",
     });
 
+    const data = await response.json();
     if (response.ok) {
-      const data = await response.json();
       return {
         portfolio: data as PortfolioType,
         url: baseUrl,
@@ -36,7 +36,7 @@ export async function fetchPortfolioDetails() {
       return {
         portfolio: {} as PortfolioType,
         url: baseUrl,
-        error: "Unable to Fetch Data after authentication",
+        error: data?.error || "Error fetching portfolio",
       };
     }
   } catch (err) {
