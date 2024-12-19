@@ -1,27 +1,33 @@
 {
   "personalInfo": {
     "displayName": "",
-    "name": "Deepak Pahawa",
+    "name": "Yash Chawla",
     "contactNumber": "9963976068",
     "email": "deepakpahwa19@gmail.com",
     "socialMedia": {
       "linkedin": "https://www.linkedin.com/in/deepakpahawa/",
-      "github": "https://github.com/DeepakPahawa/deepk-portfolio",
-      "youtube": "",
-      "facebook": "",
-      "instagram": ""
+      "github": "https://github.com/deepakpahwa19",
+      "youtube": "https://github.com/deepakpahwa19",
+      "facebook": "https://github.com/deepakpahwa19",
+      "instagram": "https://github.com/deepakpahwa19"
     }
   },
   "heroInfo": {
     "displayName": "",
-    "message": "Nice to Meet you.",
-    "introduction": "I am Deepak",
-    "description": "I am passionate about crafting innovative web solutions and staying up-to-date with the latest technologies. My goal is to deliver high-quality, efficient, and user-friendly applications that exceed expectations."
+    "message": "Hello There",
+    "introduction": "I am Yash",
+    "description": "I am expert at crafting innovative web solutions and staying up-to-date with the latest technologies. My goal is to deliver high-quality, efficient, and user-friendly applications that exceed expectations."
   },
   "skillsInfo": {
-    "displayName": "Arsenal",
+    "displayName": "",
     "skills": {
-      "frontend": [
+      "cloud": [
+        {
+          "label": "DigitalOcean",
+          "imageName": "/digitalocean.png"
+        }
+      ],
+      "Frontend": [
         {
           "label": "ReactJS",
           "imageName": "/reactjs.png"
@@ -35,226 +41,44 @@
           "imageName": "/tailwind.png"
         },
         {
-          "label": "TypeScript",
-          "imageName": "/typescript.webp"
-        },
-        {
-          "label": "JavaScript",
-          "imageName": "/javascript.png"
-        },
-        {
-          "label": "Angular",
-          "imageName": "/angular.png"
-        },
-        {
-          "label": "Svelte",
-          "imageName": "/svelte.png"
-        },
-        {
-          "label": "Bootstrap",
-          "imageName": "/bootstrap.png"
-        },
-        {
           "label": "Material-UI",
           "imageName": "/materialui.png"
-        },
-        {
-          "label": "Chakra UI",
-          "imageName": "/chakraui.png"
-        },
-        {
-          "label": "Electron",
-          "imageName": "/electron.png"
-        },
-        {
-          "label": "VueJS",
-          "imageName": "/vuejs.png"
         }
       ],
-      "backend": [
-        {
-          "label": "Spring Boot",
-          "imageName": "/springboot.png"
-        },
-        {
-          "label": "Flask",
-          "imageName": "/flask.png"
-        },
-        {
-          "label": "Django",
-          "imageName": "/django.png"
-        },
-        {
-          "label": "ExpressJS",
-          "imageName": "/expressjs.png"
-        },
-        {
-          "label": "NodeJS",
-          "imageName": "/nodejs.webp"
-        },
-        {
-          "label": "Ruby on Rails",
-          "imageName": "/rubyonrails.png"
-        },
-        {
-          "label": "Laravel",
-          "imageName": "/laravel.png"
-        },
-        {
-          "label": "FastAPI",
-          "imageName": "/fastapi.png"
-        },
-        {
-          "label": "ASP.NET Core",
-          "imageName": "/aspnetcore.png"
-        }
-      ],
-      "mobile": [
-        {
-          "label": "Java (Android)",
-          "imageName": "/androidjava.png"
-        },
-        {
-          "label": "NativeScript",
-          "imageName": "/nativescript.png"
-        },
-        {
-          "label": "Unreal",
-          "imageName": "/unreal.png"
-        },
-        {
-          "label": "Unity",
-          "imageName": "/unity.png"
-        },
-        {
-          "label": "Cordova",
-          "imageName": "/cordova.png"
-        },
-        {
-          "label": "Xamarin",
-          "imageName": "/xamarin.png"
-        },
-        {
-          "label": "Ionic",
-          "imageName": "/ionic.png"
-        },
-        {
-          "label": "Flutter",
-          "imageName": "/flutter.png"
-        },
+      "Mobile": [
         {
           "label": "React Native",
           "imageName": "/reactnative.png"
         }
       ],
-      "database": [
-        {
-          "label": "PostgreSQL",
-          "imageName": "/postgresql.png"
-        },
-        {
-          "label": "MongoDB",
-          "imageName": "/mongodb.png"
-        },
+      "Database": [
         {
           "label": "MySQL",
           "imageName": "/mysql.png"
         },
         {
-          "label": "SQLite",
-          "imageName": "/sqlite.png"
-        },
-        {
-          "label": "Redis",
-          "imageName": "/redis.png"
-        },
-        {
-          "label": "Oracle Database",
-          "imageName": "/oracle.png"
-        },
-        {
-          "label": "Microsoft SQL Server",
-          "imageName": "/mssql.png"
-        },
-        {
-          "label": "Elasticsearch",
-          "imageName": "/elasticsearch.png"
-        },
-        {
-          "label": "Firebase",
-          "imageName": "/firebase.png"
-        },
-        {
-          "label": "Cassandra",
-          "imageName": "/cassandra.png"
+          "label": "MongoDB",
+          "imageName": "/mongodb.png"
         }
       ],
-      "devops": [
+      "mba_tools": [
         {
-          "label": "Docker",
-          "imageName": "/docker.png"
+          "label": "SPSS",
+          "imageName": "/spss.png"
         },
         {
-          "label": "Kubernetes",
-          "imageName": "/kubernetes.png"
-        },
-        {
-          "label": "Jenkins",
-          "imageName": "/jenkins.png"
-        },
-        {
-          "label": "GitHub Actions",
-          "imageName": "/githubactions.png"
-        },
-        {
-          "label": "Terraform",
-          "imageName": "/terraform.png"
-        },
-        {
-          "label": "AWS",
-          "imageName": "/aws.png"
-        },
-        {
-          "label": "Google Cloud Platform (GCP)",
-          "imageName": "/gcp.png"
-        },
-        {
-          "label": "Microsoft Azure",
-          "imageName": "/azure.png"
-        },
-        {
-          "label": "Ansible",
-          "imageName": "/ansible.png"
-        },
-        {
-          "label": "CircleCI",
-          "imageName": "/circleci.png"
+          "label": "MATLAB",
+          "imageName": "/matlab.png"
         }
       ],
-      "cloud": [
+      "AI/ML": [
         {
-          "label": "Alibaba Cloud",
-          "imageName": "/alibaba.png"
+          "label": "TensorFlow",
+          "imageName": "/tensorflow.png"
         },
         {
-          "label": "Cloudflare",
-          "imageName": "/cloudflare.png"
-        },
-        {
-          "label": "DigitalOcean",
-          "imageName": "/digitalocean.png"
-        },
-        {
-          "label": "Vercel",
-          "imageName": "/vercel.png"
-        },
-        {
-          "label": "Netlify",
-          "imageName": "/netlify.png"
-        },
-        {
-          "label": "Heroku",
-          "imageName": "/heroku.png"
+          "label": "PyTorch",
+          "imageName": "/pytorch.png"
         }
       ]
     }
@@ -283,6 +107,17 @@
         "startDate": "",
         "endDate": "",
         "imageUrl": "https://raw.githubusercontent.com/DeepakPahawa/deepk-portfolio/master/images/1734305033916-lowes.png"
+      },
+      {
+        "projectName": "Cisco Webex",
+        "designation": "Lead Software Engineer",
+        "link": "https://www.webex.com/",
+        "cover": "",
+        "skills": "Java, JavaScript, Next.JS, React.JS",
+        "companyName": "Cisco",
+        "startDate": "",
+        "endDate": "",
+        "imageUrl": "https://raw.githubusercontent.com/DeepakPahawa/deepk-portfolio/master/images/1734561322664-Webex.png"
       }
     ]
   }
