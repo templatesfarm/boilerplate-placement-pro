@@ -31,7 +31,6 @@ export const POST = async (req: NextRequest) => {
     }
 
     count--;
-    console.log("Count:", count);
 
     if (password === env.password) {
       count = limit;

@@ -1,6 +1,6 @@
 "use client";
-import Footer from "@/components/Footer";
-import Hero from "@/components/Hero/Hero";
+import { FloatingDockDemo } from "@/components/FloatingDockDemo";
+import HeroPro from "@/components/Hero/HeroPro";
 import Navbar from "@/components/Navbar/Navbar";
 import PasswordInput from "@/components/PasswordInput";
 import { Projects } from "@/components/Projects/Projects";
@@ -29,8 +29,8 @@ export default function HomePage({ portfolio, url }: HomePageProps) {
   }, [updateState, portfolio, url]);
 
   return (
-    <div className="min-h-screen bg-background overflow-hidden">
-      <div className="max-w-7xl mx-auto p-5">
+    <div className="min-h-screen bg-background overflow-hidden space-y-10 w-full">
+      <div className="py-5">
         {!isEditing && <PasswordInput />}
         {isEditing && (
           // <div className="text-center mx-auto text-blue-500 animate-pulse">
@@ -47,17 +47,20 @@ export default function HomePage({ portfolio, url }: HomePageProps) {
             </Button>
           </div>
         )}
-        <div className="flex justify-end">
-          <div className="w-[90vw] mr-3 md:mr-20">
+        <div className="flex justify-evenly flex-row px-5 max-w-7xl mx-auto">
+          {/* <div className="w-[90vw] mr-3 md:mr-20">
             <Navbar />
-          </div>
-          <ThemeToggle />
+          </div> */}
+          {/* <div className="w-[25%]"></div> */}
+          <FloatingDockDemo />
+          {/* <div className="flex justify-end items-center h-20 w-full">
+            <ThemeToggle />
+          </div> */}
         </div>
-        <Hero />
+        <HeroPro />
         <Skills />
         <Projects />
       </div>
-      <Footer />
     </div>
   );
 }

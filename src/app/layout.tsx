@@ -33,7 +33,7 @@ export default function RootLayout({
               process.env.NEXT_PUBLIC_PORTFOLIO_ACCESS_KEY ?? ""
             }
           >
-            <main className="bg-white text-foreground">{children}</main>
+            <main className="bg-background text-foreground">{children}</main>
           </AuthProvider>
         </ThemeProvider>
       </body>

@@ -6,6 +6,7 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={() => setTheme(resolvedTheme === "light" ? "dark" : "light")}
+      className="items-center"
     >
       {theme === "light" ? <FaMoon /> : <FaSun />}
     </button>
