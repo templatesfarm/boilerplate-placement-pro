@@ -84,7 +84,7 @@
     }
   },
   "projectsInfo": {
-    "displayName": "Experience",
+    "displayName": "",
     "projects": [
       {
         "projectName": "Intuit Quickbooks",
@@ -96,7 +96,9 @@
         "headline1": "I worked here as a SE",
         "headline2": "I've managed the team of 5 members",
         "images": [
-          "Webex.png"
+          "Webex.png",
+          "Intuit Quickbooks.png",
+          "lowes.png"
         ]
       }
     ]
