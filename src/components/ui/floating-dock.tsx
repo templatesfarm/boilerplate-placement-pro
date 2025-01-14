@@ -110,7 +110,7 @@ const FloatingDockDesktop = ({
           key={"theme"}
           icon={<ThemeToggle />}
           href="#"
-          title="theme"
+          title="Theme"
         />
       </>
     </motion.div>
