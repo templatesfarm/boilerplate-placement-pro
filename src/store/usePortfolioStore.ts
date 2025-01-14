@@ -1,11 +1,7 @@
 import { create } from "zustand";
 import { serverRoutes } from "@/lib/contants";
-import {
-  HeroType,
-  PersonalInfoType,
-  ProjectsInfoType,
-  SkillsInfoType,
-} from "portfolioui";
+import { HeroType, PersonalInfoType, SkillsInfoType } from "portfolioui";
+import { ProjectsInfoType } from "@/components/project.types";
 
 const initialPersonalState: PersonalInfoType = {
   displayName: "",
@@ -37,15 +33,17 @@ const initialProjectState = {
   displayName: "",
   projects: [
     {
+      timeline: "",
       projectName: "",
+      headline1: "",
+      headline2: "",
       designation: "",
       link: "",
       cover: "",
-      skills: [] as string[],
+      skills: "",
       companyName: "",
-      startDate: "",
-      endDate: "",
-      imageUrl: "",
+      clientName: "",
+      images: [],
     },
   ],
 };

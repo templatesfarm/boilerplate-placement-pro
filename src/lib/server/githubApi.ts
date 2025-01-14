@@ -69,27 +69,57 @@ export const fetchFileContentFromDatabase = async (path: string) => {
 };
 
 export const uploadFileInCDN = async (file: File) => {
-  const filename = `${Date.now()}-${file.name}`;
+  const fileName = `${file.name}`;
 
   const encodedContent = Buffer.from(await file.arrayBuffer()).toString(
     "base64"
   );
 
   const { owner, repo, branch } = getGithubClient();
-  const { data } = await octokit.repos.createOrUpdateFileContents({
-    owner,
-    repo,
-    path: `images/${filename}`,
-    message: "Upload Image",
-    content: encodedContent,
-    branch,
-  });
+  let sha;
+  try {
+    const existingFileData = await octokit.repos.getContent({
+      owner,
+      repo,
+      path: `images/${fileName}`,
+      ref: branch,
+    });
+    sha = existingFileData.data.sha;
+  } catch (error) {
+    console.log("🚀 ~ uploadFileInCDN ~ error:", error);
+  }
+  let response;
+  if (sha) {
+    response = await octokit.repos.createOrUpdateFileContents({
+      owner,
+      repo,
+      path: `images/${fileName}`,
+      message: "Upload Image",
+      content: encodedContent,
+      branch,
+      sha,
+    });
+  } else {
+    response = await octokit.repos.createOrUpdateFileContents({
+      owner,
+      repo,
+      path: `images/${fileName}`,
+      message: "Upload Image",
+      content: encodedContent,
+      branch,
+    });
+  }
+  console.log("🚀 ~ uploadFileInCDN ~ response:", response);
 
+  const { data } = response;
+  console.log("🚀 ~ uploadFileInCDN ~ data:", data);
   const fileUrl = data.content?.html_url
     ? data.content.html_url
         .replace("github.com", "raw.githubusercontent.com")
         .replace(`/blob/${branch}/`, `/${branch}/`)
     : undefined;
 
-  return fileUrl;
+  console.log("🚀 ~ uploadFileInCDN ~ fileUrl:", fileUrl);
+
+  return { fileName, fileUrl };
 };

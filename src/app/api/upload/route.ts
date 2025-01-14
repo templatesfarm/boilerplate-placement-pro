@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
     if (!file) {
       return NextResponse.json({ error: "No file uploaded" }, { status: 400 });
     }
-    const fileUrl = await uploadFileInCDN(file);
+    const { fileName, fileUrl } = await uploadFileInCDN(file);
 
     // const base64Content = Buffer.from(await file.arrayBuffer()).toString("base64");
     // const filename = `${Date.now()}-${file.name}`;
@@ -30,7 +30,7 @@ export async function POST(req: NextRequest) {
     //   .replace("github.com", "raw.githubusercontent.com")
     //   .replace(`/blob/${branch}/`, `/${branch}/`);
 
-    return NextResponse.json({ url: fileUrl });
+    return NextResponse.json({ fileName, fileUrl });
   } catch (err) {
     const error = err as Error;
     console.error("Error in upload route:", error);

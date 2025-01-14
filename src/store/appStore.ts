@@ -1,4 +1,4 @@
-import {create} from 'zustand';
+import { create } from "zustand";
 
 interface AppStore {
   isEditing: boolean;
@@ -6,6 +6,6 @@ interface AppStore {
 }
 
 export const useAppStore = create<AppStore>((set) => ({
-  isEditing: false,
+  isEditing: true,
   setIsEditing: (isEditing) => set({ isEditing }),
 }));
