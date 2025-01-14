@@ -116,6 +116,19 @@
           "https://raw.githubusercontent.com/templatesfarm/placement-pro/master/images/Webex.png",
           "https://raw.githubusercontent.com/templatesfarm/placement-pro/master/images/lowes.png"
         ]
+      },
+      {
+        "timeline": "2015-20",
+        "projectName": "Intuit Quickbooks",
+        "headline1": "I was the Champion at Intuit",
+        "headline2": "",
+        "designation": "Software Engineer",
+        "link": "",
+        "cover": "",
+        "skills": "Java, Selenium, Webdriver",
+        "companyName": "Altimetrik",
+        "clientName": "Intuit",
+        "images": []
       }
     ]
   }
