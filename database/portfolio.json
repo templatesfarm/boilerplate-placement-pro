@@ -90,9 +90,7 @@
         "projectName": "Intuit Quickbooks",
         "designation": "Lead Software Engineer",
         "link": "https://quickbooks.intuit.com/",
-        "skills": [
-          "Java, JavaScript, Next.JS, React.JS"
-        ],
+        "skills": "",
         "companyName": "Intuit",
         "timeline": "2023-24",
         "headline1": "I worked here as a SE",
