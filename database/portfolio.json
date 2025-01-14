@@ -98,7 +98,10 @@
         "imageUrl": "https://raw.githubusercontent.com/DeepakPahawa/deepk-portfolio/master/images/1734302627699-Intuit%20Quickbooks.png",
         "timeline": "2023-24",
         "headline1": "I worked here as a SE",
-        "headline2": "I've managed the team of 5 members"
+        "headline2": "I've managed the team of 5 members",
+        "images": [
+          "https://raw.githubusercontent.com/templatesfarm/placement-pro/master/images/1736871610554-Webex.png"
+        ]
       }
     ]
   }
