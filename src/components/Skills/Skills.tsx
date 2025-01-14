@@ -56,7 +56,7 @@ const Skills = () => {
     //   isEditing={isEditing}
     // />
     <div className="max-w-7xl mx-auto pb-24 w-[80%]">
-      <h4 className="mx-auto w-fit mb-24 mt-12">Skills</h4>
+      <h4 className="mx-auto w-fit mb-24 mt-12 text-3xl">Skills</h4>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-32 gap-y-16">
         {skills.map((skill, index) => (
           <SkillSlider

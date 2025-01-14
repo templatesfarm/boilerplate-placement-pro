@@ -60,8 +60,8 @@ export default function HomePage({ portfolio, url }: HomePageProps) {
           </div> */}
         </div>
         <HeroPro />
-        <TimelineDemo />
         <Skills />
+        <TimelineDemo />
         <Footer />
         {/* <Projects /> */}
       </div>
