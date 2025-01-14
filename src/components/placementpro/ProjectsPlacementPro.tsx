@@ -4,7 +4,7 @@ import ProjectsTimelineDialog from "./ProjectsTimelineDialog";
 import { usePortfolioStore } from "@/store/usePortfolioStore";
 import { useAppStore } from "@/store/appStore";
 import { ProjectsTimelinePreview } from "./ProjectsTimelinePreview";
-import { ProjectsInfoType } from "../project.types";
+import { ProjectsInfoType } from "./project.types";
 
 export interface ProjectsBasicProps {
   isEditing: boolean;
@@ -35,18 +35,24 @@ export const ProjectsEditable: React.FC<ProjectsBasicProps> = ({
   const [isDialogOpen, setIsDialogOpen] = useState<boolean>(false);
 
   return (
-    <EditComponent
-      isEditing={isEditing}
-      handleEditClick={() => setIsDialogOpen(true)}
-    >
-      {/* {projectsInfo.projects?.length > 0 && <ProjectsTimelinePreview />} */}
-      <ProjectsTimelinePreview projectsInfo={projectsInfo} />
-      <ProjectsTimelineDialog
-        isOpen={isDialogOpen}
-        onOpenChange={() => setIsDialogOpen(false)}
-        saveProjectsInfo={saveProjectsInfo}
-        projectsInfo={projectsInfo}
-      />
-    </EditComponent>
+    <>
+      {isEditing ? (
+        <EditComponent
+          isEditing={isEditing}
+          handleEditClick={() => setIsDialogOpen(true)}
+        >
+          {/* {projectsInfo.projects?.length > 0 && <ProjectsTimelinePreview />} */}
+          <ProjectsTimelinePreview projectsInfo={projectsInfo} />
+          <ProjectsTimelineDialog
+            isOpen={isDialogOpen}
+            onOpenChange={() => setIsDialogOpen(false)}
+            saveProjectsInfo={saveProjectsInfo}
+            projectsInfo={projectsInfo}
+          />
+        </EditComponent>
+      ) : (
+        <ProjectsTimelinePreview projectsInfo={projectsInfo} />
+      )}
+    </>
   );
 };

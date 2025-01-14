@@ -11,7 +11,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import FileUpload from "../FileUpload/FileUpload";
-import { ProjectsInfoType, ProjectType } from "../project.types";
+import { ProjectsInfoType, ProjectType } from "./project.types";
 
 const initialProject = {
   timeline: "",
@@ -21,7 +21,7 @@ const initialProject = {
   designation: "",
   link: "",
   cover: "",
-  skills: [] as string[],
+  skills: "",
   companyName: "",
   clientName: "",
   images: [],

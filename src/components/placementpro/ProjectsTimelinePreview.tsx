@@ -1,8 +1,9 @@
 import Image from "next/image";
 import React from "react";
 import { Timeline } from "@/components/ui/timeline";
-import { ProjectsInfoType, ProjectType } from "../project.types";
+import { ProjectsInfoType, ProjectType } from "./project.types";
 import { getImageUrl } from "@/lib/server/serverUtils";
+import { HeroSkeleton } from "../Loaders";
 
 const timelineData = [
   {
@@ -95,15 +96,18 @@ export function ProjectsTimelinePreview({
       <div className="space-y-5">
         <ProjectHeadline headline={project.headline1} />
         <ProjectHeadline headline={project.headline2} />
-        <div className="flex flex-row justify-between items-center">
+        {/* <div className="flex flex-row justify-between items-center">
           {project.companyName && <div>Company: {project.companyName}</div>}
           {project.clientName && <div>Client: {project.clientName}</div>}
-        </div>
+        </div> */}
         <ProjectSkills skills={project.skills} />
         <ProjectImages images={project.images} />
       </div>
     ),
   }));
+  if (projectsInfo.projects.length === 0) {
+    return <HeroSkeleton />;
+  }
   return (
     <div className="w-full">
       <Timeline data={data} />
