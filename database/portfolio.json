@@ -4,7 +4,11 @@
     "name": "Yash Chawla",
     "contactNumber": "9364001200",
     "email": "yashchawla@gmail.com",
-    "socialMedia": {},
+    "socialMedia": {
+      "linkedIn": "https://www.linkedin.com/in/deepakpahawa/",
+      "github": "https://github.com/deepakpahwa19",
+      "youtube": "https://www.linkedin.com/in/deepakpahawa/"
+    },
     "resumeName": "Deepak Pahawa_CV.docx"
   },
   "heroInfo": {
