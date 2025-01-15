@@ -1,6 +1,9 @@
 "use client";
 import Footer from "@/components/Banner";
-import { FloatingDockDemo } from "@/components/FloatingDockDemo";
+import {
+  Dock,
+  FloatingDockDemo,
+} from "@/components/placementpro/FloatingDockDemo";
 import { Hero } from "@/components/placementpro/Hero";
 import HeroPro from "@/components/Hero/HeroPro";
 import PasswordInput from "@/components/PasswordInput";
@@ -47,21 +50,11 @@ export default function HomePage({ portfolio, url }: HomePageProps) {
             </Button>
           </div>
         )}
-        <div className="flex justify-evenly flex-row px-5 max-w-7xl mx-auto">
-          {/* <div className="w-[90vw] mr-3 md:mr-20">
-            <Navbar />
-          </div> */}
-          {/* <div className="w-[25%]"></div> */}
-          <FloatingDockDemo />
-          {/* <div className="flex justify-end items-center h-20 w-full">
-            <ThemeToggle />
-          </div> */}
-        </div>
+        <Dock />
         <Hero />
         <Skills />
         <Projects />
         <Footer />
-        {/* <Projects /> */}
       </div>
     </div>
   );

@@ -3,10 +3,14 @@ import { useState } from "react";
 export const useDownload = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  const handleDownload = async () => {
+  const handleDownload = async (name: string) => {
+    if (!name) {
+      console.log("No Resume file is uploaded");
+      return;
+    }
     setIsLoading(true);
     try {
-      const response = await fetch("/api/download");
+      const response = await fetch(`/api/download/${name}`);
       if (!response.ok) throw new Error("Download failed");
 
       const blob = await response.blob();

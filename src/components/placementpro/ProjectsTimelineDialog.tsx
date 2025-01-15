@@ -86,7 +86,7 @@ export const ProjectsTimelineDialog: React.FC<ProjectDialogProps> = ({
   return (
     <Dialog open={isOpen} onOpenChange={() => onOpenChange?.(false)}>
       <DialogOverlay />
-      <DialogContent className="overflow-auto max-h-[90%] space-y-4">
+      <DialogContent className="overflow-auto max-h-[90%] space-y-4 z-50">
         <DialogTitle>Add Projects</DialogTitle>
         <Label className="block mb-2">Section Title</Label>
         <Input

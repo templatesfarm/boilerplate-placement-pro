@@ -6,7 +6,6 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -63,10 +62,7 @@ export const SkillsSlidersDialog: React.FC<SkillsDialogProps> = ({
 
   return (
     <Dialog open={isOpen} onOpenChange={onOpenChange}>
-      {/* <DialogTrigger asChild>
-        <Button variant="outline">Add Skills</Button>
-      </DialogTrigger> */}
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-[425px] z-50">
         <DialogHeader>
           <DialogTitle className="text-center mt-5">Skills Details</DialogTitle>
         </DialogHeader>

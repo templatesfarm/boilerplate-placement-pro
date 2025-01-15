@@ -1,8 +1,9 @@
 import { create } from "zustand";
 import { serverRoutes } from "@/lib/contants";
-import { HeroType, PersonalInfoType } from "portfolioui";
+import { HeroType } from "portfolioui";
 import { ProjectsInfoType } from "@/components/placementpro/project.types";
 import { SkillsSlidersType } from "@/components/placementpro/skillsSliders.types";
+import { PersonalInfoType } from "@/components/placementpro/personalInfo.types";
 
 const initialPersonalState: PersonalInfoType = {
   displayName: "",
@@ -10,11 +11,10 @@ const initialPersonalState: PersonalInfoType = {
   contactNumber: "",
   email: "",
   socialMedia: {
-    linkedin: "",
+    linkedIn: "",
     github: "",
     youtube: "",
-    facebook: "",
-    instagram: "",
+    xdotcom: "",
   },
 };
 

@@ -5,10 +5,22 @@ import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 
 type PropType = {
-  setImageUrl: (x: string) => void;
+  message?: string;
+  setImageUrl?: (x: string) => void;
+  handleFileData?: ({
+    fileName,
+    fileUrl,
+  }: {
+    fileName: string;
+    fileUrl: string;
+  }) => void;
 };
 
-const FileUpload: React.FC<PropType> = ({ setImageUrl }) => {
+const FileUpload: React.FC<PropType> = ({
+  message = "",
+  setImageUrl,
+  handleFileData,
+}) => {
   const [image, setImage] = useState<File | null>(null);
   const [error, setError] = useState<string>("");
   const [uploading, setUploading] = useState(false);
@@ -40,7 +52,8 @@ const FileUpload: React.FC<PropType> = ({ setImageUrl }) => {
       console.log("🚀 ~ handleUpload ~ data.URL:", data.url);
       if (response.ok && !!data) {
         setUploadedUrl(data.fileUrl);
-        setImageUrl(data.fileUrl);
+        setImageUrl?.(data.fileUrl);
+        handleFileData?.({ fileName: data.fileName, fileUrl: data.fileUrl });
       }
     } catch (err) {
       const error = err as Error;
@@ -58,9 +71,10 @@ const FileUpload: React.FC<PropType> = ({ setImageUrl }) => {
       <Input
         type="file"
         id="file"
-        accept="image/*"
+        accept=".png,.pdf,.doc,.docx,.jpg,.jpeg"
         onChange={handleFileChange}
       />
+      <p className="text-sm text-red-600 my-2">{message}</p>
       <Button disabled={!image || uploading} onClick={handleUpload}>
         {uploading ? "Uploading..." : "Upload"}
       </Button>

@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { Octokit } from "@octokit/rest";
 import env from "@/app/env";
 
@@ -6,11 +6,15 @@ const octokit = new Octokit({
   auth: process.env.GITHUB_TOKEN,
 });
 
-export async function GET() {
+export async function GET(
+  request: NextRequest,
+  { params }: { params: { fileName: string } }
+) {
   try {
+    const { fileName } = params;
     const owner = env.github.username; // Replace with the GitHub repository owner
     const repo = env.github.repo; // Replace with the GitHub repository name
-    const path = "images/1734561322664-Webex.png"; // Replace with the path to your file in the repository
+    const path = `images/${fileName}`; // Replace with the path to your file in the repository
 
     const response = await octokit.repos.getContent({
       owner,
@@ -21,7 +25,8 @@ export async function GET() {
     if ("content" in response.data) {
       const contentType = path.endsWith(".pdf")
         ? "application/pdf"
-        : "image/png";
+        : "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
+
       return new NextResponse(Buffer.from(response.data.content, "base64"), {
         status: 200,
         headers: {
