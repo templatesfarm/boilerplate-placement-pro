@@ -1,6 +1,7 @@
 "use client";
 import Footer from "@/components/Banner";
 import { FloatingDockDemo } from "@/components/FloatingDockDemo";
+import { Hero } from "@/components/placementpro/Hero";
 import HeroPro from "@/components/Hero/HeroPro";
 import PasswordInput from "@/components/PasswordInput";
 import { Projects } from "@/components/placementpro/Projects";
@@ -56,7 +57,7 @@ export default function HomePage({ portfolio, url }: HomePageProps) {
             <ThemeToggle />
           </div> */}
         </div>
-        <HeroPro />
+        <Hero />
         <Skills />
         <Projects />
         <Footer />
