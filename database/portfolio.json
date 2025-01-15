@@ -2,21 +2,23 @@
   "personalInfo": {
     "displayName": "",
     "name": "Yash Chawla",
-    "contactNumber": "9963976068",
-    "email": "deepakpahwa19@gmail.com",
+    "contactNumber": "9364001200",
+    "email": "yashchawla@gmail.com",
     "socialMedia": {
-      "linkedin": "https://www.linkedin.com/in/deepakpahawa/",
+      "linkedin": "https://github.com/deepakpahwa19",
       "github": "https://github.com/deepakpahwa19",
       "youtube": "https://github.com/deepakpahwa19",
-      "facebook": "https://github.com/deepakpahwa19",
-      "instagram": "https://github.com/deepakpahwa19"
-    }
+      "X": "https://www.linkedin.com/in/deepakpahawa/",
+      "linkedIn": "https://github.com/deepakpahwa19",
+      "xdotcom": "https://github.com/deepakpahwa19"
+    },
+    "resumeName": "Deepak Pahawa_CV.docx"
   },
   "heroInfo": {
     "displayName": "",
-    "message": "Hi! I am Yash",
-    "introduction": "A Software Developer.",
-    "description": "I am expert at crafting innovative web solutions and staying up-to-date with the latest technologies. My goal is to deliver high-quality, efficient, and user-friendly applications that exceed expectations."
+    "message": "Hi! I am Deepak",
+    "introduction": "A Full Stack Developer",
+    "description": "I am expert at crafting optimized web solutions and staying up-to-date with the latest technologies. My goal is to deliver high-quality, efficient, and user-friendly applications that exceed expectations."
   },
   "skillsInfo": {
     "displayName": "Arsenal",
