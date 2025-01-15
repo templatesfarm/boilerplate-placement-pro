@@ -2,13 +2,9 @@
 import Footer from "@/components/Banner";
 import { FloatingDockDemo } from "@/components/FloatingDockDemo";
 import HeroPro from "@/components/Hero/HeroPro";
-import Navbar from "@/components/Navbar/Navbar";
 import PasswordInput from "@/components/PasswordInput";
-import { Projects } from "@/components/Projects/Projects";
-import Skills from "@/components/Skills/Skills";
-import ThemeToggle from "@/components/ThemeToggle";
-import { ProjectsPlacementPro } from "@/components/placementpro/ProjectsPlacementPro";
-import { ProjectsTimelinePreview } from "@/components/placementpro/ProjectsTimelinePreview";
+import { Projects } from "@/components/placementpro/Projects";
+import { Skills } from "@/components/placementpro/Skills";
 import { Button } from "@/components/ui/button";
 import { useAppStore } from "@/store/appStore";
 import { PortfolioType, usePortfolioStore } from "@/store/usePortfolioStore";
@@ -62,7 +58,7 @@ export default function HomePage({ portfolio, url }: HomePageProps) {
         </div>
         <HeroPro />
         <Skills />
-        <ProjectsPlacementPro />
+        <Projects />
         <Footer />
         {/* <Projects /> */}
       </div>
