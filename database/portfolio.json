@@ -22,10 +22,6 @@
     "displayName": "Skills",
     "skills": [
       {
-        "name": "NextJS",
-        "rating": 9
-      },
-      {
         "name": "ReactJS",
         "rating": 8.5
       },
@@ -36,6 +32,10 @@
       {
         "name": "JavaScript",
         "rating": 10
+      },
+      {
+        "name": "NextJS",
+        "rating": 8.5
       }
     ]
   },
