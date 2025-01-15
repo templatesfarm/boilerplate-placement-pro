@@ -19,69 +19,25 @@
     "description": "I am expert at crafting innovative web solutions and staying up-to-date with the latest technologies. My goal is to deliver high-quality, efficient, and user-friendly applications that exceed expectations."
   },
   "skillsInfo": {
-    "displayName": "",
-    "skills": {
-      "cloud": [
-        {
-          "label": "DigitalOcean",
-          "imageName": "/digitalocean.png"
-        }
-      ],
-      "Frontend": [
-        {
-          "label": "ReactJS",
-          "imageName": "/reactjs.png"
-        },
-        {
-          "label": "NextJS",
-          "imageName": "/nextjs.jpg"
-        },
-        {
-          "label": "Tailwind",
-          "imageName": "/tailwind.png"
-        },
-        {
-          "label": "Material-UI",
-          "imageName": "/materialui.png"
-        }
-      ],
-      "Mobile": [
-        {
-          "label": "React Native",
-          "imageName": "/reactnative.png"
-        }
-      ],
-      "Database": [
-        {
-          "label": "MySQL",
-          "imageName": "/mysql.png"
-        },
-        {
-          "label": "MongoDB",
-          "imageName": "/mongodb.png"
-        }
-      ],
-      "mba_tools": [
-        {
-          "label": "SPSS",
-          "imageName": "/spss.png"
-        },
-        {
-          "label": "MATLAB",
-          "imageName": "/matlab.png"
-        }
-      ],
-      "AI/ML": [
-        {
-          "label": "TensorFlow",
-          "imageName": "/tensorflow.png"
-        },
-        {
-          "label": "PyTorch",
-          "imageName": "/pytorch.png"
-        }
-      ]
-    }
+    "displayName": "Skills",
+    "skills": [
+      {
+        "name": "NextJS",
+        "rating": 9
+      },
+      {
+        "name": "ReactJS",
+        "rating": 8.5
+      },
+      {
+        "name": "TypeScript",
+        "rating": 8.5
+      },
+      {
+        "name": "JavaScript",
+        "rating": 10
+      }
+    ]
   },
   "projectsInfo": {
     "displayName": "",
