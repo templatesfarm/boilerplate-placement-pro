@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import React, { useEffect, useRef, useState, memo } from "react";
 import { motion } from "framer-motion";
@@ -69,7 +70,7 @@ export const TextRevealCard = ({
       onTouchMove={touchMoveHandler}
       ref={cardRef}
       className={cn(
-        "bg-background border border-white/[0.08] w-full rounded-lg px-1 py-8 relative overflow-hidden",
+        "bg-neutral-300 dark:bg-neutral-900 border border-white/[0.08] w-full rounded-lg px-1 py-8 relative overflow-hidden",
         className
       )}
     >
@@ -91,24 +92,24 @@ export const TextRevealCard = ({
                 }
           }
           transition={isMouseOver ? { duration: 0 } : { duration: 0.4 }}
-          className="absolute bg-background z-20  will-change-transform"
+          className="absolute bg-neutral-300 dark:bg-neutral-900 z-20  will-change-transform"
         >
           {revealText && (
             <p
-              style={{
-                textShadow: "4px 4px 15px rgba(0,0,0,0.5)",
-              }}
-              className="text-sm md:text-base  lg:text-2xl py-2 font-bold text-foreground bg-clip-text w-fit mx-auto text-wrap"
+              // style={{
+              //   textShadow: "4px 4px 15px rgba(0,0,0,0.5)",
+              // }}
+              className="text-sm md:text-base lg:text-2xl py-2 font-bold text-foreground bg-clip-text w-fit mx-auto text-wrap"
             >
               {revealText}
             </p>
           )}
           {revealText2 && (
             <p
-              style={{
-                textShadow: "4px 4px 15px rgba(0,0,0,0.5)",
-              }}
-              className="text-sm md:text-base  lg:text-2xl py-2 font-bold text-foreground bg-clip-text w-fit mx-auto text-wrap"
+              // style={{
+              //   textShadow: "4px 4px 15px rgba(0,0,0,0.5)",
+              // }}
+              className="text-sm md:text-base lg:text-2xl py-2 font-bold text-foreground bg-clip-text w-fit mx-auto text-wrap"
             >
               {revealText2}
             </p>
@@ -121,7 +122,7 @@ export const TextRevealCard = ({
             opacity: widthPercentage > 0 ? 1 : 0,
           }}
           transition={isMouseOver ? { duration: 0 } : { duration: 0.4 }}
-          className="h-40 w-[8px] bg-background absolute z-50 will-change-transform"
+          className="h-40 w-[8px] bg-neutral-300 dark:bg-neutral-900 absolute z-40 will-change-transform"
         ></motion.div>
 
         <div className="overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)] w-[80%] mx-auto">
@@ -187,9 +188,9 @@ const Stars = () => {
             position: "absolute",
             top: `${random() * 100}%`,
             left: `${random() * 100}%`,
-            width: `2px`,
-            height: `2px`,
-            backgroundColor: "white",
+            width: `4px`,
+            height: `4px`,
+            backgroundColor: "grey",
             borderRadius: "50%",
             zIndex: 1,
           }}
