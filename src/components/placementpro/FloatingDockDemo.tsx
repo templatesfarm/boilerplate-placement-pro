@@ -16,6 +16,7 @@ import { useAppStore } from "@/store/appStore";
 import EditComponent from "../EditComponent";
 import PersonalInfoDialog from "./PersonalInfoDialog";
 import { PersonalInfoType, SocialMediaType } from "./personalInfo.types";
+import { useTheme } from "next-themes";
 
 export const Dock = () => {
   const {
@@ -24,16 +25,19 @@ export const Dock = () => {
     isLoading,
   } = usePortfolioStore();
   const { isEditing } = useAppStore();
+  const { setTheme, theme, resolvedTheme } = useTheme();
 
-  if (isLoading) {
+  if (isLoading || !theme || !resolvedTheme) {
     return <SkillsSkeleton />;
   }
 
   return (
-    <FloatingDockEdit
+    <FloatingDockEditable
       isEditing={isEditing}
       personalInfo={personalInfo}
       savePersonalInfo={savePersonalInfo}
+      setTheme={() => setTheme(resolvedTheme === "light" ? "dark" : "light")}
+      theme={theme}
     />
   );
 };
@@ -42,12 +46,16 @@ export interface FloatingDockEditProps {
   isEditing: boolean;
   personalInfo: PersonalInfoType;
   savePersonalInfo: (x: PersonalInfoType) => void;
+  setTheme: () => void;
+  theme: string;
 }
 
-export const FloatingDockEdit: React.FC<FloatingDockEditProps> = ({
+export const FloatingDockEditable: React.FC<FloatingDockEditProps> = ({
   isEditing,
   personalInfo,
   savePersonalInfo,
+  setTheme,
+  theme,
 }) => {
   const [isDialogOpen, setIsDialogOpen] = useState<boolean>(false);
 
@@ -61,6 +69,8 @@ export const FloatingDockEdit: React.FC<FloatingDockEditProps> = ({
           <FloatingDockDemo
             socialMediaLinks={personalInfo.socialMedia}
             resumeName={personalInfo.resumeName}
+            setTheme={setTheme}
+            theme={theme}
           />
           <PersonalInfoDialog
             isOpen={isDialogOpen}
@@ -73,6 +83,8 @@ export const FloatingDockEdit: React.FC<FloatingDockEditProps> = ({
         <FloatingDockDemo
           socialMediaLinks={personalInfo.socialMedia}
           resumeName={personalInfo.resumeName}
+          setTheme={setTheme}
+          theme={theme}
         />
       )}
     </>
@@ -83,10 +95,14 @@ export function FloatingDockDemo({
   socialMediaLinks,
   resumeName = "",
   className,
+  setTheme,
+  theme,
 }: {
   socialMediaLinks: SocialMediaType;
   resumeName?: string;
   className?: string;
+  setTheme: () => void;
+  theme: string;
 }) {
   const { handleDownload } = useDownload();
   const links = [
@@ -145,6 +161,8 @@ export function FloatingDockDemo({
         <FloatingDock
           // mobileClassName="translate-y-20" // only for demo, remove for production
           items={links}
+          setTheme={setTheme}
+          theme={theme}
         />
       </div>
     </div>

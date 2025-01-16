@@ -9,7 +9,7 @@ import {
 } from "framer-motion";
 import Link from "next/link";
 import { useRef, useState } from "react";
-import ThemeToggle from "../ThemeToggle";
+import { IconMoon, IconSun } from "@tabler/icons-react";
 
 type FloatinDockItemsType = {
   title: string;
@@ -21,14 +21,22 @@ type FloatinDockItemsType = {
 export const FloatingDock = ({
   items,
   desktopClassName,
+  setTheme,
+  theme,
 }: {
   items: FloatinDockItemsType[];
   desktopClassName?: string;
-  mobileClassName?: string;
+  setTheme: () => void;
+  theme: string;
 }) => {
   return (
     <>
-      <FloatingDockDesktop items={items} className={desktopClassName} />
+      <FloatingDockDesktop
+        items={items}
+        className={desktopClassName}
+        setTheme={setTheme}
+        theme={theme}
+      />
     </>
   );
 };
@@ -36,9 +44,13 @@ export const FloatingDock = ({
 const FloatingDockDesktop = ({
   items,
   className,
+  setTheme,
+  theme,
 }: {
   items: FloatinDockItemsType[];
   className?: string;
+  setTheme: () => void;
+  theme: string;
 }) => {
   const mouseX = useMotionValue(Infinity);
   return (
@@ -57,9 +69,9 @@ const FloatingDockDesktop = ({
         <IconContainer
           mouseX={mouseX}
           key={"theme"}
-          icon={<ThemeToggle />}
+          icon={theme === "light" ? <IconMoon /> : <IconSun />}
           title="Theme"
-          onClick={() => {}}
+          onClick={setTheme}
         />
       </>
     </motion.div>

@@ -1,11 +1,14 @@
-import Navbar from "./Navbar/Navbar";
+import { usePortfolioStore } from "@/store/usePortfolioStore";
+import { TextRevealCardPreview } from "./TextRevealCardPreview";
 
 export default function Footer() {
+  const { portfolio } = usePortfolioStore();
+  const { personalInfo } = portfolio;
+
   return (
-    <div className="border-t-[1px] py-5">
-      <div className="max-w-7xl mx-auto p-5">
-        <Navbar />
-      </div>
-    </div>
+    <TextRevealCardPreview
+      email={personalInfo.email}
+      phoneNumber={personalInfo.contactNumber}
+    />
   );
 }

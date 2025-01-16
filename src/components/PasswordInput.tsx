@@ -4,7 +4,7 @@ import { useAppStore } from "@/store/appStore";
 import env from "@/app/env";
 
 const PasswordInput: React.FC = () => {
-  const { setIsEditing } = useAppStore();
+  const { isEditing, setIsEditing } = useAppStore();
   const [inputValue, setInputValue] = useState<string>("");
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -66,13 +66,17 @@ const PasswordInput: React.FC = () => {
   }, [inputValue, setIsEditing]);
 
   return (
-    <input
-      type="password"
-      ref={inputRef}
-      value={""}
-      onChange={(event) => setInputValue(event?.target.value)}
-      style={{ position: "absolute", top: "-9999px", left: "-9999px" }} // Hide the input field
-    />
+    <>
+      {!isEditing && (
+        <input
+          type="password"
+          ref={inputRef}
+          value={""}
+          onChange={(event) => setInputValue(event?.target.value)}
+          style={{ position: "absolute", top: "-9999px", left: "-9999px" }} // Hide the input field
+        />
+      )}
+    </>
   );
 };
 
