@@ -70,13 +70,13 @@ export const TextRevealCard = ({
       onTouchMove={touchMoveHandler}
       ref={cardRef}
       className={cn(
-        "bg-neutral-300 dark:bg-neutral-900 border border-white/[0.08] w-full rounded-lg px-1 py-8 relative overflow-hidden",
+        "w-full rounded-lg py-2 relative overflow-hidden",
         className
       )}
     >
       {children}
 
-      <div className="h-40  relative flex items-center overflow-hidden">
+      <div className="h-full  relative flex items-center overflow-hidden">
         <motion.div
           style={{
             width: "100%",
@@ -92,7 +92,7 @@ export const TextRevealCard = ({
                 }
           }
           transition={isMouseOver ? { duration: 0 } : { duration: 0.4 }}
-          className="absolute bg-neutral-300 dark:bg-neutral-900 z-20  will-change-transform"
+          className="absolute bg-neutral-100 dark:bg-neutral-900  z-20  will-change-transform"
         >
           {revealText && (
             <p
@@ -122,7 +122,7 @@ export const TextRevealCard = ({
             opacity: widthPercentage > 0 ? 1 : 0,
           }}
           transition={isMouseOver ? { duration: 0 } : { duration: 0.4 }}
-          className="h-40 w-[8px] bg-neutral-300 dark:bg-neutral-900 absolute z-40 will-change-transform"
+          className="h-full w-[8px]  absolute z-40 will-change-transform"
         ></motion.div>
 
         <div className="overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)] w-[80%] mx-auto">

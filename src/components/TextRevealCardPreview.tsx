@@ -10,7 +10,7 @@ export function TextRevealCardPreview({
   phoneNumber: string;
 }) {
   return (
-    <div className="flex items-center justify-center h-96 rounded-2xl max-w-7xl mx-auto w-full px-2 md:px-10">
+    <div className="flex items-center justify-center h-72 rounded-2xl max-w-7xl mx-auto w-full px-2 md:px-10">
       <TextRevealCard
         text="Reveal my contact info"
         revealText={email}
