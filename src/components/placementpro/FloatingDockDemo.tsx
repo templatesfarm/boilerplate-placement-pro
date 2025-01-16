@@ -8,7 +8,7 @@ import {
   IconFileCv,
   IconHome,
 } from "@tabler/icons-react";
-import { useDownload } from "@/app/hooks/download";
+import { useDownload } from "@/app/hooks/useDownload";
 import { cn } from "@/lib/utils";
 import { usePortfolioStore } from "@/store/usePortfolioStore";
 import { useAppStore } from "@/store/appStore";
