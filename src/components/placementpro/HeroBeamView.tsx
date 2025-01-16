@@ -1,7 +1,7 @@
 import React from "react";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 import { HeroType } from "portfolioui";
-import { TextGenerateEffectDemo } from "../TextGenerateEffectDemo";
+import { TextGenerateEffectDemo } from "./TextGenerateEffectDemo";
 import { Skeleton } from "../ui/skeleton";
 
 export function HeroBeamView({

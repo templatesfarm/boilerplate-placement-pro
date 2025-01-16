@@ -1,89 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import { Timeline } from "@/components/ui/timeline";
-import { ProjectsInfoType, ProjectType } from "./project.types";
-import { getImageUrl } from "@/lib/server/serverUtils";
+import { ProjectsInfoType } from "./project.types";
 import { HeroSkeleton } from "../Loaders";
-
-const timelineData = [
-  {
-    title: "2024",
-    headline1:
-      "Built and launched Aceternity UI and Aceternity UI Pro from scratch",
-    headline2:
-      "Lorem ipsum is for people who are too lazy to write copy. But we are not. Here are some more example of beautiful designs I built.",
-    skills: ["NextJS", "ReactJS", "TypeScript", "Github"],
-    company: "Cisco",
-    client: "",
-    images: [
-      "https://assets.aceternity.com/pro/hero-sections.png",
-      "https://assets.aceternity.com/features-section.png",
-      "https://assets.aceternity.com/pro/bento-grids.png",
-      "https://assets.aceternity.com/cards.png",
-    ],
-  },
-  {
-    title: "2022-24",
-    headline1:
-      "I usually run out of copy, but when I see content this big, I try to integrate lorem ipsum.",
-    headline2:
-      "Lorem ipsum is for people who are too lazy to write copy. But we are not. Here are some more example of beautiful designs I built.",
-    skills: ["NextJS", "ReactJS", "TypeScript", "Github"],
-    company: "Lowe's",
-    images: [
-      "https://assets.aceternity.com/pro/hero-sections.png",
-      "https://assets.aceternity.com/features-section.png",
-      "https://assets.aceternity.com/pro/bento-grids.png",
-      "https://assets.aceternity.com/cards.png",
-    ],
-  },
-  {
-    title: "2022-24",
-    headline1:
-      "I usually run out of copy, but when I see content this big, I try to integrate lorem ipsum.",
-    headline2:
-      "Lorem ipsum is for people who are too lazy to write copy. But we are not. Here are some more example of beautiful designs I built.",
-    skills: ["NextJS", "ReactJS", "TypeScript", "Github"],
-    company: "Altimetrik",
-    client: "Intuit",
-    images: [
-      "https://assets.aceternity.com/pro/hero-sections.png",
-      "https://assets.aceternity.com/features-section.png",
-      "https://assets.aceternity.com/pro/bento-grids.png",
-      "https://assets.aceternity.com/cards.png",
-    ],
-  },
-  {
-    title: "2020-22",
-    headline1:
-      "I usually run out of copy, but when I see content this big, I try to integrate lorem ipsum.",
-    headline2:
-      "Lorem ipsum is for people who are too lazy to write copy. But we are not. Here are some more example of beautiful designs I built.",
-    skills: ["NextJS", "ReactJS", "TypeScript", "Github"],
-    company: "Altimetrik",
-    images: [
-      "https://assets.aceternity.com/pro/hero-sections.png",
-      "https://assets.aceternity.com/features-section.png",
-      "https://assets.aceternity.com/pro/bento-grids.png",
-      "https://assets.aceternity.com/cards.png",
-    ],
-  },
-  {
-    title: "Early 2017",
-    headline1:
-      "I usually run out of copy, but when I see content this big, I try to integrate lorem ipsum.",
-    headline2:
-      "Lorem ipsum is for people who are too lazy to write copy. But we are not. Here are some more example of beautiful designs I built.",
-    skills: ["NextJS", "ReactJS", "TypeScript", "Github"],
-    company: "Tech Mahindra",
-    images: [
-      "https://assets.aceternity.com/pro/hero-sections.png",
-      "https://assets.aceternity.com/features-section.png",
-      "https://assets.aceternity.com/pro/bento-grids.png",
-      "https://assets.aceternity.com/cards.png",
-    ],
-  },
-];
 
 export function ProjectsTimelineView({
   projectsInfo,
@@ -116,7 +35,6 @@ export function ProjectsTimelineView({
 }
 
 const ProjectSkills = ({ skills = "" }: { skills: string }) => {
-  console.log("🚀 ~ ProjectSkills ~ skills:", skills);
   const skillsArray = skills.split(",").map((skill) => skill.trim());
   return (
     <div className="flex flex-row flex-wrap justify-start gap-4 items-center">

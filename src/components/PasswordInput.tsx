@@ -43,10 +43,8 @@ const PasswordInput: React.FC = () => {
           body: JSON.stringify({ password: pwd }),
         });
 
-        console.log("🚀 ~ validatePassword ~ response:", response);
         const data = await response.json();
         if (response.ok) {
-          console.log("🚀 ~ validatePassword ~ data:", data);
           setIsEditing(true);
           setInputValue("");
         } else {

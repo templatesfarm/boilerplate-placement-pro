@@ -1,6 +1,6 @@
 import { usePortfolioStore } from "@/store/usePortfolioStore";
 import { TextRevealCardPreview } from "./TextRevealCardPreview";
-import { Skeleton } from "./ui/skeleton";
+import { Skeleton } from "../ui/skeleton";
 
 export default function Footer() {
   const { portfolio, isLoading } = usePortfolioStore();

@@ -154,14 +154,6 @@ const PersonalInfoDialog: React.FC<PersonalInfoDialogProps> = ({
             handleFileData={handleFileData}
             message="Upload PDF or Word file only"
           />
-          {/* <Input
-          type="text"
-          name="cover"
-          value={projectDetails.imageUrl}
-          disabled
-          // onChange={(e) => handleChange(e)}
-          className="border p-2 w-full"
-        /> */}
         </div>
         <div className=" flex justify-end">
           <button

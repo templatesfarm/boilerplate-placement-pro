@@ -1,5 +1,5 @@
 "use client";
-import Footer from "@/components/Footer";
+import Footer from "@/components/placementpro/Footer";
 import { Dock } from "@/components/placementpro/FloatingDockDemo";
 import { Hero } from "@/components/placementpro/Hero";
 import PasswordInput from "@/components/PasswordInput";

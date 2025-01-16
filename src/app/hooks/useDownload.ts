@@ -22,10 +22,8 @@ export const useDownload = () => {
       const filenameMatch = contentDisposition.match(/filename="?(.+)"?/i);
       if (filenameMatch && filenameMatch[1]) {
         fileName = filenameMatch[1].replace(/['"]/g, "");
-        console.log("🚀 ~ handleDownload ~ fileName:", fileName);
       }
 
-      console.log("🚀 ~ handleDownload ~ filenameMatch:", filenameMatch);
       // Ensure the file extension matches the content type
       const fileExtension = fileName.split(".").pop()?.toLowerCase();
       if (contentType.includes("pdf") && fileExtension !== "pdf") {
@@ -34,7 +32,6 @@ export const useDownload = () => {
         fileName += ".png";
       }
 
-      console.log("🚀 ~ handleDownload ~ fileName:", fileName);
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.style.display = "none";

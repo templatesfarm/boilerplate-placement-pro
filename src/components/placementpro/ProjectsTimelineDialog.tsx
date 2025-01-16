@@ -159,11 +159,6 @@ const ProjectDetail: React.FC<ProjectDetailType> = ({
 
   const handleImageUrl = useCallback(
     (imageUrl: string) => {
-      console.log("🚀 ~ handleImageUrl ~ imageUrl:", imageUrl);
-      console.log(
-        "🚀 ~ handleImageUrl ~ projectDetails.images:",
-        projectDetails.images
-      );
       setProjectDetails((prev) => {
         if (prev.images.includes(imageUrl)) {
           return prev; // If it exists, return the previous state without changes

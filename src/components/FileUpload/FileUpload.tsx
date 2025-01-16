@@ -28,10 +28,6 @@ const FileUpload: React.FC<PropType> = ({
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files?.[0]) {
-      console.log(
-        "🚀 ~ handleFileChange ~ e.target.files?.[0]:",
-        e.target.files?.[0]
-      );
       setImage(e.target.files[0]);
     }
   };
@@ -49,7 +45,6 @@ const FileUpload: React.FC<PropType> = ({
         body: formData,
       });
       const data = (await response.json()) || null;
-      console.log("🚀 ~ handleUpload ~ data.URL:", data.url);
       if (response.ok && !!data) {
         setUploadedUrl(data.fileUrl);
         setImageUrl?.(data.fileUrl);

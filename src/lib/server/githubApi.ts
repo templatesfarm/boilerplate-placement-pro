@@ -109,17 +109,13 @@ export const uploadFileInCDN = async (file: File) => {
       branch,
     });
   }
-  console.log("🚀 ~ uploadFileInCDN ~ response:", response);
 
   const { data } = response;
-  console.log("🚀 ~ uploadFileInCDN ~ data:", data);
   const fileUrl = data.content?.html_url
     ? data.content.html_url
         .replace("github.com", "raw.githubusercontent.com")
         .replace(`/blob/${branch}/`, `/${branch}/`)
     : undefined;
-
-  console.log("🚀 ~ uploadFileInCDN ~ fileUrl:", fileUrl);
 
   return { fileName, fileUrl };
 };

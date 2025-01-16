@@ -161,12 +161,7 @@ export function FloatingDockDemo({
             {/* </div> */}
           </div>
         ) : (
-          <FloatingDock
-            // mobileClassName="translate-y-20" // only for demo, remove for production
-            items={links}
-            setTheme={setTheme}
-            theme={theme}
-          />
+          <FloatingDock items={links} setTheme={setTheme} theme={theme} />
         )}
       </div>
     </div>

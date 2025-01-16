@@ -9,13 +9,6 @@ export async function generateMetadata({}): Promise<Metadata> {
       title: `${portfolio.personalInfo.name} | Portfolio | TemplatesFarm`,
       description: portfolio.heroInfo.description,
       keywords: `${portfolio.personalInfo.name} Portfolio, TemplatesFarm`,
-      // openGraph: {
-      //   images: [
-      //     {
-      //       url: getImageUrl(course?.imageId),
-      //     },
-      //   ],
-      // },
       alternates: {
         canonical: url,
       },
