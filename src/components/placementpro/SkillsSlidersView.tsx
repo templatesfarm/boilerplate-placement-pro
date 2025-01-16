@@ -1,5 +1,5 @@
 import React from "react";
-import SkillSlider from "./SkillSlider";
+import SkillSlider from "./AnimatedSlider";
 import { SkillsSlidersType } from "./skillsSliders.types";
 import { Skeleton } from "../ui/skeleton";
 
@@ -29,7 +29,7 @@ export const SkillsSlidersView = ({
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-32 gap-y-16">
             {skillsInfo.skills.map((skill, index) => (
               <SkillSlider
-                name={skill.name}
+                label={skill.name}
                 rating={skill.rating}
                 key={skill.name + index}
               />
