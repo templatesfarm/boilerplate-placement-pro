@@ -12,20 +12,12 @@ export const Skills = () => {
   const { portfolio, saveSkillsInfo, isLoading } = usePortfolioStore();
   const { isEditing } = useAppStore();
 
-  if (isLoading) {
-    return <SkillsSkeleton />;
-  }
-
   return (
-    // <SkillsBasic
-    //   saveSelectedSkills={saveSkillsInfo}
-    //   skillsInfo={portfolio.skillsInfo}
-    //   isEditing={isEditing}
-    // />
     <SkillsSliders
       saveSkillsInfo={saveSkillsInfo}
       skillsInfo={portfolio.skillsInfo}
       isEditing={isEditing}
+      isLoading={isLoading}
     />
   );
 };
@@ -33,6 +25,7 @@ export const Skills = () => {
 export interface SkillsSlidersProp {
   isEditing: boolean;
   skillsInfo: SkillsSlidersType;
+  isLoading: boolean;
   saveSkillsInfo: (x: SkillsSlidersType) => void;
 }
 
@@ -40,27 +33,22 @@ const SkillsSliders: React.FC<SkillsSlidersProp> = ({
   isEditing,
   skillsInfo,
   saveSkillsInfo,
+  isLoading,
 }) => {
   const [isDialogOpen, setIsDialogOpen] = useState<boolean>(false);
 
   return (
-    <>
-      {isEditing ? (
-        <EditComponent
-          isEditing={isEditing}
-          handleEditClick={() => setIsDialogOpen(true)}
-        >
-          <SkillsSlidersView skillsInfo={skillsInfo} />
-          <SkillsSlidersDialog
-            isOpen={isDialogOpen}
-            onOpenChange={setIsDialogOpen}
-            skillsInfo={skillsInfo}
-            saveSkillsInfo={saveSkillsInfo}
-          />
-        </EditComponent>
-      ) : (
-        <SkillsSlidersView skillsInfo={skillsInfo} />
-      )}
-    </>
+    <EditComponent
+      isEditing={isEditing}
+      handleEditClick={() => setIsDialogOpen(true)}
+    >
+      <SkillsSlidersView skillsInfo={skillsInfo} isLoading={isLoading} />
+      <SkillsSlidersDialog
+        isOpen={isDialogOpen}
+        onOpenChange={setIsDialogOpen}
+        skillsInfo={skillsInfo}
+        saveSkillsInfo={saveSkillsInfo}
+      />
+    </EditComponent>
   );
 };
