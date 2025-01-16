@@ -27,7 +27,7 @@ export const FloatingDock = ({
   items: FloatinDockItemsType[];
   desktopClassName?: string;
   setTheme: () => void;
-  theme: string;
+  theme?: string;
 }) => {
   return (
     <>
@@ -50,7 +50,7 @@ const FloatingDockDesktop = ({
   items: FloatinDockItemsType[];
   className?: string;
   setTheme: () => void;
-  theme: string;
+  theme?: string;
 }) => {
   const mouseX = useMotionValue(Infinity);
   return (
