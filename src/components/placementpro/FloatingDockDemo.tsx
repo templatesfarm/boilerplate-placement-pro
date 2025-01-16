@@ -59,36 +59,24 @@ export const FloatingDockEditable: React.FC<FloatingDockEditProps> = ({
   const [isDialogOpen, setIsDialogOpen] = useState<boolean>(false);
 
   return (
-    <>
-      {isEditing ? (
-        <EditComponent
-          isEditing={isEditing}
-          handleEditClick={() => setIsDialogOpen(true)}
-        >
-          <FloatingDockDemo
-            socialMediaLinks={personalInfo.socialMedia}
-            resumeName={personalInfo.resumeName}
-            setTheme={setTheme}
-            theme={theme}
-            isLoading={isLoading}
-          />
-          <PersonalInfoDialog
-            isOpen={isDialogOpen}
-            onOpenChange={setIsDialogOpen}
-            personalInfo={personalInfo}
-            savePersonalInfo={savePersonalInfo}
-          />
-        </EditComponent>
-      ) : (
-        <FloatingDockDemo
-          socialMediaLinks={personalInfo.socialMedia}
-          resumeName={personalInfo.resumeName}
-          setTheme={setTheme}
-          theme={theme}
-          isLoading={isLoading}
-        />
-      )}
-    </>
+    <EditComponent
+      isEditing={isEditing}
+      handleEditClick={() => setIsDialogOpen(true)}
+    >
+      <FloatingDockDemo
+        socialMediaLinks={personalInfo.socialMedia}
+        resumeName={personalInfo.resumeName}
+        setTheme={setTheme}
+        theme={theme}
+        isLoading={isLoading}
+      />
+      <PersonalInfoDialog
+        isOpen={isDialogOpen}
+        onOpenChange={setIsDialogOpen}
+        personalInfo={personalInfo}
+        savePersonalInfo={savePersonalInfo}
+      />
+    </EditComponent>
   );
 };
 
