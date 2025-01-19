@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
-import { motion, useAnimation, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 
 interface AnimatedSliderProps {
   rating: number;
@@ -14,31 +14,46 @@ const MotionSlider = motion(Slider);
 
 export default function AnimatedSlider({ rating, label }: AnimatedSliderProps) {
   const [displayValue, setDisplayValue] = useState(0);
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 1 });
-  const controls = useAnimation();
+  const ref = useRef<HTMLDivElement>(null);
+
+  // Easing function for smooth animation
+  const easeInOutQuad = (t: number) =>
+    t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
 
   useEffect(() => {
-    if (isInView) {
-      controls.set({
-        transition: { duration: 1.5, ease: "easeOut" },
-      });
-      const animationDuration = 1500; // 1.5 seconds
-      const startTime = Date.now();
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          const animationDuration = 1500; // 1.5 seconds
+          const startTime = Date.now();
 
-      const animateValue = () => {
-        const elapsedTime = Date.now() - startTime;
-        const progress = Math.min(elapsedTime / animationDuration, 1);
-        setDisplayValue(Math.round(progress * rating * 10));
+          const animateValue = () => {
+            const elapsedTime = Date.now() - startTime;
+            const progress = Math.min(elapsedTime / animationDuration, 1); // Clamp between 0 and 1
+            const easedProgress = easeInOutQuad(progress);
+            setDisplayValue(Math.round(easedProgress * rating * 10));
 
-        if (progress < 1) {
+            if (progress < 1) {
+              requestAnimationFrame(animateValue);
+            }
+          };
+
           requestAnimationFrame(animateValue);
         }
-      };
+      },
+      { threshold: 1.0 } // Trigger when fully in view
+    );
 
-      requestAnimationFrame(animateValue);
+    if (ref.current) {
+      observer.observe(ref.current);
     }
-  }, [isInView, controls, rating]);
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, [rating]);
 
   return (
     <div className="space-y-4" ref={ref}>
@@ -56,10 +71,9 @@ export default function AnimatedSlider({ rating, label }: AnimatedSliderProps) {
       <MotionSlider
         id={`slider-${label}`}
         value={[displayValue]}
-        animate={controls}
         min={0}
         max={100}
-        step={0.5}
+        step={1}
         aria-label={`${label} slider`}
         aria-valuemin={0}
         aria-valuemax={100}
