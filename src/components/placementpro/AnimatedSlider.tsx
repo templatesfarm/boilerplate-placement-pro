@@ -56,11 +56,10 @@ export default function AnimatedSlider({ rating, label }: AnimatedSliderProps) {
       <MotionSlider
         id={`slider-${label}`}
         value={[displayValue]}
-        onValueChange={(newValue) => setDisplayValue(newValue[0])}
         animate={controls}
         min={0}
         max={100}
-        step={1}
+        step={0.5}
         aria-label={`${label} slider`}
         aria-valuemin={0}
         aria-valuemax={100}
