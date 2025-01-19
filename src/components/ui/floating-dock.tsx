@@ -20,12 +20,12 @@ type FloatinDockItemsType = {
 
 export const FloatingDock = ({
   items,
-  desktopClassName,
+  className,
   setTheme,
   theme,
 }: {
   items: FloatinDockItemsType[];
-  desktopClassName?: string;
+  className?: string;
   setTheme: () => void;
   theme?: string;
 }) => {
@@ -33,7 +33,7 @@ export const FloatingDock = ({
     <>
       <FloatingDockDesktop
         items={items}
-        className={desktopClassName}
+        className={className}
         setTheme={setTheme}
         theme={theme}
       />

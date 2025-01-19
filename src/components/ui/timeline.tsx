@@ -1,5 +1,6 @@
 "use client";
 import { useWindowSize } from "@/app/hooks/useWindowSize";
+import { cn } from "@/lib/utils";
 import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
@@ -8,7 +9,13 @@ interface TimelineEntry {
   content: React.ReactNode;
 }
 
-export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
+export const Timeline = ({
+  data,
+  className,
+}: {
+  data: TimelineEntry[];
+  className?: string;
+}) => {
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
@@ -67,7 +74,10 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               height: heightTransform,
               opacity: opacityTransform,
             }}
-            className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full"
+            className={cn(
+              "absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-purple-900 via-blue-400 to-transparent from-[0%] via-[10%] rounded-full",
+              className
+            )}
           />
         </div>
       </div>

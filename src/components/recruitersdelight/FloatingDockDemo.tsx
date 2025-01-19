@@ -69,6 +69,7 @@ export const FloatingDockEditable: React.FC<FloatingDockEditProps> = ({
         setTheme={setTheme}
         theme={theme}
         isLoading={isLoading}
+        className="bg-slate-100 dark:bg-slate-900"
       />
       <PersonalInfoDialog
         isOpen={isDialogOpen}
@@ -142,12 +143,7 @@ export function FloatingDockDemo({
     },
   ];
   return (
-    <div
-      className={cn(
-        "flex justify-evenly flex-row px-5 max-w-7xl mx-auto",
-        className
-      )}
-    >
+    <div className={cn("flex justify-evenly flex-row px-5 max-w-7xl mx-auto")}>
       <div className="flex items-center justify-center w-full fixed top-8 z-40">
         {isLoading ? (
           <div className="mx-auto flex gap-2 h-16 md:gap-4 items-end  rounded-2xl bg-gray-50 dark:bg-neutral-900 px-4 pb-3">
@@ -161,7 +157,12 @@ export function FloatingDockDemo({
             {/* </div> */}
           </div>
         ) : (
-          <FloatingDock items={links} setTheme={setTheme} theme={theme} />
+          <FloatingDock
+            items={links}
+            setTheme={setTheme}
+            theme={theme}
+            className={className}
+          />
         )}
       </div>
     </div>

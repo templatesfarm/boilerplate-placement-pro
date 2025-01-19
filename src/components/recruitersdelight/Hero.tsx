@@ -4,7 +4,7 @@ import { useAppStore } from "@/store/appStore";
 import { HeroType } from "portfolioui";
 import { usePortfolioStore } from "@/store/usePortfolioStore";
 import EditComponent from "../EditComponent";
-import { HeroBeamView } from "./HeroBeamView";
+import { HeroBeamPathView } from "./HeroBeamView";
 import HeroDialog from "../Hero/HeroDialog";
 
 export const Hero = () => {
@@ -41,7 +41,7 @@ export const HeroBeam: React.FC<HeroBeamProps> = ({
       isEditing={isEditing}
       handleEditClick={() => setIsDialogOpen(true)}
     >
-      <HeroBeamView heroInfo={heroInfo} isLoading={isLoading} />
+      <HeroBeamPathView heroInfo={heroInfo} isLoading={isLoading} />
       <HeroDialog
         isOpen={isDialogOpen}
         onOpenChange={setIsDialogOpen}

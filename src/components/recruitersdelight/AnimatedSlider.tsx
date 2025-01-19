@@ -13,7 +13,10 @@ interface AnimatedSliderProps {
 
 const MotionSlider = motion(Slider);
 
-export default function AnimatedSlider({ rating, label }: AnimatedSliderProps) {
+export default function AnimatedSliderWithScale({
+  rating,
+  label,
+}: AnimatedSliderProps) {
   const [displayValue, setDisplayValue] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
   const max = 10;
