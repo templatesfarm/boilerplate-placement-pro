@@ -15,68 +15,82 @@ export const BackgroundBeamsWithCollision = ({
 
   const beams = [
     {
-      initialX: 10,
-      translateX: 10,
+      initialX: "2vw",
+      translateX: "2vw",
       duration: 7,
       repeatDelay: 3,
       delay: 2,
     },
     {
-      initialX: 600,
-      translateX: 600,
+      initialX: "10vw",
+      translateX: "10vw",
+      duration: 7,
+      repeatDelay: 3,
+      delay: 2,
+    },
+    {
+      initialX: "20vw",
+      translateX: "20vw",
       duration: 3,
       repeatDelay: 3,
       delay: 4,
     },
     {
-      initialX: 100,
-      translateX: 100,
+      initialX: "30vw",
+      translateX: "30vw",
       duration: 7,
       repeatDelay: 7,
       className: "h-6",
     },
     {
-      initialX: 400,
-      translateX: 400,
+      initialX: "40vw",
+      translateX: "40vw",
       duration: 5,
       repeatDelay: 14,
       delay: 4,
     },
     {
-      initialX: 800,
-      translateX: 800,
+      initialX: "50vw",
+      translateX: "50vw",
       duration: 11,
       repeatDelay: 2,
       className: "h-20",
     },
     {
-      initialX: 1000,
-      translateX: 1000,
+      initialX: "60vw",
+      translateX: "60vw",
       duration: 4,
       repeatDelay: 2,
       className: "h-12",
     },
     {
-      initialX: 1200,
-      translateX: 1200,
+      initialX: "70vw",
+      translateX: "70vw",
       duration: 6,
       repeatDelay: 4,
       delay: 2,
       className: "h-6",
     },
     {
-      initialX: 1400,
-      translateX: 1400,
+      initialX: "80vw",
+      translateX: "80vw",
       duration: 7,
       repeatDelay: 3,
       delay: 2,
     },
     {
-      initialX: 1600,
-      translateX: 1600,
+      initialX: "90vw",
+      translateX: "90vw",
       duration: 3,
       repeatDelay: 3,
       delay: 4,
+    },
+    {
+      initialX: "98vw",
+      translateX: "98vw",
+      duration: 7,
+      repeatDelay: 3,
+      delay: 2,
     },
   ];
 
@@ -117,8 +131,8 @@ const CollisionMechanism = React.forwardRef<
     containerRef: React.RefObject<HTMLDivElement>;
     parentRef: React.RefObject<HTMLDivElement>;
     beamOptions?: {
-      initialX?: number;
-      translateX?: number;
+      initialX?: string;
+      translateX?: string;
       initialY?: number;
       translateY?: number;
       rotate?: number;
@@ -128,6 +142,7 @@ const CollisionMechanism = React.forwardRef<
       repeatDelay?: number;
     };
   }
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
 >(({ parentRef, containerRef, beamOptions = {} }, ref) => {
   const beamRef = useRef<HTMLDivElement>(null);
   const [collision, setCollision] = useState<{
