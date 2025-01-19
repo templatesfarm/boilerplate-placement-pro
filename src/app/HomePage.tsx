@@ -1,10 +1,10 @@
 "use client";
-import Footer from "@/components/placementpro/Footer";
-import { Dock } from "@/components/placementpro/FloatingDockDemo";
-import { Hero } from "@/components/placementpro/Hero";
+import Footer from "@/components/recruitersdelight/Footer";
+import { Dock } from "@/components/recruitersdelight/FloatingDockDemo";
+import { Hero } from "@/components/recruitersdelight/Hero";
 import PasswordInput from "@/components/PasswordInput";
-import { Projects } from "@/components/placementpro/Projects";
-import { Skills } from "@/components/placementpro/Skills";
+import { Projects } from "@/components/recruitersdelight/Projects";
+import { Skills } from "@/components/recruitersdelight/Skills";
 import { PortfolioType, usePortfolioStore } from "@/store/usePortfolioStore";
 import { useEffect } from "react";
 import { ApplyChangesButton } from "@/components/ApplyChangesButton";

@@ -1,9 +1,9 @@
 import { create } from "zustand";
 import { serverRoutes } from "@/lib/contants";
 import { HeroType } from "portfolioui";
-import { ProjectsInfoType } from "@/components/placementpro/project.types";
-import { SkillsSlidersType } from "@/components/placementpro/skillsSliders.types";
-import { PersonalInfoType } from "@/components/placementpro/personalInfo.types";
+import { ProjectsInfoType } from "@/components/recruitersdelight/project.types";
+import { SkillsSlidersType } from "@/components/recruitersdelight/skillsSliders.types";
+import { PersonalInfoType } from "@/components/recruitersdelight/personalInfo.types";
 
 const initialPersonalState: PersonalInfoType = {
   displayName: "",

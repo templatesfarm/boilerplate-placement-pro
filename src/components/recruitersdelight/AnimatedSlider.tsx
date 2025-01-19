@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
 import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 interface AnimatedSliderProps {
   rating: number;
@@ -15,6 +16,9 @@ const MotionSlider = motion(Slider);
 export default function AnimatedSlider({ rating, label }: AnimatedSliderProps) {
   const [displayValue, setDisplayValue] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
+  const max = 10;
+  const skipInterval = 2; // Set to 1 to allow no text skipping
+  const ticks = [...Array(max + 1)].map((_, i) => i);
 
   // Easing function for smooth animation
   const easeInOutQuad = (t: number) =>
@@ -61,12 +65,6 @@ export default function AnimatedSlider({ rating, label }: AnimatedSliderProps) {
         <Label htmlFor={`slider-${label}`} className="leading-6">
           {label}
         </Label>
-        <output
-          htmlFor={`slider-${label}`}
-          className="text-sm font-medium tabular-nums"
-        >
-          {displayValue / 10}
-        </output>
       </div>
       <MotionSlider
         id={`slider-${label}`}
@@ -79,6 +77,27 @@ export default function AnimatedSlider({ rating, label }: AnimatedSliderProps) {
         aria-valuemax={100}
         aria-valuenow={displayValue}
       />
+      <span
+        className="mt-3 flex w-full items-center justify-between gap-1 px-2.5 text-xs font-medium text-muted-foreground"
+        aria-hidden="true"
+      >
+        {ticks.map((_, i) => (
+          <span
+            key={i}
+            className="flex w-0 flex-col items-center justify-center gap-2"
+          >
+            <span
+              className={cn(
+                "h-1 w-px bg-muted-foreground/70",
+                i % skipInterval !== 0 && "h-0.5"
+              )}
+            />
+            <span className={cn(i % skipInterval !== 0 && "opacity-0")}>
+              {i}
+            </span>
+          </span>
+        ))}
+      </span>
     </div>
   );
 }
