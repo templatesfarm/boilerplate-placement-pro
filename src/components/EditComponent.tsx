@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import React from "react";
 import { FaPencilAlt } from "react-icons/fa";
 
@@ -5,16 +6,21 @@ interface PropTypes {
   children: React.ReactNode;
   isEditing: boolean;
   handleEditClick: () => void;
+  className?: string;
 }
 
 const EditComponent: React.FC<PropTypes> = ({
   children,
   isEditing,
   handleEditClick,
+  className = "",
 }) => {
   return (
     <div
-      className={`relative ${isEditing ? "border border-red-500 my-2" : ""}`}
+      className={cn(
+        `relative ${isEditing ? "border border-red-500 my-2" : ""}`,
+        `${isEditing ? className : ""}`
+      )}
     >
       {isEditing && (
         <div className="absolute top-2 right-2">

@@ -1,6 +1,6 @@
 "use client";
 import Footer from "@/components/recruitersdelight/Footer";
-import { Dock } from "@/components/recruitersdelight/FloatingDockDemo";
+import { Dock } from "@/components/recruitersdelight/Dock";
 import { Hero } from "@/components/recruitersdelight/Hero";
 import PasswordInput from "@/components/PasswordInput";
 import { Projects } from "@/components/recruitersdelight/Projects";
@@ -24,7 +24,7 @@ export default function HomePage({ portfolio, url }: HomePageProps) {
 
   return (
     <div className="min-h-screen bg-background overflow-hidden space-y-10 w-full">
-      <div className="py-5">
+      <div className="py-5 relative">
         <PasswordInput />
         <ApplyChangesButton />
         <Dock />

@@ -62,6 +62,7 @@ export const FloatingDockEditable: React.FC<FloatingDockEditProps> = ({
     <EditComponent
       isEditing={isEditing}
       handleEditClick={() => setIsDialogOpen(true)}
+      className="absolute top-0 w-full mx-auto h-24"
     >
       <FloatingDockDemo
         socialMediaLinks={personalInfo.socialMedia}
